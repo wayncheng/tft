@@ -1,8 +1,7 @@
 {
-	"name": "react-redux-app-bones",
+	"name": "tft-items",
 	"version": "0.1.0",
-	"private": true,
-	"homepage": "https://wayncheng.github.io/tft-items",
+	"homepage": "https://wayncheng.github.io/tft",
 	"dependencies": {
 		"classnames": "^2.2.6",
 		"gh-pages": "^2.1.1",
@@ -23,7 +22,7 @@
 		"redux-thunk": "^2.3.0"
 	},
 	"scripts": {
-		"predeploy": "yarn build",
+		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
