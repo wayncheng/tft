@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-import itemData from '../utils/item_data';
+// import itemData from '../utils/item_data';
 import {addItem,removeItem} from '../modules/items';
+import {Icon} from '../components';
 import './Item.scss';
 
 class Item extends Component {
@@ -23,12 +24,13 @@ class Item extends Component {
 
 	render() {
 		const {item_id} = this.props;
-		const item = itemData[item_id];
+		// const item = itemData[item_id];
 		// const full_id = partner ? item.combos[partner] : item.id;
 		return (
-						<a href='#!' className={classNames("item",this.props.className)} item_id={item_id} onClick={this.handleClick}>
+						<a href='#!' className={classNames("item",this.props.className)} data-item-id={item_id} onClick={this.handleClick}>
 							{/* <img src={`../static/img/${item_id}.png`} alt={item.name}/> */}
-							<img src={`https://blitz-cdn.blitz.gg/blitz/tft/items/${item.id}.png`} alt={item.name || item.id}/>
+							<Icon item_id={item_id}/>
+							{/* <img src={`https://blitz-cdn.blitz.gg/blitz/tft/items/${item.id}.png`} alt={item.name || item.id}/> */}
 						</a>
 			// <React.Fragment>
 			// 		{item_id && (

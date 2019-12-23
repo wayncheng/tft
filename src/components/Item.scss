@@ -1,11 +1,11 @@
 @import '../config/variables';
 
+$icon-size: 4rem;
 
 .item {
-	$icon-size: 4rem;
-	font-size: 4rem;
-	margin: 0;
-	flex: 1;
+	// font-size: 4rem;
+	// margin: 0;
+	flex: 0 1;
 	// margin-right: 0.25rem;
 	// &:last-child {
 	// 	margin-right: 0;
@@ -13,21 +13,26 @@
 	display: flex;
 	width: 100%;
 	height: 100%;
-	display: flex;
 	// max-height: 1em;
-	max-width : 1em;
+	// max-width : 1em;
 	margin: 0 .5rem;
-	
+}
 
-	img {
-		height    : 100%;
-		width     : 100%;
-		font-size: inherit;
-		max-height: 1em;
-		max-width : 1em;
-		// max-height: $icon-size;
-		// max-width: $icon-size;
-		margin: auto;
+.item-img {
+	// width: $icon-size;
+	// height: $icon-size;
+	// margin: auto;
+	// height    : 100%;
+	// width     : 100%;
+	font-size: $icon-size;
+	max-height: 1em;
+	max-width: 1em;
+	// max-height: $icon-size;
+	// max-width: $icon-size;
+
+	&.tiny {
+		font-size: $icon-size/2;
+		opacity: 0.6;
 	}
 }
 
@@ -64,7 +69,6 @@
 	margin: 0 auto;
 }
 
-
 // Inventory ==============================
 .inventory {
 	display: flex;
@@ -80,7 +84,6 @@
 	.items-container {
 		flex-wrap: wrap;
 	}
-	
 }
 .combo-item {
 	.help {
@@ -90,5 +93,56 @@
 		line-height: 1.25;
 		text-align: center;
 		color: $fg-secondary;
+	}
+}
+
+// Table ==============================
+.item-table {
+	$table-icon-size: 3rem;
+	$table-z: 100;
+	$th-padding: .75rem;
+
+	%inactive-item {
+		opacity: 0.2;
+	}
+	%active-item {
+		opacity: 1;
+		z-index: $table-z+1;
+		// background-color: red;
+		// outline: 2px solid #e2e8f0;
+		// border: 2px solid yellow;
+		// box-shadow: inset 0 0 0 2px #fff;
+	}
+
+	.head-row th {
+		padding-top: $th-padding;
+		// padding-right: 1rem;
+	}
+	.body-row th {
+		padding-right: $th-padding;
+	}
+
+	th,
+	td {
+		// box-sizing: border-box;
+		z-index: $table-z;
+		width: $table-icon-size;
+		position: relative;
+		// border: 2px solid transparent;
+		padding: 2px;
+	}
+
+	// th:not(.is-repeat),
+	.combo-item:not(.is-repeat) {
+		@extend %inactive-item;
+
+		&.possible,
+		&:hover,
+		&:focus {
+			@extend %active-item;
+		}
+	}
+	.item-img {
+		font-size: $table-icon-size;
 	}
 }

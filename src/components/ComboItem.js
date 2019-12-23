@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 import itemData from '../utils/item_data';
 import {makeCombo} from '../modules/items';
+import {Icon} from '.';
 
 class ComboItem extends Component {
 	handleClick = event => {
@@ -21,15 +22,17 @@ class ComboItem extends Component {
 		return (
 			<a
 				href='#!'
-				className={classNames('item','combo-item','flex flex-col', this.props.className)}
+				className={classNames('item', 'combo-item', 'flex flex-col', this.props.className)}
 				item1={item1}
 				item2={item2}
 				item_id={combo_id}
 				onClick={this.handleClick}
 			>
-				<img src={`https://blitz-cdn.blitz.gg/blitz/tft/items/${combo.id}.png`} alt={combo.name || combo.id} />
-		<p className="help">{item1}</p>
-		<p className="help">{item2}</p>
+				{/* <div className='help-container flex flex-row justify-around'>
+					<Icon className='tiny' item_id={item1} />
+					<Icon className='tiny' item_id={item2} />
+				</div> */}
+				<Icon item_id={combo_id} />
 			</a>
 		);
 	}
