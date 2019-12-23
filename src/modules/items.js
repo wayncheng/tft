@@ -4,14 +4,15 @@ export const SET_COMBOS = 'items/SET_COMBOS';
 export const SET_UNIQUE = 'items/SET_UNIQUE';
 
 const initialState = {
-	base      : [ 'sword', 'vest', 'belt', 'rod', 'cloak', 'bow', 'spatula', 'tear', 'glove' ],
+	// base      : [ 'sword', 'vest', 'belt', 'rod', 'cloak', 'bow', 'spatula', 'tear', 'glove' ],
+	base           : [ 'belt', 'bow', 'cloak', 'glove', 'rod', 'spatula', 'sword', 'tear', 'vest' ],
+	comboInventory : [],
+	inventory      : [],
+	combos         : [],
+	unique         : [],
 	// inventory : ['sword','vest'],
 	// combos    : ['sword_vest'],
 	// unique    : ['sword_vest'],
-	inventory : [],
-	combos    : [],
-	unique    : [],
-	comboInventory: [],
 };
 
 export default (state = initialState, action) => {
@@ -29,7 +30,7 @@ export default (state = initialState, action) => {
 		case SET_COMBO_INVENTORY:
 			return {
 				...state,
-				comboInventory : state.comboInventory.concat([action.combo]),
+				comboInventory : state.comboInventory.concat([ action.combo ]),
 			};
 		case SET_UNIQUE:
 			return {
@@ -87,7 +88,7 @@ export const processKey = key => (dispatch, getState) => {
 	const num = parseInt(key[key.length - 1]);
 	const action = key.startsWith('shift+') ? 'remove' : 'add';
 	const item = base[num - 1];
-	
+
 	if (action === 'add') {
 		dispatch(addItem(item));
 	} else if (action === 'remove') {
@@ -97,34 +98,35 @@ export const processKey = key => (dispatch, getState) => {
 
 export const addItem = item => (dispatch, getState) => {
 	const {inventory} = getState().items;
-	const newInventory = inventory.concat([ item ]);
+	const newInventory = inventory.concat([ item ]).sort();
 	dispatch(setInventory(newInventory));
 };
 export const removeItem = _item => (dispatch, getState) => {
 	// const parts = _item.split('_');
 	// for (let i = 0; i < parts.length; i++) {
-		// const item = parts[i];
-		let {inventory} = getState().items;
-		let newInv = inventory;
+	// const item = parts[i];
+	let {inventory} = getState().items;
+	let newInv = inventory;
 
-		const pos = newInv.indexOf(_item);
-		if (pos !== -1) {
-			newInv = newInv.slice(0, pos).concat(newInv.slice(pos + 1));
-			dispatch(setInventory(newInv));
-		}
+	const pos = newInv.indexOf(_item);
+	if (pos !== -1) {
+		newInv = newInv.slice(0, pos).concat(newInv.slice(pos + 1));
+		dispatch(setInventory(newInv));
+	}
 	// }
-}
-export const makeCombo = (item1,item2) => (dispatch) => {
-	console.log('combining:',item1,item2);
-	
+};
+export const makeCombo = (item1, item2) => dispatch => {
+	console.log('combining:', item1, item2);
+
 	// remove each item from inventory
-	dispatch(removeItem(item1))
-	dispatch(removeItem(item2))
-	
+	dispatch(removeItem(item1));
+	dispatch(removeItem(item2));
+
 	// add combined to inventory?
-	dispatch({type:SET_COMBO_INVENTORY,
-		combo: `${item1}_${item2}`
-	})
+	dispatch({
+		type  : SET_COMBO_INVENTORY,
+		combo : `${item1}_${item2}`,
+	});
 };
 export const setInventory = inventory => dispatch => {
 	dispatch({
