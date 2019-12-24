@@ -23,7 +23,7 @@
 		"redux-thunk": "^2.3.0"
 	},
 	"scripts": {
-		"predeploy": "npm run build",
+		"predeploy": "yarn build",
 		"deploy": "gh-pages -d build",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
@@ -33,10 +33,5 @@
 	"eslintConfig": {
 		"extends": "react-app"
 	},
-	"browserslist": [
-		">0.2%",
-		"not dead",
-		"not ie <= 11",
-		"not op_mini all"
-	]
+	"browserslist": [ ">0.2%", "not dead", "not ie <= 11", "not op_mini all" ]
 }

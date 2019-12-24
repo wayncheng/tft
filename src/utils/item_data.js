@@ -1,5 +1,6 @@
 module.exports = {
-	belt              : {
+	// Base Item --------------------------------------
+	belt            : {
 		name   : "Giant's Belt",
 		perk   : '+200 Base Health',
 		id     : 'giantsbelt',
@@ -15,7 +16,7 @@ module.exports = {
 			spatula : 'frozenmallet',
 		},
 	},
-	bow               : {
+	bow             : {
 		id     : 'recurvebow',
 		name   : 'Recurve Bow',
 		perk   : '+20% Attack Speed',
@@ -31,7 +32,7 @@ module.exports = {
 			// belt    : 'titanichydra',
 		},
 	},
-	cloak             : {
+	cloak           : {
 		id     : 'negatroncloak',
 		name   : 'Negatron Cloak',
 		perk   : '+20 Magic Resist',
@@ -47,7 +48,7 @@ module.exports = {
 			// belt    : 'zephyr',
 		},
 	},
-	glove             : {
+	glove           : {
 		id     : 'sparringgloves',
 		name   : 'Sparring Gloves',
 		perk   : '+10& Dodge Chance, +10% Crit Chance',
@@ -63,7 +64,7 @@ module.exports = {
 			// belt    : 'trapclaw',
 		},
 	},
-	rod               : {
+	rod             : {
 		id     : 'needlesslylargerod',
 		name   : 'Needlessly Large Rod',
 		perk   : '+20% Spell Power',
@@ -79,7 +80,7 @@ module.exports = {
 			// belt    : '',
 		},
 	},
-	spatula           : {
+	spatula         : {
 		id     : 'spatula',
 		name   : 'Spatula',
 		perk   : 'Something',
@@ -95,7 +96,7 @@ module.exports = {
 			// belt    : '',
 		},
 	},
-	sword             : {
+	sword           : {
 		name   : 'B.F. Sword',
 		perk   : '+20 Attack Damage',
 		id     : 'bfsword',
@@ -111,7 +112,7 @@ module.exports = {
 			// spatula : 'youmuusghostblade',
 		},
 	},
-	tear              : {
+	tear            : {
 		id     : 'tearofthegoddess',
 		name   : 'Tear of the Goddess',
 		perk   : '+20% Starting Mana',
@@ -127,7 +128,7 @@ module.exports = {
 			// spatula : '',
 		},
 	},
-	vest              : {
+	vest            : {
 		name   : 'Chain Vest',
 		perk   : '+20 Armor',
 		id     : 'chainvest',
@@ -144,108 +145,231 @@ module.exports = {
 		},
 	},
 
-	// 'swordvest': {
-
-	// }
-	belt_belt       : {id: 'warmogsarmor'},
-	belt_bow        : {id: 'titanichydra'},
-	belt_cloak      : {id: 'zephyr'},
-	belt_glove      : {id: 'trapclaw'},
-	belt_rod        : {id: 'morellonomicon'},
-	belt_spatula    : {id: 'frozenmallet'},
-	belt_sword      : {id: 'zekesherald'},
-	belt_tear       : {id: 'redemption'},
-	belt_vest       : {id: 'redbuff'},
-	bow_bow         : {id: 'rapidfirecannon'},
-	bow_cloak       : {id: 'runaanshurricane'},
-	bow_glove       : {id: 'repeatingcrossbow'},
-	bow_rod         : {id: 'guinsoosrageblade'},
-	bow_spatula     : {id: 'bladeoftheruinedking'},
-	bow_sword       : {id: 'giantslayer'},
-	bow_tear        : {id: 'statikkshiv'},
-	bow_vest        : {id: 'phantomdancer'},
-	cloak_cloak     : {id: 'dragonsclaw'},
-	cloak_glove     : {id: 'quicksilver'},
-	cloak_rod       : {id: 'ionicspark'},
-	cloak_spatula   : {id: 'talismanoflight'},
-	cloak_sword     : {id: 'bloodthirster'},
-	cloak_tear      : {id: 'hush'},
-	cloak_vest      : {id: 'swordbreaker'},
-	glove_glove     : {id: 'thiefsgloves'},
-	glove_rod       : {id: 'jeweledgauntlet'},
-	glove_spatula   : {id: 'berserkeraxe'},
-	glove_sword     : {id: 'infinityedge'},
-	glove_tear      : {id: 'handofjustice'},
-	glove_vest      : {id: 'iceborngauntlet'},
-	rod_rod         : {id: 'rabadonsdeathcap'},
-	rod_spatula     : {id: 'infernocinder'},
-	rod_sword       : {id: 'hextechgunblade'},
-	rod_tear        : {id: 'ludensecho'},
-	rod_vest        : {id: 'locketoftheironsolari'},
-	spatula_spatula : {id: 'forceofnature'},
-	spatula_sword   : {id: 'youmuusghostblade'},
-	spatula_tear    : {id: 'magescap'},
-	spatula_vest    : {id: 'wardensmail'},
-	sword_sword     : {id: 'deathblade'},
-	sword_tear      : {id: 'spearofshojin'},
-	sword_vest      : {id: 'guardianangel'},
-	tear_tear       : {id: 'seraphsembrace'},
-	tear_vest       : {id: 'frozenheart'},
-	vest_vest       : {id: 'thornmail'},
-	
-	// guardianangel     : {
-	// 	name : 'Guardian Angel',
-	// 	perk : 'Revives champ with 400 HP after 2s',
-	// },
-	// deathblade        : {
-	// 	name : 'Death Blade',
-	// 	perk : 'On kill or assist, gain +15 attack. Stacks infinitely.',
-	// },
-
-	// 	_combos: [ 'beltbelt',
-	//   'beltbow',
-	//   'beltcloak',
-	//   'beltglove',
-	//   'beltrod',
-	//   'beltspatula',
-	//   'beltsword',
-	//   'belttear',
-	//   'beltvest',
-	//   'bowbow',
-	//   'bowcloak',
-	//   'bowglove',
-	//   'bowrod',
-	//   'bowspatula',
-	//   'bowsword',
-	//   'bowtear',
-	//   'bowvest',
-	//   'cloakcloak',
-	//   'cloakglove',
-	//   'cloakrod',
-	//   'cloakspatula',
-	//   'cloaksword',
-	//   'cloaktear',
-	//   'cloakvest',
-	//   'gloveglove',
-	//   'gloverod',
-	//   'glovespatula',
-	//   'glovesword',
-	//   'glovetear',
-	//   'glovevest',
-	//   'rodrod',
-	//   'rodspatula',
-	//   'rodsword',
-	//   'rodtear',
-	//   'rodvest',
-	//   'spatulaspatula',
-	//   'spatulasword',
-	//   'spatulatear',
-	//   'spatulavest',
-	//   'swordsword',
-	//   'swordtear',
-	//   'swordvest',
-	//   'teartear',
-	//   'tearvest',
-	// 	'vestvest',
-	// ]
+	// Combos -----------------------------------------
+	belt_belt       : {
+		id        : 'warmogsarmor',
+		perk      : 'Wearer regenerates 6% of missing HP per second',
+		perk_abbr : 'Regenerate 6% missing HP per sec',
+	},
+	belt_bow        : {
+		id        : 'titanichydra',
+		perk      : 'attack deals 3% max HP to target and adjacent enemies behind them',
+		perk_abbr : 'attack deals 3% max HP to target and adjacent enemies behind',
+	},
+	belt_cloak      : {
+		id        : 'zephyr',
+		perk      : 'On start of combat, banish an enemy for 6 seconds',
+		perk_abbr : 'Banish an enemy for 6s on combat start',
+	},
+	belt_glove      : {
+		id        : 'trapclaw',
+		perk      : 'Wearer starts combat with spell shield, stuns enemy who breaks it for 4 seconds',
+		perk_abbr : 'Start w/ spell shield, enemy breaker stunned for 4s',
+	},
+	belt_rod        : {
+		id        : 'morellonomicon',
+		perk      : "Spells deal burn damage equal to 20% of enemy's max HP over 10 seconds and prevents healing",
+		perk_abbr : "Spells deal burn dmg of 20% of enemy's max HP over 10s, prevents healing",
+	},
+	belt_spatula    : {
+		id        : 'frozenmallet',
+		perk      : 'Wearer is also glacial',
+		perk_abbr : 'Also Glacial',
+	},
+	belt_sword      : {
+		id        : 'zekesherald',
+		perk      : 'At start, allies 2 spaces to left and right gain +20% attack speed',
+		perk_abbr : 'At start, +20% Attack Speed for allies 2 spaces to L&R',
+	},
+	belt_tear       : {
+		id        : 'redemption',
+		perk      : 'At 30% health, heal all nearby allies for 1200 HP',
+		perk_abbr : 'At 30% health, heal nearby allies for 1200 HP',
+	},
+	belt_vest       : {
+		id        : 'redbuff',
+		perk      : 'Attacks burn for 20% of max HP over 10 seconds and disable healing',
+		perk_abbr : 'Attacks burn for 20% max HP over 10s & disable healing',
+	},
+	bow_bow         : {
+		id        : 'rapidfirecannon',
+		perk      : 'Attack range is doubled',
+		perk_abbr : 'Doubles attack range',
+	},
+	bow_cloak       : {
+		id        : 'runaanshurricane',
+		perk      : 'Attacks one additional enemy and deals 60% damage (applies on hit effects)',
+		perk_abbr : 'Attacks extra enemy & deals 60% dmg (on hit effects)',
+	},
+	bow_glove       : {
+		id        : 'repeatingcrossbow',
+		perk      : 'On death, item passes to an ally. gain additional 30% crit chance and attack speed (stacks)',
+		perk_abbr : 'On death, pass item to ally. +30% crit chance & attack speed (stacks)',
+	},
+	bow_rod         : {
+		id        : 'guinsoosrageblade',
+		perk      : 'Attacks give 5% attack speed. stacks infinitely',
+		perk_abbr : '+5% attack speed on attacks (stacks infinitely)',
+	},
+	bow_spatula     : {
+		id        : 'bladeoftheruinedking',
+		perk      : 'Wearer is also a blademaster',
+		perk_abbr : 'Also Blademaster',
+	},
+	bow_sword       : {
+		id        : 'giantslayer',
+		perk      : "Attacks deal additional 9% of enemy's current HP as physical damage",
+		perk_abbr : "Attacks deal +9% enemy's current HP as physical dmg",
+	},
+	bow_tear        : {
+		id        : 'statikkshiv',
+		perk      : 'Every 3rd attack deals 100 damage to 2 additional targets',
+		perk_abbr : 'Every 3rd attack, deal 100 dmg to 2 extra targets',
+	},
+	bow_vest        : {
+		id        : 'phantomdancer',
+		perk      : 'Wearer dodges all critical strikes',
+		perk_abbr : 'Dodge all crit strikes',
+	},
+	cloak_cloak     : {
+		id        : 'dragonsclaw',
+		perk      : '50% resistance to magic damage',
+		perk_abbr : '50% magic dmg resistance',
+	},
+	cloak_glove     : {
+		id        : 'quicksilver',
+		perk      : 'Prevents next cc effect to wearer. refreshes every 3 seconds',
+		perk_abbr : 'Prevents next CC effect (refreshes every 3s)',
+	},
+	cloak_rod       : {
+		id        : 'ionicspark',
+		perk      : 'Whenever an enemy casts a spell, they take 90 true damage',
+		// perk_abbr:'On enemy spell cast, they take 90 true dmg',
+		perk_abbr : 'Enemy takes 90 true dmg on spell cast',
+	},
+	cloak_spatula   : {
+		id        : 'talismanoflight',
+		perk      : 'Wearer is also light',
+		perk_abbr : 'Also Light',
+	},
+	cloak_sword     : {
+		id        : 'bloodthirster',
+		perk      : 'Attacks heal for 40% of damage',
+		perk_abbr : 'Attacks heal for 40% of dmg',
+	},
+	cloak_tear      : {
+		id        : 'hush',
+		perk      : 'Attacks have 25% chance to mana lock for 4 seconds',
+		perk_abbr : 'Attacks have 25% chance to mana lock for 4s',
+	},
+	cloak_vest      : {
+		id        : 'swordbreaker',
+		perk      : 'Attacks have 25% chance to disarm for 3 seconds',
+		perk_abbr : 'Attacks have 25% chance to disarm for 3s',
+	},
+	glove_glove     : {
+		id        : 'thiefsgloves',
+		perk      : 'Takes all item slots. on round start, gain 2 temporary items',
+		perk_abbr : 'At start, gain 2 temp items (takes all slots)',
+	},
+	glove_rod       : {
+		id        : 'jeweledgauntlet',
+		perk      : 'Your abilities can critically strike',
+		perk_abbr : 'Abilities can crit strike',
+	},
+	glove_spatula   : {
+		id        : 'berserkeraxe',
+		perk      : 'Wearer is also berserker',
+		perk_abbr : 'Also Berserker',
+	},
+	glove_sword     : {
+		id        : 'infinityedge',
+		perk      : 'Critical strikes deal +125% damage',
+		perk_abbr : 'Crit strikes deal +125% dmg',
+	},
+	glove_tear      : {
+		id        : 'handofjustice',
+		perk      : 'On round start, gain +50% damage or +50 life on hit until end of round',
+		perk_abbr : 'On start, +50% dmg or +50 life on hit until round end',
+	},
+	glove_vest      : {
+		id        : 'iceborngauntlet',
+		perk      : 'On dodge, create an expandable 25% attack speed slow zone',
+		perk_abbr : 'On dodge, create expandable 25% attack speed slow zone',
+	},
+	rod_rod         : {
+		id        : 'rabadonsdeathcap',
+		perk      : "Wearer's ability damage increased by 75%",
+		perk_abbr : '+75% ability dmg',
+	},
+	rod_spatula     : {
+		id        : 'infernocinder',
+		perk      : 'Wearer is also Inferno',
+		perk_abbr : 'Also Inferno',
+	},
+	rod_sword       : {
+		id        : 'hextechgunblade',
+		perk      : 'Heal for 25% of all damage dealt',
+		perk_abbr : 'Heal for 25% of all dmg dealt',
+	},
+	rod_tear        : {
+		id        : 'ludensecho',
+		perk      : 'Deal 150 splash damage on ability hit',
+		perk_abbr : 'Deal 150 splash dmg on ability hit',
+	},
+	rod_vest        : {
+		id        : 'locketoftheironsolari',
+		perk      : 'At start of combat, wearer and allies 2 spaces to left and right get 300 shield for 8 seconds',
+		perk_abbr : 'At start, 300 shield for 8s to wearer and allies 2 spaces L&R',
+	},
+	spatula_spatula : {
+		id        : 'forceofnature',
+		perk      : 'Gain + team size',
+		perk_abbr : '+1 team size',
+	},
+	spatula_sword   : {
+		id        : 'youmuusghostblade',
+		perk      : 'Wearer is also assassin',
+		perk_abbr : 'Also Assassin',
+	},
+	spatula_tear    : {
+		id        : 'magescap',
+		perk      : 'Wearer is also a mage',
+		perk_abbr : 'Also Mage',
+	},
+	spatula_vest    : {
+		id        : 'wardensmail',
+		perk      : 'Wearer is also a warden',
+		perk_abbr : 'Also Warden',
+	},
+	sword_sword     : {
+		id        : 'deathblade',
+		perk      : 'On kill or assist, gain +15 attack, stacks infinitely',
+		perk_abbr : 'On kill/assist, +15 attack (stacks infinitely)',
+	},
+	sword_tear      : {
+		id        : 'spearofshojin',
+		perk      : 'After casting, gain 18% of max mana per attack',
+		perk_abbr : 'After cast, +18% max mana per attack',
+	},
+	sword_vest      : {
+		id        : 'guardianangel',
+		perk      : 'Revives champ with 400 HP after 2 seconds',
+		perk_abbr : 'Revives with 400HP after 2s',
+	},
+	tear_tear       : {
+		id        : 'seraphsembrace',
+		perk      : 'Regain 20 mana each time a spell is cast',
+		perk_abbr : '+20 mana each time a spell is cast',
+	},
+	tear_vest       : {
+		id        : 'frozenheart',
+		perk      : 'Adjacent enemies lose 25% attack speed for 1 second',
+		perk_abbr : '-25% attack speed for 1s to adjacent enemies',
+	},
+	vest_vest       : {
+		id        : 'thornmail',
+		perk      : 'Reflect 100% of mitigated damage taken from attacks as magic damage',
+		perk_abbr : 'Reflect 100% of mitigated dmg taken from attacks as magic dmg',
+	},
 };
