@@ -33,8 +33,8 @@ class HomePage extends Component {
 
 				<main className='flex-1 flex flex-col justify-stretch'>
 					{/* <Combos className='bg-gray-800' /> */}
-					<Inventory className='bg-gray-700' />
-					<BaseItemSelectionPanel className='bg-gray-600' />
+					<Inventory className='bg-gray-800' />
+					<BaseItemSelectionPanel className='bg-gray-700' />
 				</main>
 
 				<KeyboardEventHandler
