@@ -5,7 +5,9 @@ import { ConnectedRouter } from 'react-router-redux';
 import store, { history } from './store';
 import App from './App.js';
 
-const target = document.querySelector('#root');
+// Build optimized icon library
+import buildIconLibrary from './utils/icons';
+buildIconLibrary();
 
 render(
   <Provider store={store}>
@@ -13,5 +15,5 @@ render(
 		<App />
     </ConnectedRouter>
   </Provider>,
-  target
+  document.querySelector('#root')
 )

@@ -1,35 +1,24 @@
 @import '../config/variables';
 
-$icon-size: 4rem;
+$icon-size: 3rem;
+$table-icon-size: 3rem;
+$table-z: 100;
+$th-padding: .75rem;
 
 .item {
-	// font-size: 4rem;
-	// margin: 0;
 	flex: 0 1;
-	// margin-right: 0.25rem;
-	// &:last-child {
-	// 	margin-right: 0;
-	// }
 	display: flex;
 	width: 100%;
 	height: 100%;
-	// max-height: 1em;
-	// max-width : 1em;
 	margin: 0 .5rem;
+	font-size: $icon-size;
 }
 
 .item-img {
-	// width: $icon-size;
-	// height: $icon-size;
-	// margin: auto;
-	// height    : 100%;
-	// width     : 100%;
-	font-size: $icon-size;
+	// font-size: $icon-size;
+	font-size: inherit;
 	max-height: 1em;
 	max-width: 1em;
-	// max-height: $icon-size;
-	// max-width: $icon-size;
-
 	&.tiny {
 		font-size: $icon-size/2;
 		opacity: 0.6;
@@ -45,18 +34,10 @@ $icon-size: 4rem;
 .base-select-panel {
 	display: flex;
 	flex-direction: row;
-	// background-color: #fff;
 	max-height: 8rem;
 	padding: 1rem 1rem 1rem 2rem;
 	.container {
-		// outline: 1px solid blue;
 	}
-	// .item {
-	// 	margin-right: 1rem;
-	// 	&:last-child {
-	// 		margin-right: 0;
-	// 	}
-	// }
 }
 .items-row {
 	width: 100%;
@@ -73,9 +54,7 @@ $icon-size: 4rem;
 .inventory {
 	display: flex;
 	flex-direction: row;
-	// background-color: $bg-light;
 	flex-wrap: wrap;
-	// padding: 2rem 2rem;
 }
 
 // Combos ===================================
@@ -98,9 +77,6 @@ $icon-size: 4rem;
 
 // Table ==============================
 .item-table {
-	$table-icon-size: 3rem;
-	$table-z: 100;
-	$th-padding: .75rem;
 
 	%inactive-item {
 		opacity: 0.2;
@@ -124,25 +100,79 @@ $icon-size: 4rem;
 
 	th,
 	td {
-		// box-sizing: border-box;
 		z-index: $table-z;
-		width: $table-icon-size;
 		position: relative;
-		// border: 2px solid transparent;
 		padding: 2px;
+	}
+	td {
+		// width: $icon-size*3;
+		// width: $table-icon-size*3;
+		width: initial;
 	}
 
 	// th:not(.is-repeat),
-	.combo-item:not(.is-repeat) {
+	// .combo-container:not(.is-repeat) {
+	.combo-cell:not(.is-repeat) {
 		@extend %inactive-item;
-
-		&.possible,
 		&:hover,
 		&:focus {
-			@extend %active-item;
+			// @extend %active-item;
+			opacity: 0.7;
+			z-index: $table-z+1;
+		}
+
+		&.possible {
+			opacity: 1;
+			z-index: $table-z+2;
 		}
 	}
 	.item-img {
-		font-size: $table-icon-size;
+		// font-size: $table-icon-size;
+		font-size: $icon-size;
+	}
+
+	.perk-toggle-cell {
+		display: flex;
+		flex-direction: row;
+		// justify-content: flex-end;
+		// align-items: flex-start;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		padding-right: $th-padding;
+		color: $fg-light-secondary;
+		&:hover, &:focus {
+			color: $fg-light-primary;
+		}
+	}
+}
+.combo-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: stretch;
+	.combo-item {
+		flex:1;
+	}
+	.perk {
+		flex: 3;
+	}
+}
+.perk {
+	font-size: .5rem;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	display: none; // hide by default
+}
+
+.show-perks {
+	.perk {
+		// display: none;
+		display: initial;
+	}
+	td {
+		width: $icon-size*3;
 	}
 }

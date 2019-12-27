@@ -10,7 +10,7 @@ import DevSandboxPage from './pages/DevSandboxPage';
 class App extends Component {
 	render() {
 		return (
-			<BrowserRouter>
+			<BrowserRouter basename={"/tft"}>
 				<Switch>
 					{process.env.NODE_ENV !== 'production' && (
 						<Route exact path="/dev" component={DevSandboxPage} />
