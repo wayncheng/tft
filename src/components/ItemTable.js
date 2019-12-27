@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {Icon} from '.';
+import {Icon, PerkToggle,ComboItem} from '.';
 import classNames from 'classnames';
 import itemData from '../utils/item_data';
 
@@ -13,7 +13,7 @@ class ItemTable extends Component {
 
 	render() {
 		return (
-			<table className={classNames('item-table', this.props.className)}>
+			<table className={classNames('item-table', {'show-perks': this.props.showPerks},this.props.className)}>
 				{/* <thead>
 					<tr>
 						<th />
@@ -30,7 +30,7 @@ class ItemTable extends Component {
 				<tbody>
 					{this.props.base.map((itemA, indexA) => {
 						return (
-							<tr className="body-row" key={`row-${itemA}`}>
+							<tr className='body-row' key={`row-${itemA}`}>
 								<th>
 									<Icon item_id={itemA} />
 								</th>
@@ -40,19 +40,27 @@ class ItemTable extends Component {
 									// Set active flag if this comboID is in the array of possible combos
 									const comboIndex = this.props.unique.indexOf(comboID);
 									// const isRepeat = (indexB < indexA);
-									const isRepeat = (indexB > indexA);
+									const isRepeat = indexB > indexA;
+									const item = itemData[comboID];
+
 									return (
 										<td
-											className={classNames('table-item combo-item', comboID, {
-												possible : comboIndex !== -1,
-												'is-repeat': isRepeat,
+											className={classNames(
+												'table-item combo-cell', 
+												comboID, {
+												possible    : comboIndex !== -1,
+												'is-repeat' : isRepeat,
 											})}
 											data-item={comboID}
 											id={`item_${indexA}-${indexB}`}
 											key={`combo-${comboID}`}
 										>
 											{!isRepeat && (
-											<Icon item_id={comboID} />
+												<div className={classNames("combo-container flex flex-row align-center")}>
+													{/* <Icon item_id={comboID} /> */}
+													<ComboItem item1={itemA} item2={itemB} />
+													<span className="perk">{item.perk}</span>
+												</div>
 											)}
 										</td>
 									);
@@ -60,8 +68,11 @@ class ItemTable extends Component {
 							</tr>
 						);
 					})}
-					<tr className="head-row">
-						<th />
+					<tr className='head-row'>
+		
+					<th className="perk-toggle-cell">
+							<PerkToggle/>
+						</th>
 						{this.props.base.map(item => {
 							return (
 								<th key={`heading-${item}`}>
@@ -80,6 +91,7 @@ const mapStateToProps = state => ({
 	base      : state.items.base,
 	inventory : state.items.inventory,
 	unique    : state.items.unique,
+	showPerks    : state.items.showPerks,
 });
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
 

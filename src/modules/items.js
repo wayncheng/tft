@@ -2,6 +2,7 @@ export const SET_INVENTORY = 'items/SET_INVENTORY';
 export const SET_COMBO_INVENTORY = 'items/SET_COMBO_INVENTORY';
 export const SET_COMBOS = 'items/SET_COMBOS';
 export const SET_UNIQUE = 'items/SET_UNIQUE';
+export const TOGGLE_PERKS = 'items/TOGGLE_PERKS';
 
 const initialState = {
 	// base      : [ 'sword', 'vest', 'belt', 'rod', 'cloak', 'bow', 'spatula', 'tear', 'glove' ],
@@ -10,6 +11,7 @@ const initialState = {
 	inventory      : [],
 	combos         : [],
 	unique         : [],
+	showPerks      : false,
 	// inventory : ['sword','vest'],
 	// combos    : ['sword_vest'],
 	// unique    : ['sword_vest'],
@@ -36,6 +38,11 @@ export default (state = initialState, action) => {
 			return {
 				...state,
 				unique : action.unique,
+			};
+		case TOGGLE_PERKS:
+			return {
+				...state,
+				showPerks : !state.showPerks,
 			};
 		default:
 			return state;
@@ -135,4 +142,7 @@ export const setInventory = inventory => dispatch => {
 	});
 
 	dispatch(findCombos(inventory));
+};
+export const togglePerks = () => dispatch => {
+	dispatch({type: TOGGLE_PERKS});
 };

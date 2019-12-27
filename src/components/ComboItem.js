@@ -15,7 +15,10 @@ class ComboItem extends Component {
 	};
 
 	render() {
-		const {item1, item2} = this.props;
+		// const {item1, item2} = this.props;
+		const sorted = [this.props.item1,this.props.item2].sort();
+		const item1 = sorted[0];
+		const item2 = sorted[1];
 		const combo_id = `${item1}_${item2}`;
 		const combo = itemData[combo_id];
 
