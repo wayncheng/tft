@@ -25,7 +25,6 @@ class PerkToggle extends Component {
 				onClick={this.handleClick}
 			>
 				{/* Info */}
-				{/* <i className='material-icons'>info</i> */}
 				<FontAwesomeIcon icon='info-circle' className={classNames('info-icon')} />
 			</button>
 		);
