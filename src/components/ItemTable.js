@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {Icon, PerkToggle,ComboItem} from '.';
+import {Icon, PerkToggle, ComboItem} from '.';
 import classNames from 'classnames';
 import itemData from '../utils/item_data';
 
@@ -13,7 +13,7 @@ class ItemTable extends Component {
 
 	render() {
 		return (
-			<table className={classNames('item-table', {'show-perks': this.props.showPerks},this.props.className)}>
+			<table className={classNames('item-table', {'show-perks': this.props.showPerks}, this.props.className)}>
 				{/* <thead>
 					<tr>
 						<th />
@@ -45,9 +45,7 @@ class ItemTable extends Component {
 
 									return (
 										<td
-											className={classNames(
-												'table-item combo-cell', 
-												comboID, {
+											className={classNames('table-item combo-cell', comboID, {
 												possible    : comboIndex !== -1,
 												'is-repeat' : isRepeat,
 											})}
@@ -56,10 +54,10 @@ class ItemTable extends Component {
 											key={`combo-${comboID}`}
 										>
 											{!isRepeat && (
-												<div className={classNames("combo-container flex flex-row align-center")}>
+												<div className={classNames('combo-container flex flex-row align-center')}>
 													{/* <Icon item_id={comboID} /> */}
 													<ComboItem item1={itemA} item2={itemB} />
-													<span className="perk">{item.perk}</span>
+													<span className='perk'>{item.perk}</span>
 												</div>
 											)}
 										</td>
@@ -69,9 +67,8 @@ class ItemTable extends Component {
 						);
 					})}
 					<tr className='head-row'>
-		
-					<th className="perk-toggle-cell">
-							<PerkToggle/>
+						<th className='perk-toggle-cell'>
+							<PerkToggle />
 						</th>
 						{this.props.base.map(item => {
 							return (
@@ -91,7 +88,7 @@ const mapStateToProps = state => ({
 	base      : state.items.base,
 	inventory : state.items.inventory,
 	unique    : state.items.unique,
-	showPerks    : state.items.showPerks,
+	showPerks : state.items.showPerks,
 });
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
 
