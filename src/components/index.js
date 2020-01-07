@@ -10,3 +10,4 @@ export {default as Combos} from './Combos';
 export {default as ComboItem} from './ComboItem';
 export {default as BaseItemSelectionPanel} from './BaseItemSelectionPanel';
 export {default as PerkToggle} from './PerkToggle';
+export {default as Footer} from './Footer';

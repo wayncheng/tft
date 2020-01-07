@@ -12,8 +12,8 @@ class BaseItemSelectionPanel extends Component {
 	render() {
 		return (
 			
-			<section className={classNames('base-select-panel items-row items-container', this.props.className)}>
-				<div className="container mx-auto max-w-3xl flex flex-row justify-center align-center">
+			<section className={classNames('base-select-panel items-row', this.props.className)}>
+				<div className="items-container container mx-auto max-w-3xl flex flex-row justify-center align-center">
 
 			{this.props.base.map((baseItem, index) => {
 				return (

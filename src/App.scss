@@ -32,27 +32,37 @@ body {
 	min-height: inherit;
 	height: 100%;
 }
-.big-img-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	// max-width: 2000px;
-	width: 100%;
-	height: initial;
-	max-height: 60vh;
-	img {
-		max-height: inherit;
-		// max-height: 90vh;
-		height: 100%;
-		// height: inherit;
-		// height: initial;
-		// width: 100%;
-		width: initial;
-	}
-}
 
 .flex-kids { 
 	> * {
 		flex: 1;
+	}
+}
+
+.sec-title {
+	position: absolute;
+	top: .5rem;
+	right: .5rem;
+}
+
+.eyebrow {
+	font-size: .75rem;
+	text-transform: uppercase;
+	color: $fg-light-disabled;
+	font-weight: 600;
+	letter-spacing: .15em;
+	word-spacing: .15em;
+}
+
+.footer {
+	a {
+		color: $fg-light-secondary;
+		text-decoration: none;
+		font-size: .9rem;
+		
+		&:hover,&:focus {
+			color: $fg-light-primary;
+			text-decoration: underline;
+		}
 	}
 }

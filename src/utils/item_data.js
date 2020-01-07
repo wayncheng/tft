@@ -1,5 +1,5 @@
 module.exports = {
-	// Base Item --------------------------------------
+	// Base Items --------------------------------------
 	belt            : {
 		name   : "Giant's Belt",
 		perk   : '+200 Base Health',
@@ -148,13 +148,13 @@ module.exports = {
 	// Combos -----------------------------------------
 	belt_belt       : {
 		id        : 'warmogsarmor',
-		perk      : 'Regenerate 6% missing HP per sec',
+		perk      : 'Regen 6% missing HP/sec',
 		perk_full : 'Wearer regenerates 6% of missing HP per second',
 	},
 	belt_bow        : {
 		id        : 'titanichydra',
-		perk      : 'attack deals 3% max HP to target and adjacent enemies behind',
-		perk_full : 'attack deals 3% max HP to target and adjacent enemies behind them',
+		perk      : 'Atk deals 3% max HP to target & adjacent enemies behind',
+		perk_full : 'Attack deals 3% max HP to target and adjacent enemies behind them',
 	},
 	belt_cloak      : {
 		id        : 'zephyr',
@@ -163,12 +163,12 @@ module.exports = {
 	},
 	belt_glove      : {
 		id        : 'trapclaw',
-		perk      : 'Start w/ spell shield, enemy breaker stunned for 4s',
+		perk      : 'Start w/ spell shield, stuns breaker for 4s',
 		perk_full : 'Wearer starts combat with spell shield, stuns enemy who breaks it for 4 seconds',
 	},
 	belt_rod        : {
 		id        : 'morellonomicon',
-		perk      : "Spells deal burn dmg of 20% of enemy's max HP over 10s, prevents healing",
+		perk      : "Spells burn for 20% of max HP over 10s, prevents healing",
 		perk_full : "Spells deal burn damage equal to 20% of enemy's max HP over 10 seconds and prevents healing",
 	},
 	belt_spatula    : {
@@ -178,17 +178,17 @@ module.exports = {
 	},
 	belt_sword      : {
 		id        : 'zekesherald',
-		perk      : 'At start, +20% Attack Speed for allies 2 spaces to L&R',
+		perk      : 'At start, +20% Atk Speed for allies 2 spaces L&R',
 		perk_full : 'At start, allies 2 spaces to left and right gain +20% attack speed',
 	},
 	belt_tear       : {
 		id        : 'redemption',
-		perk      : 'At 30% health, heal nearby allies for 1200 HP',
+		perk      : 'At 30% HP, heal nearby allies for 1200 HP',
 		perk_full : 'At 30% health, heal all nearby allies for 1200 HP',
 	},
 	belt_vest       : {
 		id        : 'redbuff',
-		perk      : 'Attacks burn for 20% max HP over 10s & disable healing',
+		perk      : 'Atks burn for 20% max HP over 10s & disable healing',
 		perk_full : 'Attacks burn for 20% of max HP over 10 seconds and disable healing',
 	},
 	bow_bow         : {
@@ -198,17 +198,18 @@ module.exports = {
 	},
 	bow_cloak       : {
 		id        : 'runaanshurricane',
-		perk      : 'Attacks extra enemy & deals 60% dmg (on hit effects)',
+		perk      : 'Atks extra enemy & deals 60% dmg (on hit effects)',
 		perk_full : 'Attacks one additional enemy and deals 60% damage (applies on hit effects)',
 	},
 	bow_glove       : {
 		id        : 'repeatingcrossbow',
-		perk      : 'On death, pass item to ally. +30% crit chance & attack speed (stacks)',
+		perk      : 'On death, pass item to ally. +30% crit chance & atk speed (stacks)',
 		perk_full : 'On death, item passes to an ally. gain additional 30% crit chance and attack speed (stacks)',
 	},
 	bow_rod         : {
 		id        : 'guinsoosrageblade',
-		perk      : '+5% attack speed on attacks (stacks infinitely)',
+		perk      : 'Atks give +5% atk speed (stacks infinitely)',
+		// perk      : '+5% atk speed on attacks (stacks infinitely)',
 		perk_full : 'Attacks give 5% attack speed. stacks infinitely',
 	},
 	bow_spatula     : {
@@ -218,12 +219,13 @@ module.exports = {
 	},
 	bow_sword       : {
 		id        : 'giantslayer',
-		perk      : "Attacks deal +9% enemy's current HP as physical dmg",
+		// perk      : "Atks deal +9% enemy's HP as physical dmg",
+		perk      : "Atks deal +9% enemy's current HP as physical dmg",
 		perk_full : "Attacks deal additional 9% of enemy's current HP as physical damage",
 	},
 	bow_tear        : {
 		id        : 'statikkshiv',
-		perk      : 'Every 3rd attack, deal 100 dmg to 2 extra targets',
+		perk      : 'Every 3rd atk, 100 dmg to 2 extra targets',
 		perk_full : 'Every 3rd attack deals 100 damage to 2 additional targets',
 	},
 	bow_vest        : {
@@ -238,8 +240,9 @@ module.exports = {
 	},
 	cloak_glove     : {
 		id        : 'quicksilver',
-		perk      : 'Prevents next CC effect (refreshes every 3s)',
-		perk_full : 'Prevents next cc effect to wearer. refreshes every 3 seconds',
+		// perk      : 'Prevents next CC effect (refresh every 3s)',
+		perk      : 'Immune to CC',
+		perk_full : 'Prevents next Crowd Control effect to wearer. Refreshes every 3 seconds',
 	},
 	cloak_rod       : {
 		id        : 'ionicspark',
@@ -254,22 +257,23 @@ module.exports = {
 	},
 	cloak_sword     : {
 		id        : 'bloodthirster',
-		perk      : 'Attacks heal for 40% of dmg',
+		perk      : 'Atks heal for 40% of dmg',
 		perk_full : 'Attacks heal for 40% of damage',
 	},
 	cloak_tear      : {
 		id        : 'hush',
-		perk      : 'Attacks have 25% chance to mana lock for 4s',
+		perk      : 'Atks have 25% chance to mana lock for 4s',
 		perk_full : 'Attacks have 25% chance to mana lock for 4 seconds',
 	},
 	cloak_vest      : {
 		id        : 'swordbreaker',
-		perk      : 'Attacks have 25% chance to disarm for 3s',
+		perk      : 'Atks have 25% chance to disarm for 3s',
 		perk_full : 'Attacks have 25% chance to disarm for 3 seconds',
 	},
 	glove_glove     : {
 		id        : 'thiefsgloves',
-		perk      : 'At start, gain 2 temp items (takes all slots)',
+		// perk      : 'At start, gain 2 temp items (takes all slots)',
+		perk      : 'Start w/ 2 temp items (takes all slots)',
 		perk_full : 'Takes all item slots. on round start, gain 2 temporary items',
 	},
 	glove_rod       : {
@@ -289,12 +293,13 @@ module.exports = {
 	},
 	glove_tear      : {
 		id        : 'handofjustice',
-		perk      : 'On start, +50% dmg or +50 life on hit until round end',
+		// perk      : 'On start, +50% dmg or +50 life on hit until round end',
+		perk      : 'Start w/ +50% dmg or +50 life on hit for round',
 		perk_full : 'On round start, gain +50% damage or +50 life on hit until end of round',
 	},
 	glove_vest      : {
 		id        : 'iceborngauntlet',
-		perk      : 'Dodges create expandable 25% attack speed slow zone',
+		perk      : 'Dodges create expandable 25% atk speed slow zone',
 		perk_full : 'On dodge, create an expandable 25% attack speed slow zone',
 	},
 	rod_rod         : {
@@ -319,7 +324,7 @@ module.exports = {
 	},
 	rod_vest        : {
 		id        : 'locketoftheironsolari',
-		perk      : 'At start, 300 shield for 8s to wearer and allies 2 spaces L&R',
+		perk      : 'Start w/ 300 shield for 8s to wearer and allies 2 spaces L&R',
 		perk_full : 'At start of combat, wearer and allies 2 spaces to left and right get 300 shield for 8 seconds',
 	},
 	spatula_spatula : {
@@ -344,17 +349,17 @@ module.exports = {
 	},
 	sword_sword     : {
 		id        : 'deathblade',
-		perk      : 'On kill/assist, +15 attack (stacks infinitely)',
+		perk      : 'On kill/assist, +15 atk (stacks infinitely)',
 		perk_full : 'On kill or assist, gain +15 attack, stacks infinitely',
 	},
 	sword_tear      : {
 		id        : 'spearofshojin',
-		perk      : 'After cast, +18% max mana per attack',
+		perk      : 'After cast, +18% max mana per atk',
 		perk_full : 'After casting, gain 18% of max mana per attack',
 	},
 	sword_vest      : {
 		id        : 'guardianangel',
-		perk      : 'Revives with 400HP after 2s',
+		perk      : 'Revives w/ 400HP after 2s',
 		perk_full : 'Revives champ with 400 HP after 2 seconds',
 	},
 	tear_tear       : {
@@ -364,12 +369,12 @@ module.exports = {
 	},
 	tear_vest       : {
 		id        : 'frozenheart',
-		perk      : '-25% attack speed for 1s to adjacent enemies',
+		perk      : '-25% atk speed for 1s to adjacent enemies',
 		perk_full : 'Adjacent enemies lose 25% attack speed for 1 second',
 	},
 	vest_vest       : {
 		id        : 'thornmail',
-		perk      : 'Reflect 100% mitigated dmg taken from attacks as magic dmg',
+		perk      : 'Reflect 100% mitigated dmg taken from atks as magic dmg',
 		perk_full : 'Reflect 100% of mitigated damage taken from attacks as magic damage',
 	},
 };

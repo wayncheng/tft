@@ -3,59 +3,75 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 // import itemData from '../utils/item_data';
-import {addItem,removeItem} from '../modules/items';
+import {addItem, removeItem} from '../modules/items';
 import {Icon} from '../components';
 import './Item.scss';
 
 class Item extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isIngredient : false,
+		};
+	}
 
 	handleClick = event => {
 		event.preventDefault();
-		const{item_id,action} = this.props;
+		const {item_id, action} = this.props;
 		// console.log('item_id:',item_id);
-		if (action === 'add'){
+		if (action === 'add') {
 			// console.log(`add ${item_id}`)
-			this.props.addItem(item_id)
-		} else if (action === 'remove'){
+			this.props.addItem(item_id);
+		} else if (action === 'remove') {
 			// console.log(`remove ${item_id}`)
-			this.props.removeItem(item_id)
+			this.props.removeItem(item_id);
 		}
-	}
+	};
+
+	componentDidUpdate = prevProps => {
+		if (prevProps.className !== this.props.className) {
+			this.setState({
+				isIngredient : this.props.ingredient,
+			});
+		}
+	};
 
 	render() {
-		const {item_id} = this.props;
-		// const item = itemData[item_id];
-		// const full_id = partner ? item.combos[partner] : item.id;
+		const {item_id, inv_index, ingredients} = this.props;
+		const isIngredient = inv_index === ingredients[0] || inv_index === ingredients[1];
+
 		return (
-						<a href='#!' className={classNames("item",this.props.className)} data-item-id={item_id} onClick={this.handleClick}>
-							{/* <img src={`../static/img/${item_id}.png`} alt={item.name}/> */}
-							<Icon item_id={item_id}/>
-							{/* <img src={`https://blitz-cdn.blitz.gg/blitz/tft/items/${item.id}.png`} alt={item.name || item.id}/> */}
-						</a>
-			// <React.Fragment>
-			// 		{item_id && (
-			// 			<a href='#!' className="item" item_id={item_id} onClick={this.handleClick}>
-			// 				{/* <img src={`../static/img/${item_id}.png`} alt={item.name}/> */}
-			// 				<img src={`https://blitz-cdn.blitz.gg/blitz/tft/items/${item_id}.png`} alt={item.name}/>
-			// 			</a>
-			// 		)}
-			// </React.Fragment>
+			<a
+				href='#!'
+				className={classNames('item', this.props.className, {
+					ingredient : isIngredient,
+				})}
+				data-ingredient={this.props.ingredient}
+				data-item-id={item_id}
+				onClick={this.handleClick}
+			>
+				<Icon item_id={item_id} />
+			</a>
 		);
 	}
 }
 
 const mapStateToProps = state => ({
-
+	ingredients : state.items.ingredients,
 });
-const mapDispatchToProps = dispatch => bindActionCreators({
-	addItem,
-	removeItem,
-}, dispatch);
+const mapDispatchToProps = dispatch =>
+	bindActionCreators(
+		{
+			addItem,
+			removeItem,
+		},
+		dispatch,
+	);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Item);
 
 Item.defaultProps = {
 	item_id : '',
-	action: 'add',
-	partner: '',
+	action  : 'add',
+	partner : '',
 };

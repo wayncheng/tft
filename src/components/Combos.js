@@ -23,6 +23,7 @@ class Combos extends Component {
 		// console.log('combos:',combos);
 		return (
 				<section className={classNames("combos items-row", this.props.className)}>
+					<h3 className="sec-title eyebrow">Possible Combos</h3>
 					{unique.length > 0 && (
 						<div className='items-container flex-row justify-center m-auto'>
 							{unique.map((pair, index) => {

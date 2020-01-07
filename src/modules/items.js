@@ -3,6 +3,8 @@ export const SET_COMBO_INVENTORY = 'items/SET_COMBO_INVENTORY';
 export const SET_COMBOS = 'items/SET_COMBOS';
 export const SET_UNIQUE = 'items/SET_UNIQUE';
 export const TOGGLE_PERKS = 'items/TOGGLE_PERKS';
+export const MOUSE_ENTER_COMBO = 'items/MOUSE_ENTER_COMBO';
+export const MOUSE_LEAVE_COMBO = 'items/MOUSE_LEAVE_COMBO';
 
 const initialState = {
 	// base      : [ 'sword', 'vest', 'belt', 'rod', 'cloak', 'bow', 'spatula', 'tear', 'glove' ],
@@ -15,6 +17,10 @@ const initialState = {
 	// inventory : ['sword','vest'],
 	// combos    : ['sword_vest'],
 	// unique    : ['sword_vest'],
+	ingredients: [-1,-1],
+	// ingredient1: -1,
+	// ingredient2: -1,
+	hoveringCombo: false,
 };
 
 export default (state = initialState, action) => {
@@ -43,6 +49,22 @@ export default (state = initialState, action) => {
 			return {
 				...state,
 				showPerks : !state.showPerks,
+			};
+		case MOUSE_ENTER_COMBO:
+			return {
+				...state,
+				hoveringCombo: true,
+				ingredients : action.ingredients,
+				// ingredient1 : action.ingredient1,
+				// ingredient2 : action.ingredient2,
+			};
+		case MOUSE_LEAVE_COMBO:
+			return {
+				...state,
+				hoveringCombo: false,
+				ingredients : [-1,-1],
+				// ingredient1 : -1,
+				// ingredient2 : -1,
 			};
 		default:
 			return state;
@@ -145,4 +167,32 @@ export const setInventory = inventory => dispatch => {
 };
 export const togglePerks = () => dispatch => {
 	dispatch({type: TOGGLE_PERKS});
+};
+
+
+export const mouseEnterCombo = (item1, item2) => (dispatch,getState) => {
+	// Find where the ingredients (base items) are located in the inventory
+	const {inventory} = getState().items;
+	let pos1 = inventory.indexOf(item1);
+	let pos2 = inventory.indexOf(item2);
+	// console.log(`${pos1} + ${pos2}`)
+	if (pos2 === pos1){
+		// pos2 = inventory.lastIndexOf(item2)
+		pos2 = pos1+1;
+	}
+	
+// Toggle hover state flag, Set ingredients location
+	dispatch({
+		type  : MOUSE_ENTER_COMBO,
+		// hoveringCombo: true,
+		ingredients: [pos1,pos2],
+		// ingredient1: pos1,
+		// ingredient2: pos2,
+	});
+};
+export const mouseLeaveCombo = () => (dispatch) => {
+	// Reset ingredients, remove hover flag
+	dispatch({
+		type  : MOUSE_LEAVE_COMBO,
+	});
 };
