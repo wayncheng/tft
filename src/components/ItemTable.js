@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {
-	Icon, 
-	PerkToggle, 
+	// Icon, 
+	// PerkToggle, 
 	ComboItem,
 	Item,
 } from '.';
 import classNames from 'classnames';
 import itemData from '../utils/item_data';
+import './ItemTable.scss';
 
 class ItemTable extends Component {
 	constructor(props) {

@@ -12,8 +12,9 @@ import {
 	Footer,
 } from '../components';
 // import itemData from '../utils/item_data';
-import itemTable from '../static/img/item-table.png';
+// import itemTable from '../static/img/item-table.png';
 import {addItem, removeItem, processKey} from '../modules/items';
+import constants from '../utils/constants';
 // const items = [ 'sword', 'vest', 'belt', 'rod', 'cloak', 'bow', 'spatula', 'tear', 'glove' ];
 class HomePage extends Component {
 	handleKeyEvent = (key, event) => {
@@ -27,15 +28,15 @@ class HomePage extends Component {
 				{/* <Helmet title='TFT Items' /> */}
 
 				<main className='flex-1 flex flex-col justify-stretch'>
-					<Combos className='bg-gray-800' />
-					<Inventory className='bg-gray-700' />
 					<BaseItemSelectionPanel className='bg-gray-600' />
+					<Inventory className='bg-gray-700' />
+					<Combos className='bg-gray-800' />
 					{/* <section className='section table-section w-full flex-col justify-center align-center flex-1 m-auto bg-gray-900'>
 						<ItemTable />
 					</section> */}
 				</main>
 				<aside className='big-img-container bg-gray-500'>
-						<img className='cheat-sheet' src={itemTable} alt='item cheat sheet' />
+						<img className='cheat-sheet' src={constants.item_cheatsheet} alt='item cheat sheet' />
 					{/* <a href="https://progameguides.com/wp-content/uploads/2019/06/tft-full-item-cheat-sheet-set2-9-24b.png" target="_blank" rel="noopener noreferrer">
 					</a> */}
 				</aside>

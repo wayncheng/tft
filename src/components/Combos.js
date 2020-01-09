@@ -3,10 +3,13 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 // import itemData from '../utils/item_data';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import './Combos.scss';
 import {
-	// Item, 
+	// Item,
 	ComboItem,
+	ComboSpotlight,
+	DetailedComboItem,
 } from '../components';
 
 class Combos extends Component {
@@ -17,26 +20,31 @@ class Combos extends Component {
 
 	render() {
 		const {
-			// combos, 
+			// combos,
 			unique,
 		} = this.props;
 		// console.log('combos:',combos);
 		return (
-				<section className={classNames("combos items-row", this.props.className)}>
-					<h3 className="sec-title eyebrow">Possible Combos</h3>
-					{unique.length > 0 && (
-						<div className='items-container flex-row justify-center m-auto'>
-							{unique.map((pair, index) => {
-								const split = pair.split('_');
+			<section className={classNames('combos items-sec relative', this.props.className)}>
+				<h3 className="sec-title eyebrow">Possible Combos</h3>
+				{/* <h3 className='sec-title icon-title text-2xl'>
+					<FontAwesomeIcon icon='dice-six' />
+				</h3> */}
 
-								return <ComboItem className="" item1={split[0]} item2={split[1]} key={'unique-' + index}/>
-								// return <Item item_id={pair} action='none' key={'unique-' + index} />;
-								// return <Item item_id={pair} action='none' key={'unique-' + index} />;
-							})}
-						</div>
-					)}
-				</section>
+				{unique.length > 0 && (
+					// <div className='col-container items-container flex-row justify-center m-auto'>
+					<div className='row-container items-container flex-row justify-center m-auto'>
+						{unique.map((pair, index) => {
+							const split = pair.split('_');
 
+							// return <ComboItem className='' item1={split[0]} item2={split[1]} key={'unique-' + index} />;
+							return <DetailedComboItem className='' item1={split[0]} item2={split[1]} key={'unique-' + index} />;
+						})}
+					</div>
+				)}
+
+				<ComboSpotlight/>
+			</section>
 		);
 	}
 }

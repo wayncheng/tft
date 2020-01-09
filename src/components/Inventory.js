@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 // import itemData from '../utils/item_data';
 import classNames from 'classnames';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 // import './Inventory.scss';
 import {Item} from '../components';
 
@@ -13,12 +14,12 @@ class Inventory extends Component {
 	}
 
 	render() {
-		const {inventory, ingredient1, ingredient2, ingredients} = this.props;
+		const {inventory} = this.props;
 		// console.log('inventory --->',inventory);
 		return (
 			<section
 				className={classNames(
-					'inventory items-row',
+					'inventory items-sec',
 					'relative flex flex-row flex-wrap justify-center',
 					this.props.className,
 					{
@@ -27,6 +28,10 @@ class Inventory extends Component {
 				)}
 			>
 				<h3 className='sec-title eyebrow'>Inventory</h3>
+				{/* <h3 className='sec-title icon-title text-3xl'>
+					<FontAwesomeIcon icon="dice"/>
+				</h3> */}
+
 				<div
 					className={classNames('items-container flex-row justify-center m-auto flex-wrap', {
 						'combo-hovered' : this.props.hoveringCombo,

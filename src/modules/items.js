@@ -1,3 +1,5 @@
+// import undoable, { distinctState } from 'redux-undo'
+
 export const SET_INVENTORY = 'items/SET_INVENTORY';
 export const SET_COMBO_INVENTORY = 'items/SET_COMBO_INVENTORY';
 export const SET_COMBOS = 'items/SET_COMBOS';
@@ -5,6 +7,8 @@ export const SET_UNIQUE = 'items/SET_UNIQUE';
 export const TOGGLE_PERKS = 'items/TOGGLE_PERKS';
 export const MOUSE_ENTER_COMBO = 'items/MOUSE_ENTER_COMBO';
 export const MOUSE_LEAVE_COMBO = 'items/MOUSE_LEAVE_COMBO';
+export const SPOTLIGHT_COMBO = 'items/SPOTLIGHT_COMBO';
+export const CLEAR_SPOTLIGHT = 'items/CLEAR_SPOTLIGHT';
 
 const initialState = {
 	// base      : [ 'sword', 'vest', 'belt', 'rod', 'cloak', 'bow', 'spatula', 'tear', 'glove' ],
@@ -14,16 +18,16 @@ const initialState = {
 	combos         : [],
 	unique         : [],
 	showPerks      : false,
+	ingredients    : [ -1, -1 ],
+	hoveringCombo  : false,
+	comboSpotlight: '',
+	// comboSpotlight : 'sword_vest',
 	// inventory : ['sword','vest'],
 	// combos    : ['sword_vest'],
 	// unique    : ['sword_vest'],
-	ingredients: [-1,-1],
-	// ingredient1: -1,
-	// ingredient2: -1,
-	hoveringCombo: false,
 };
 
-export default (state = initialState, action) => {
+const items = (state = initialState, action) => {
 	switch (action.type) {
 		case SET_INVENTORY:
 			return {
@@ -50,19 +54,31 @@ export default (state = initialState, action) => {
 				...state,
 				showPerks : !state.showPerks,
 			};
+
+		case SPOTLIGHT_COMBO:
+			return {
+				...state,
+				comboSpotlight : action.combo_id,
+			};
+		case CLEAR_SPOTLIGHT:
+			return {
+				...state,
+				comboSpotlight : '',
+			};
+
 		case MOUSE_ENTER_COMBO:
 			return {
 				...state,
-				hoveringCombo: true,
-				ingredients : action.ingredients,
+				hoveringCombo : true,
+				ingredients   : action.ingredients,
 				// ingredient1 : action.ingredient1,
 				// ingredient2 : action.ingredient2,
 			};
 		case MOUSE_LEAVE_COMBO:
 			return {
 				...state,
-				hoveringCombo: false,
-				ingredients : [-1,-1],
+				hoveringCombo : false,
+				ingredients   : [ -1, -1 ],
 				// ingredient1 : -1,
 				// ingredient2 : -1,
 			};
@@ -71,8 +87,18 @@ export default (state = initialState, action) => {
 	}
 };
 
-// LAYER CONTROLS ========================================
+export default items;
+// Use undo, redo ...................
+// const undoableItems = undoable(items, {
+//   // filter: distinctState()
+// })
+// export default undoableItems;
 
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+
+// LAYER CONTROLS ========================================
 export const findCombos = inventory => (dispatch, getState) => {
 	// const {inventory} = getState().items;
 	const combos = [];
@@ -100,6 +126,7 @@ export const findCombos = inventory => (dispatch, getState) => {
 		}
 	}
 
+	console.log('combos:', combos);
 	dispatch({
 		type   : SET_COMBOS,
 		combos,
@@ -169,30 +196,39 @@ export const togglePerks = () => dispatch => {
 	dispatch({type: TOGGLE_PERKS});
 };
 
+export const spotlightCombo = combo_id => dispatch => {
+	dispatch({
+		type     : SPOTLIGHT_COMBO,
+		combo_id,
+	});
+};
+export const clearSpotlight = () => dispatch => {
+	dispatch({type: CLEAR_SPOTLIGHT});
+};
 
-export const mouseEnterCombo = (item1, item2) => (dispatch,getState) => {
+export const mouseEnterCombo = (item1, item2) => (dispatch, getState) => {
 	// Find where the ingredients (base items) are located in the inventory
 	const {inventory} = getState().items;
 	let pos1 = inventory.indexOf(item1);
 	let pos2 = inventory.indexOf(item2);
 	// console.log(`${pos1} + ${pos2}`)
-	if (pos2 === pos1){
+	if (pos2 === pos1) {
 		// pos2 = inventory.lastIndexOf(item2)
-		pos2 = pos1+1;
+		pos2 = pos1 + 1;
 	}
-	
-// Toggle hover state flag, Set ingredients location
+
+	// Toggle hover state flag, Set ingredients location
 	dispatch({
-		type  : MOUSE_ENTER_COMBO,
+		type        : MOUSE_ENTER_COMBO,
 		// hoveringCombo: true,
-		ingredients: [pos1,pos2],
+		ingredients : [ pos1, pos2 ],
 		// ingredient1: pos1,
 		// ingredient2: pos2,
 	});
 };
-export const mouseLeaveCombo = () => (dispatch) => {
+export const mouseLeaveCombo = () => dispatch => {
 	// Reset ingredients, remove hover flag
 	dispatch({
-		type  : MOUSE_LEAVE_COMBO,
+		type : MOUSE_LEAVE_COMBO,
 	});
 };
