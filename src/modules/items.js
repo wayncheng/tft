@@ -25,6 +25,7 @@ const initialState = {
 	// inventory : ['sword','vest'],
 	// combos    : ['sword_vest'],
 	// unique    : ['sword_vest'],
+	// inventory           : [ 'belt', 'bow', 'cloak', 'glove', 'rod', 'spatula', 'sword', 'tear', 'vest', 'belt', 'bow', 'cloak', 'glove', 'rod', 'spatula', 'sword', 'tear', 'vest' ],
 };
 
 const items = (state = initialState, action) => {

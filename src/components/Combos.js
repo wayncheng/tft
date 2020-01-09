@@ -33,13 +33,18 @@ class Combos extends Component {
 
 				{unique.length > 0 && (
 					// <div className='col-container items-container flex-row justify-center m-auto'>
-					<div className='row-container items-container flex-row justify-center m-auto'>
+					<div className='row-container items-container'>
 						{unique.map((pair, index) => {
 							const split = pair.split('_');
 
 							// return <ComboItem className='' item1={split[0]} item2={split[1]} key={'unique-' + index} />;
 							return <DetailedComboItem className='' item1={split[0]} item2={split[1]} key={'unique-' + index} />;
 						})}
+
+						{/* Blank elements to align last row of grid */}
+						<div className="detailed-container"></div>
+						<div className="detailed-container"></div>
+						<div className="detailed-container"></div>
 					</div>
 				)}
 

@@ -30,13 +30,13 @@ class DetailedComboItem extends Component {
 	};
 	handleMouseEnter = event => {
 		event.preventDefault();
-		const {item1,item2} = this.props;
-		this.props.mouseEnterCombo(item1,item2)
-	}
+		const {item1, item2} = this.props;
+		this.props.mouseEnterCombo(item1, item2);
+	};
 	handleMouseLeave = event => {
 		event.preventDefault();
-		this.props.mouseLeaveCombo()
-	}
+		this.props.mouseLeaveCombo();
+	};
 
 	// handleClick = event => {
 	// 	event.preventDefault();
@@ -63,32 +63,34 @@ class DetailedComboItem extends Component {
 		const combo = itemData[combo_id];
 
 		return (
-			<div className='detailed-combo'>
-				<a
-					href='#!'
-					className={classNames('item', 'combo-item', 'flex flex-col', this.props.className)}
-					item1={item1}
-					item2={item2}
-					item_id={combo_id}
-					onClick={this.handleClick}
-					title={combo.name}
-					// onMouseEnter={this.handleMouseEnter}
-					// onMouseLeave={this.handleMouseLeave}
-				>
-					<Icon item_id={combo_id} />
-				</a>
-				<div className='details'>
-					<div className='ingredients'>
-						<Icon className='tiny' item_id={item1} />
-						<Icon className='tiny' item_id={item2} />
-					</div>
-					{/* <div className='detail-body'> */}
+			<div className='detailed-container'>
+				<div className='detailed-combo'>
+					<a
+						href='#!'
+						className={classNames('item', 'combo-item', 'flex flex-col', this.props.className)}
+						item1={item1}
+						item2={item2}
+						item_id={combo_id}
+						onClick={this.handleClick}
+						title={combo.name}
+						// onMouseEnter={this.handleMouseEnter}
+						// onMouseLeave={this.handleMouseLeave}
+					>
+						<Icon item_id={combo_id} />
+					</a>
+					<div className='details'>
+						<div className='ingredients'>
+							<Icon className='tiny' item_id={item1} />
+							<Icon className='tiny' item_id={item2} />
+						</div>
+						{/* <div className='detail-body'> */}
 						{/* <p className='detail-text'>{combo.perk_full}</p> */}
 						<p className='detail-text'>{combo.perk}</p>
-					{/* </div> */}
+						{/* </div> */}
 
-					{/* <Emoji item={item1}/>
+						{/* <Emoji item={item1}/>
 					<Emoji item={item2}/> */}
+					</div>
 				</div>
 			</div>
 		);
