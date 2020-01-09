@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/tft/static/css/main.a15447cc.chunk.css"
   },
   {
-    "revision": "b9a21bfab660a8427060cbb43fe4c592",
+    "revision": "37b52b717ef1872695ba6a688b70a1b7",
     "url": "/tft/index.html"
   }
 ];
