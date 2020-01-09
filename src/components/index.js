@@ -1,12 +1,20 @@
 //============================================================
 // Components Index
 //============================================================
-// export {default as ___________} from './___________';
-export {default as Icon} from './Icon';
-export {default as Item} from './Item';
-export {default as ItemTable} from './ItemTable';
+// Top Level
 export {default as Inventory} from './Inventory';
 export {default as Combos} from './Combos';
-export {default as ComboItem} from './ComboItem';
 export {default as BaseItemSelectionPanel} from './BaseItemSelectionPanel';
+export {default as Footer} from './Footer';
+
+export {default as Icon} from './Icon';
+export {default as Item} from './Item';
+export {default as ComboItem} from './ComboItem';
+export {default as DetailedComboItem} from './DetailedComboItem';
+export {default as ComboSpotlight} from './ComboSpotlight';
+
+// Table
+export {default as ItemTable} from './ItemTable';
 export {default as PerkToggle} from './PerkToggle';
+// Experimental
+export {default as Emoji} from './Emoji';

@@ -16,7 +16,7 @@ import {
 	// Emoji,
 } from '.';
 
-class ComboItem extends Component {
+class DetailedComboItem extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -28,15 +28,15 @@ class ComboItem extends Component {
 		const {item1, item2} = this.props;
 		this.props.makeCombo(item1, item2);
 	};
-	// handleMouseEnter = event => {
-	// 	event.preventDefault();
-	// 	const {item1,item2} = this.props;
-	// 	this.props.mouseEnterCombo(item1,item2)
-	// }
-	// handleMouseLeave = event => {
-	// 	event.preventDefault();
-	// 	this.props.mouseLeaveCombo()
-	// }
+	handleMouseEnter = event => {
+		event.preventDefault();
+		const {item1,item2} = this.props;
+		this.props.mouseEnterCombo(item1,item2)
+	}
+	handleMouseLeave = event => {
+		event.preventDefault();
+		this.props.mouseLeaveCombo()
+	}
 
 	// handleClick = event => {
 	// 	event.preventDefault();
@@ -45,15 +45,15 @@ class ComboItem extends Component {
 	// 	console.log('combo_id:', combo_id);
 	// 	this.props.spotlightCombo(combo_id);
 	// };
-	handleMouseEnter = event => {
-		event.preventDefault();
-		// this.setState({tooltipActive: true})
-	};
-	handleMouseLeave = event => {
-		event.preventDefault();
-		// this.setState({tooltipActive: false})
-		// this.props.clearSpotlight();
-	};
+	// handleMouseEnter = event => {
+	// 	event.preventDefault();
+	// 	// this.setState({tooltipActive: true})
+	// };
+	// handleMouseLeave = event => {
+	// 	event.preventDefault();
+	// 	// this.setState({tooltipActive: false})
+	// 	// this.props.clearSpotlight();
+	// };
 
 	render() {
 		const sorted = [ this.props.item1, this.props.item2 ].sort();
@@ -63,30 +63,34 @@ class ComboItem extends Component {
 		const combo = itemData[combo_id];
 
 		return (
-			<a
-				href='#!'
-				className={classNames('item', 'combo-item', 'flex flex-col', this.props.className)}
-				item1={item1}
-				item2={item2}
-				item_id={combo_id}
-				onClick={this.handleClick}
-				onMouseEnter={this.handleMouseEnter}
-				onMouseLeave={this.handleMouseLeave}
-			>
-				<Icon item_id={combo_id} />
-				<div className='help-container'>
+			<div className='detailed-combo'>
+				<a
+					href='#!'
+					className={classNames('item', 'combo-item', 'flex flex-col', this.props.className)}
+					item1={item1}
+					item2={item2}
+					item_id={combo_id}
+					onClick={this.handleClick}
+					title={combo.name}
+					// onMouseEnter={this.handleMouseEnter}
+					// onMouseLeave={this.handleMouseLeave}
+				>
+					<Icon item_id={combo_id} />
+				</a>
+				<div className='details'>
+					<div className='ingredients'>
+						<Icon className='tiny' item_id={item1} />
+						<Icon className='tiny' item_id={item2} />
+					</div>
+					{/* <div className='detail-body'> */}
+						{/* <p className='detail-text'>{combo.perk_full}</p> */}
+						<p className='detail-text'>{combo.perk}</p>
+					{/* </div> */}
+
 					{/* <Emoji item={item1}/>
 					<Emoji item={item2}/> */}
-					<Icon className='tiny' item_id={item1} />
-					<Icon className='tiny' item_id={item2} />
 				</div>
-				{/* {this.state.tooltipActive && (
-					<div className='combo-tip tooltip'>
-						<Icon item_id={combo_id} />
-						<p>{combo.perk_full}</p>
-					</div>
-				)} */}
-			</a>
+			</div>
 		);
 	}
 }
@@ -106,9 +110,9 @@ const mapDispatchToProps = dispatch =>
 		dispatch,
 	);
 
-export default connect(mapStateToProps, mapDispatchToProps)(ComboItem);
+export default connect(mapStateToProps, mapDispatchToProps)(DetailedComboItem);
 
-ComboItem.defaultProps = {
+DetailedComboItem.defaultProps = {
 	item1 : '',
 	item2 : '',
 };
