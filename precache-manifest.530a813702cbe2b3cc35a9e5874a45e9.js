@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/tft/static/js/runtime~main.1d209993.js"
   },
   {
-    "revision": "edd52da8e936f8931fb1",
-    "url": "/tft/static/js/main.edd52da8.chunk.js"
+    "revision": "33aa2a6cf3d20967a989",
+    "url": "/tft/static/js/main.33aa2a6c.chunk.js"
   },
   {
     "revision": "f6514441d619fde9c27d",
     "url": "/tft/static/js/1.f6514441.chunk.js"
   },
   {
-    "revision": "edd52da8e936f8931fb1",
-    "url": "/tft/static/css/main.69ef186d.chunk.css"
+    "revision": "33aa2a6cf3d20967a989",
+    "url": "/tft/static/css/main.04829ba3.chunk.css"
   },
   {
-    "revision": "0dfb59d5297eac40ab52527048a3178f",
+    "revision": "8e56a41b5e3d4c4363b2d2c2329d2e8e",
     "url": "/tft/index.html"
   }
 ];
