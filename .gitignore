@@ -9,7 +9,7 @@
 /coverage
 
 # production
-# /build
+/build
 
 # env files
 .env
@@ -26,3 +26,6 @@ yarn-error.log*
 # misc
 .vscode
 .DS_Store
+
+# scratch files
+/scratch

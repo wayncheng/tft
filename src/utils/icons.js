@@ -3,6 +3,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 // import { } from '@fortawesome/free-brands-svg-icons'
 import { 
 	faInfoCircle,
+	faInfo,
 	faExternalLinkAlt,
 	faDice,
 	faDiceSix,
@@ -34,6 +35,7 @@ import {
 
 const buildIconLibrary = () => {
 	library.add(
+		faInfo,
 		faInfoCircle,
 		faExternalLinkAlt,
 		faDice,

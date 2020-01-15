@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {Item} from '.';
+import {Item, DetailToggle} from '.';
 import classNames from 'classnames';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 class BaseItemSelectionPanel extends Component {
 	constructor(props) {
@@ -13,22 +13,16 @@ class BaseItemSelectionPanel extends Component {
 
 	render() {
 		return (
-			<section className={classNames('base-select-panel items-sec', this.props.className)}>
-				<div className='items-container container mx-auto max-w-3xl flex flex-row justify-center align-center'>
+			<aside className='select-panel-container'>
+				<div className={classNames('select-panel items-sec', this.props.className)}>
+					{/* <DetailToggle className='' /> */}
 					{this.props.base.map((baseItem, index) => {
 						return (
-							// <div className="flex flex-1 justify-center align-center" key={'item-' + baseItem}>
-							// {/* <p className='keybind-label text-xl font-bold text-center leading-tight'>{index + 1}</p> */}
-							<Item className='' item_id={baseItem} key={'item-' + baseItem} />
-							// </div>
+							<Item className='sel-item' item_id={baseItem} key={'item-' + baseItem} />
 						);
 					})}
 				</div>
-
-				<h3 className='sec-title icon-title text-2xl'>
-					<FontAwesomeIcon icon='hand-pointer' />
-				</h3>
-			</section>
+			</aside>
 		);
 	}
 }

@@ -5,6 +5,7 @@ import classNames from 'classnames';
 // import itemData from '../utils/item_data';
 import {addItem, removeItem} from '../modules/items';
 import {Icon} from '../components';
+// import './ItemOld.scss';
 import './Item.scss';
 
 class Item extends Component {
@@ -43,7 +44,7 @@ class Item extends Component {
 		return (
 			<a
 				href='#!'
-				className={classNames('item', this.props.className, {
+				className={classNames('item sized', this.props.className, {
 					ingredient : isIngredient,
 				})}
 				data-ingredient={this.props.ingredient}

@@ -9,22 +9,25 @@ export const MOUSE_ENTER_COMBO = 'items/MOUSE_ENTER_COMBO';
 export const MOUSE_LEAVE_COMBO = 'items/MOUSE_LEAVE_COMBO';
 export const SPOTLIGHT_COMBO = 'items/SPOTLIGHT_COMBO';
 export const CLEAR_SPOTLIGHT = 'items/CLEAR_SPOTLIGHT';
+export const TOGGLE_COMBO_DETAILS = 'items/TOGGLE_COMBO_DETAILS';
 
 const initialState = {
 	// base      : [ 'sword', 'vest', 'belt', 'rod', 'cloak', 'bow', 'spatula', 'tear', 'glove' ],
-	base           : [ 'belt', 'bow', 'cloak', 'glove', 'rod', 'spatula', 'sword', 'tear', 'vest' ],
-	comboInventory : [],
-	inventory      : [],
-	combos         : [],
-	unique         : [],
-	showPerks      : false,
-	ingredients    : [ -1, -1 ],
-	hoveringCombo  : false,
-	comboSpotlight: '',
+	base             : [ 'belt', 'bow', 'cloak', 'glove', 'rod', 'spatula', 'sword', 'tear', 'vest' ],
+	comboInventory   : [],
+	inventory        : [],
+	combos           : [],
+	unique           : [],
+	showPerks        : false,
+	showComboDetails : true,
+	ingredients      : [ -1, -1 ],
+	hoveringCombo    : false,
+	comboSpotlight   : '',
 	// comboSpotlight : 'sword_vest',
 	// inventory : ['sword','vest'],
 	// combos    : ['sword_vest'],
 	// unique    : ['sword_vest'],
+	// inventory           : [ 'belt', 'bow', 'cloak', 'glove', 'rod', 'spatula', 'sword', 'tear', 'vest', 'belt', 'bow', 'cloak', 'glove', 'rod', 'spatula', 'sword', 'tear', 'vest' ],
 };
 
 const items = (state = initialState, action) => {
@@ -53,6 +56,11 @@ const items = (state = initialState, action) => {
 			return {
 				...state,
 				showPerks : !state.showPerks,
+			};
+		case TOGGLE_COMBO_DETAILS:
+			return {
+				...state,
+				showComboDetails : !state.showComboDetails,
 			};
 
 		case SPOTLIGHT_COMBO:
@@ -194,6 +202,9 @@ export const setInventory = inventory => dispatch => {
 };
 export const togglePerks = () => dispatch => {
 	dispatch({type: TOGGLE_PERKS});
+};
+export const toggleComboDetails = () => dispatch => {
+	dispatch({type: TOGGLE_COMBO_DETAILS});
 };
 
 export const spotlightCombo = combo_id => dispatch => {

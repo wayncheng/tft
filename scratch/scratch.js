@@ -47,3 +47,35 @@ console.log('# of unique pairs:',unqArr.length);
 console.log('unqArr:',unqArr);
 // console.log('# of combos:',combos.length);
 // console.log('combos:',combos);
+
+
+
+
+
+
+// a = ['a','b','c','d','e','f','g','h','i'];
+// a = ['a','b','c','d','e']
+// a = ['a','b','c']
+
+// /* 
+// [a,b,c,d] 
+
+// [
+// 	[ab,ac,ad]
+// 	[ba,bc,bd]
+// 	[ca,cb,cd]
+// 	[
+// 		[da,bc]
+// 		[db,ac]
+// 		[dc,ab]
+// 	]
+// ]
+// */
+
+
+// function rec (arr){
+// 	for (let i = 0; i < arr.length; i++) {
+// 		const ai = arr[i];
+		
+// 	}	
+// }

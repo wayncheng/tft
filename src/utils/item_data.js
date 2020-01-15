@@ -428,12 +428,12 @@ const items = {
 
 module.exports = items;
 
-const arr = [];
-for (let key in items) {
-	const item = items[key];
-	const {perk} = item;
-	const a = `${perk.length}\t${perk}`;
-	arr.push(a);
-}
-arr.sort();
-arr.forEach(x => console.log(x));
+// const arr = [];
+// for (let key in items) {
+// 	const item = items[key];
+// 	const {perk} = item;
+// 	const a = `${perk.length}\t${perk}`;
+// 	arr.push(a);
+// }
+// arr.sort();
+// arr.forEach(x => console.log(x));
