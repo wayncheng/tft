@@ -7,7 +7,7 @@ import constants from '../utils/constants';
 
 const Footer = props => {
 	return (
-		<footer className={classNames('footer row flex justify-center align-center p-6 bg-gray-700', props.className)}>
+		<footer className={classNames('footer row flex justify-center align-center bg-gray-700', props.className)}>
 			<div className='col'>
 				<ul>
 					<li>

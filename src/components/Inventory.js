@@ -20,20 +20,20 @@ class Inventory extends Component {
 			<section
 				className={classNames(
 					'inventory items-sec',
-					'relative flex flex-row flex-wrap justify-center',
+					'relative flex flex-row flex-wrap justify-center p-4',
 					this.props.className,
 					{
 						// 'empty-inv' : inventory.length === 0,
 					},
 				)}
 			>
-				<h3 className='sec-title eyebrow'>Inventory</h3>
+				{/* <h3 className='sec-title eyebrow'>Inventory</h3> */}
 				{/* <h3 className='sec-title icon-title text-3xl'>
 					<FontAwesomeIcon icon="dice"/>
 				</h3> */}
 
 				<div
-					className={classNames('items-container flex-row justify-center m-auto flex-wrap', {
+					className={classNames('items-container flex flex-row justify-center m-auto flex-wrap', {
 						'combo-hovered' : this.props.hoveringCombo,
 					})}
 				>
@@ -41,7 +41,8 @@ class Inventory extends Component {
 						return (
 							<Item
 								action='remove'
-								className={classNames('inv-item')}
+								// className={classNames('inv-item')}
+								className={'inv-item'}
 								inv_index={index}
 								item_id={item_id}
 								key={'inv-item-' + index}

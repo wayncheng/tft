@@ -65,7 +65,7 @@ class ComboItem extends Component {
 		return (
 			<a
 				href='#!'
-				className={classNames('item', 'combo-item', 'flex flex-col', this.props.className)}
+				className={classNames('item', 'combo-item', 'p-2 flex flex-col', this.props.className)}
 				item1={item1}
 				item2={item2}
 				item_id={combo_id}

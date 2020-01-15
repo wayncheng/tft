@@ -8,7 +8,8 @@ const Icon = props => {
 	return (
 		<img 
 			{...props}	
-			className={classNames('item-img',props.className)}
+			// className={classNames('item-img',props.className)}
+			className={classNames('item-img sized',props.className)}
 			src={`${src}/${item.id}.${ext}`} 
 			alt={item.name || item.id}
 		/>

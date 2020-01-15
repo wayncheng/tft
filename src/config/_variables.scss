@@ -1,3 +1,43 @@
+
+
+//======================================================
+// App Variables
+//======================================================
+	$icon-size      : 4rem;
+	$item-pad       : .5rem;
+
+	$table-icon-size: 3rem;
+	$table-z        : 100;
+	$th-padding     : .75rem;
+
+// Breakpoints ..............................
+$break-xxs: 375px;
+$break-xs: 420px;
+$break-s: 512px;
+$break-sm: 640px;
+$break-m: 768px;
+$break-ml: 900px;
+$break-l: 1024px;
+$break-xl: 1280px;
+
+$size-x: 4rem;
+$size-l: 3rem;
+$size-m: 2rem;
+$size-s: 1rem;
+
+
+.sizer {
+	font-size: $icon-size;
+	// @media all and (min-width: $break-xl) { font-size: $icon-size * 1.2; }
+	// @media all and (max-width: $break-l) { font-size: $icon-size * .9; }
+	// @media all and (max-width: $break-m) { font-size: $icon-size * .8; }
+	// @media all and (max-width: $break-s) { font-size: $icon-size * 0.65; }
+	// @media all and (max-width: $break-xs) { font-size: $icon-size * 0.6; }
+	// @media all and (max-width: $break-xxs) { font-size: $icon-size * 0.5; }
+}
+
+
+
 // Text Colors ..............................
 $fg-primary: rgba(#000, 0.87);
 $fg-secondary: rgba(#000, 0.5);
@@ -17,59 +57,19 @@ $icon-white-inactive: rgba(255, 255, 255, .5);
 // Background Color .........................
 $bg-light: #ecf0f1;
 
-// Breakpoints ..............................
-$break-xxs: 375px;
-$break-xs: 420px;
-$break-s: 512px;
-// $break-s: 640px;
-$break-sm: 640px;
-$break-m: 768px;
-$break-ml: 900px;
-$break-l: 1024px;
-$break-xl: 1280px;
-// $break-l: 1000px;
-// $break-m: 600px;
-// $break-s: 420px;
-// $break-xs: 320px;
-
-
+// Z-Index ...................................
 $z-top: 10000;
 $z-above: 1000;
 $z-base: 1;
 
-
-//======================================================
-// App Variables
-//======================================================
-$icon-size      : 4rem;
-$item-pad       : .5rem;
-
-$table-icon-size: 3rem;
-$table-z        : 100;
-$th-padding     : .75rem;
+// Shadows ...................................
+$shadow-color: rgba(36,50,66,0.2);
+// $shadow-color: rgba(36,50,66,0.3);
+$shadow-1: 0 1px 3px  0 $shadow-color;
+$shadow-2: 0 3px 5px  0 $shadow-color;
+$shadow-3: 0 5px 7px  0 $shadow-color;
+$shadow-4: 0 7px 9px  0 $shadow-color;
+$shadow-5: 0 9px 11px 0 $shadow-color;
 
 
-
-
-.sizer {
-	font-size: $icon-size;
-	@media all and (min-width: $break-xl) {
-		font-size: $icon-size * 1.2;
-	}
-	@media all and (max-width: $break-l) {
-		font-size: $icon-size * .9;
-	}
-	@media all and (max-width: $break-m) {
-		font-size: $icon-size * .8;
-	}
-	@media all and (max-width: $break-s) { font-size: $icon-size * 0.65; }
-	// @media all and (max-width: $break-sm) { font-size: $icon-size * 0.7; }
-	// @media all and (max-width: $break-s) { font-size: $icon-size * 0.65; }
-	@media all and (max-width: $break-xs) {
-		font-size: $icon-size * 0.6;
-	}
-	@media all and (max-width: $break-xxs) {
-		font-size: $icon-size * 0.5;
-	}
-}
 

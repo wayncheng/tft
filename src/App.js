@@ -7,6 +7,8 @@ import './App.scss';
 import HomePage from './pages/HomePage';
 import DevSandboxPage from './pages/DevSandboxPage';
 
+import './static/libs/tailwind.min.css';
+
 class App extends Component {
 	render() {
 		return (

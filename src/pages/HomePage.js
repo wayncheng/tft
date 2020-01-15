@@ -27,21 +27,21 @@ class HomePage extends Component {
 			<div className='page-root flex flex-col	justify-between'>
 				{/* <Helmet title='TFT Items' /> */}
 
-				<main className='flex-1 flex flex-col justify-stretch'>
-					<BaseItemSelectionPanel className='bg-gray-600' />
+				<main className='flex-1 flex flex-col justify-stretch align-stretch'>
 					<Inventory className='bg-gray-700' />
 					<Combos className='bg-gray-800' />
 					{/* <section className='section table-section w-full flex-col justify-center align-center flex-1 m-auto bg-gray-900'>
 						<ItemTable />
 					</section> */}
+					<BaseItemSelectionPanel className='' />
 				</main>
 				<aside className='big-img-container bg-gray-500'>
-						<img className='cheat-sheet' src={constants.item_cheatsheet} alt='item cheat sheet' />
+					<img className='cheat-sheet' src={constants.item_cheatsheet} alt='item cheat sheet' />
 					{/* <a href="https://progameguides.com/wp-content/uploads/2019/06/tft-full-item-cheat-sheet-set2-9-24b.png" target="_blank" rel="noopener noreferrer">
 					</a> */}
 				</aside>
 
-<Footer/>
+				<Footer />
 				<KeyboardEventHandler
 					handleKeys={[
 						'1',

@@ -3,7 +3,8 @@
 * {
 	box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
 }
 
 html {
@@ -45,11 +46,17 @@ main {
 		flex: 1;
 	}
 }
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
 
+//=======================================
 .sec-title {
 	position: absolute;
-	// top: .5rem;
-	bottom: .5rem;
+	top: .5rem;
+	// bottom: .5rem;
 	right: .5rem;
 
 	&.icon-title {
@@ -69,6 +76,7 @@ main {
 	}
 }
 
+//=======================================
 .eyebrow {
 	font-size: .75rem;
 	text-transform: uppercase;
@@ -78,7 +86,10 @@ main {
 	word-spacing: .15em;
 }
 
+// Footer =======================================
 .footer {
+	padding: 1.5rem 1rem 8rem 1rem;
+	// padding-bottom: 8rem;
 	a {
 		color: $fg-light-secondary;
 		text-decoration: none;
@@ -108,11 +119,33 @@ main {
 		height: initial;
 	}
 }
-.row {
+
+// React Switch =====================
+// .react-switch-container {
+// 	display: flex;
+// 	flex-direction: row;
+// 	align-items: center;
+// 	justify-content: flex-start;
+// 	label {
+// 		margin: 0;
+// 		margin: 0 .5rem;
+// 	}
+// }
+.react-switch-bg {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	line-height: 24px;
+	// In switch checked,unchecked icons
+	div:not(.react-switch-handle){
+		flex: 1;
+		width: 24px !important;
+		max-width: 24px !important;
+		padding: 0 2px;
+		font-size: 1rem;
+		// font-size: 0.8rem; // for info icon (not circle)
+		text-align: center;
+		color: #fff;
+	}
 }
-.col {
-}
-
