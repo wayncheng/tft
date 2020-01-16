@@ -231,21 +231,19 @@ $split-into: 4;
 .select-panel {
 	// outline: 2px solid blue;
 	// width: 100%;
-	width: 96%;
-	max-width: 900px;
-	margin: 0 auto;
-	// background-color: #fff;
-	background-color: rgba(#000, 0.25);
-	background-color: rgba(#fff, 0.25);
-	background-color: rgba(#fff, 0.5);
-	background-color: rgba(#ccc, 0.75);
-	padding: 0.75rem;
-	// padding-bottom: .5rem;
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	justify-content: space-around;
 	align-items: center;
+	width: 96%;
+	max-width: 900px;
+	margin: 0 auto;
+	background-color: rgba(#fff, 0.5);
+	background-color: rgba(#ccc, 0.75);
+	padding: 0.75rem;
+	// padding-bottom: .5rem;
 	$radius: .5rem;
 	border-top-left-radius: $radius;
 	border-top-right-radius: $radius;
@@ -263,5 +261,20 @@ $split-into: 4;
 	.detail-toggle {
 		top: unset;
 		bottom: 100%;
+	}
+}
+.panel-eyebrow {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	width: 100%;
+	// outline: 2px solid red;
+	.detail-toggle {
+		position: relative;
+		padding: 0;
+	}
+	.eyebrow-item {
+		margin: 0 .25rem;
+		margin-bottom: .5rem;
 	}
 }

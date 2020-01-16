@@ -49,7 +49,11 @@ class DevSandboxPage extends Component {
 
 
 	render() {
-		const {hash,combos,unique} = this.calculate();
+		const {
+			// hash,
+			combos,
+			unique
+		} = this.calculate();
 		const uniqueArr = Object.keys(unique);
 
 		return (

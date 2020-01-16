@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 // import itemData from '../utils/item_data';
 import {addItem, removeItem} from '../modules/items';
-import {Icon} from '../components';
+import {Image} from '../components';
 // import './ItemOld.scss';
 import './Item.scss';
 
@@ -51,7 +51,7 @@ class Item extends Component {
 				data-item-id={item_id}
 				onClick={this.handleClick}
 			>
-				<Icon item_id={item_id} />
+				<Image item_id={item_id} />
 			</a>
 		);
 	}

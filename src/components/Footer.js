@@ -2,8 +2,13 @@ import React from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import constants from '../utils/constants';
+import { 
+	// ModalTrigger,
+	ItemCheatSheetTrigger, 
+} from '.';
+// import { ItemCheatSheetTrigger } from './Modals/ModalTrigger';
 
 const Footer = props => {
 	return (
@@ -12,6 +17,9 @@ const Footer = props => {
 				<ul>
 					<li>
 						<a href='/'>Home</a>
+					</li>
+					<li>
+						<ItemCheatSheetTrigger/>
 					</li>
 					{process.env.NODE_ENV === 'dev' && (
 						<li>

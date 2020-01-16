@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-import itemData from '../utils/item_data';
+// import itemData from '../utils/item_data';
 import {
 	makeCombo,
 	mouseEnterCombo,
@@ -12,7 +12,7 @@ import {
 	//
 } from '../modules/items';
 import {
-	Icon,
+	Image,
 	// Emoji,
 } from '.';
 
@@ -60,7 +60,7 @@ class ComboItem extends Component {
 		const item1 = sorted[0];
 		const item2 = sorted[1];
 		const combo_id = `${item1}_${item2}`;
-		const combo = itemData[combo_id];
+		// const combo = itemData[combo_id];
 
 		return (
 			<a
@@ -73,16 +73,16 @@ class ComboItem extends Component {
 				onMouseEnter={this.handleMouseEnter}
 				onMouseLeave={this.handleMouseLeave}
 			>
-				<Icon item_id={combo_id} />
+				<Image item_id={combo_id} />
 				<div className='help-container'>
 					{/* <Emoji item={item1}/>
 					<Emoji item={item2}/> */}
-					<Icon className='tiny' item_id={item1} />
-					<Icon className='tiny' item_id={item2} />
+					<Image className='tiny' item_id={item1} />
+					<Image className='tiny' item_id={item2} />
 				</div>
 				{/* {this.state.tooltipActive && (
 					<div className='combo-tip tooltip'>
-						<Icon item_id={combo_id} />
+						<Image item_id={combo_id} />
 						<p>{combo.perk_full}</p>
 					</div>
 				)} */}

@@ -3,7 +3,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 // import itemData from '../utils/item_data';
 import classNames from 'classnames';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 // import './Inventory.scss';
 import {Item} from '../components';
 

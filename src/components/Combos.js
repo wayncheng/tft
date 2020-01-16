@@ -3,14 +3,14 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 // import itemData from '../utils/item_data';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import './Combos.scss';
 import {
 	// Item,
 	ComboItem,
 	ComboSpotlight,
 	DetailedComboItem,
-	ToggleSwitch,
+	// ToggleSwitch,
 	DetailToggle,
 } from '../components';
 import {toggleComboDetails} from '../modules/items';
@@ -34,7 +34,7 @@ class Combos extends Component {
 		// console.log('combos:',combos);
 		return (
 			<section className={classNames('combos items-sec px-4 pt-12 pb-16', this.props.className)}>
-				<DetailToggle/>
+				{/* <DetailToggle/> */}
 
 				{unique.length > 0 && (
 					<React.Fragment>

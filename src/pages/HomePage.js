@@ -10,6 +10,7 @@ import {
 	BaseItemSelectionPanel,
 	// ItemTable,
 	Footer,
+	// PhotoLightbox,
 } from '../components';
 // import itemData from '../utils/item_data';
 // import itemTable from '../static/img/item-table.png';
@@ -40,7 +41,7 @@ class HomePage extends Component {
 					{/* <a href="https://progameguides.com/wp-content/uploads/2019/06/tft-full-item-cheat-sheet-set2-9-24b.png" target="_blank" rel="noopener noreferrer">
 					</a> */}
 				</aside>
-
+					{/* <PhotoLightbox/> */}
 				<Footer />
 				<KeyboardEventHandler
 					handleKeys={[

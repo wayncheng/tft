@@ -12,7 +12,7 @@ import {
 	//
 } from '../modules/items';
 import {
-	Icon,
+	Image,
 	// Emoji,
 } from '.';
 
@@ -76,12 +76,12 @@ class DetailedComboItem extends Component {
 						// onMouseEnter={this.handleMouseEnter}
 						// onMouseLeave={this.handleMouseLeave}
 					>
-						<Icon item_id={combo_id} />
+						<Image item_id={combo_id} />
 					</a>
 					<div className='details'>
 						<div className='ingredients'>
-							<Icon className='tiny' item_id={item1} />
-							<Icon className='tiny' item_id={item2} />
+							<Image className='tiny' item_id={item1} />
+							<Image className='tiny' item_id={item2} />
 						</div>
 						{/* <div className='detail-body'> */}
 						{/* <p className='detail-text'>{combo.perk_full}</p> */}

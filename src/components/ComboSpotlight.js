@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 import itemData from '../utils/item_data';
 import {
-	Icon,
+	Image,
 	// asdfasdf,
 } from '../components';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -38,10 +38,10 @@ class ComboSpotlight extends Component {
 					{_spotlight.length > 0 && (
 						<div className='spotlight-body'>
 							<div className='formula sizer flex flex-row items-center justify-center mb-4'>
-								<Icon item_id={item1} className='ingredient-icon' />
-								<Icon item_id={item2} className='ingredient-icon' />
+								<Image item_id={item1} className='ingredient-icon' />
+								<Image item_id={item2} className='ingredient-icon' />
 								<FontAwesomeIcon icon='long-arrow-alt-right' className='operator' />
-								<Icon item_id={_spotlight} className='combo-icon' />
+								<Image item_id={_spotlight} className='combo-icon' />
 							</div>
 							<p>{combo.perk_full}</p>
 						</div>

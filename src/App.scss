@@ -30,16 +30,16 @@ main {
 		max-width: inherit;
 	}
 }
-
 #root {
 	min-height: inherit;
 	height: 100%;
 }
-
 .page-root {
 	min-height: inherit;
 	height: 100%;
 }
+
+
 
 .flex-kids { 
 	> * {
@@ -52,6 +52,15 @@ main {
 	flex-wrap: wrap;
 }
 
+//=======================================
+.btn {
+	outline: 2px solid red;
+	background-color: rgba(#fff,0.5);
+	color: #fff;
+	padding: 1rem;
+	border-radius: .5rem;
+	font-size: 1rem;
+}
 //=======================================
 .sec-title {
 	position: absolute;

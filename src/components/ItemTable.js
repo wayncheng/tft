@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {
-	// Icon, 
+	// Image, 
 	// PerkToggle, 
 	ComboItem,
 	Item,
@@ -26,7 +26,7 @@ class ItemTable extends Component {
 						{this.props.base.map(item => {
 							return (
 								<th key={`heading-${item}`}>
-									<Icon item_id={item} />
+									<Image item_id={item} />
 								</th>
 							);
 						})}
@@ -38,7 +38,7 @@ class ItemTable extends Component {
 						return (
 							<tr className='body-row' key={`row-${itemA}`}>
 								<th className="item-container th-y">
-									{/* <Icon item_id={itemA} /> */}
+									{/* <Image item_id={itemA} /> */}
 									<Item className="tbl-item" item_id={itemA} />
 								</th>
 								{this.props.base.map((itemB, indexB) => {
@@ -62,7 +62,7 @@ class ItemTable extends Component {
 										>
 											{!isRepeat && (
 												<div className={classNames('combo-container item-container flex flex-row align-center')}>
-													{/* <Icon item_id={comboID} /> */}
+													{/* <Image item_id={comboID} /> */}
 													<ComboItem className="tbl-item" item1={itemA} item2={itemB} />
 													<span className='perk'>{item.perk}</span>
 												</div>
