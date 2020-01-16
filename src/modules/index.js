@@ -3,6 +3,7 @@ import { routerReducer } from 'react-router-redux';
 import general from './general';
 import items from './items';
 import modal from './modal';
+import goals from './goals';
 
 
 export default combineReducers({
@@ -10,4 +11,5 @@ export default combineReducers({
 	general,
 	items,
 	modal,
+	goals,
 })

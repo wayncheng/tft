@@ -13,6 +13,7 @@ export {default as Item} from './Item';
 export {default as ComboItem} from './ComboItem';
 export {default as DetailedComboItem} from './DetailedComboItem';
 export {default as ComboSpotlight} from './ComboSpotlight';
+export {default as Goals} from './Goals';
 
 // Toggle Switch
 export {default as ToggleSwitch} from './ToggleSwitch';

@@ -5,6 +5,7 @@ import {Helmet} from 'react-helmet';
 import {
 	// Item,
 	Footer,
+	Goals,
 } from '../components';
 // import itemData from '../utils/item_data';
 class DevSandboxPage extends Component {
@@ -51,27 +52,26 @@ class DevSandboxPage extends Component {
 	render() {
 		const {
 			// hash,
-			combos,
-			unique
+			// combos,
+			// unique
 		} = this.calculate();
-		const uniqueArr = Object.keys(unique);
+		// const uniqueArr = Object.keys(unique);
 
 		return (
 			<div>
 				<Helmet title='Sandbox (Dev)' />
 				<main>
 
-					
+					<Goals/>
 
-					<section className='flex flex-col'>
+					{/* <section className='flex flex-col'>
 						<p>Combos</p>
 						<span>{combos.length}</span>
 						<pre> {JSON.stringify(combos.map(c => c.join('')), null, 2)} </pre>
 						<p>Unique</p>
 						<span>{uniqueArr.length}</span>
 						<pre> {JSON.stringify(uniqueArr, null, 2)} </pre>
-						{/* <pre> {JSON.stringify(uniqueArr.map(c => c.join('')))} </pre> */}
-					</section>
+					</section> */}
 				</main>
 				<Footer />
 			</div>

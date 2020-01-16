@@ -26,7 +26,7 @@ class BaseItemSelectionPanel extends Component {
 			<aside className='select-panel-container'>
 				<div className={classNames('select-panel items-sec', this.props.className)}>
 					<div className='panel-eyebrow flex flex-row justify-end align-center px-1 py-0'>
-						<div className='flex flex-row flex-1 justify-start align-stretch'>
+						<div className='flex flex-row flex-1 justify-start items-center'>
 							<ItemCheatSheetTrigger className='eyebrow-item' />
 							<ModalTrigger modal_id='full_cheatsheet' modal_action='open' className='default-trigger btn eyebrow-item'>
 								Full
