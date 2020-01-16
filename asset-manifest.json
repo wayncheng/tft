@@ -1,13 +1,13 @@
 {
-  "main.css": "/tft/static/css/main.12d1ac30.chunk.css",
-  "main.js": "/tft/static/js/main.40254c3b.chunk.js",
-  "main.js.map": "/tft/static/js/main.40254c3b.chunk.js.map",
-  "static/js/1.d1a89a43.chunk.js": "/tft/static/js/1.d1a89a43.chunk.js",
-  "static/js/1.d1a89a43.chunk.js.map": "/tft/static/js/1.d1a89a43.chunk.js.map",
+  "main.css": "/tft/static/css/main.5c288e63.chunk.css",
+  "main.js": "/tft/static/js/main.53e53587.chunk.js",
+  "main.js.map": "/tft/static/js/main.53e53587.chunk.js.map",
+  "static/js/1.21b8e6f3.chunk.js": "/tft/static/js/1.21b8e6f3.chunk.js",
+  "static/js/1.21b8e6f3.chunk.js.map": "/tft/static/js/1.21b8e6f3.chunk.js.map",
   "runtime~main.js": "/tft/static/js/runtime~main.1d209993.js",
   "runtime~main.js.map": "/tft/static/js/runtime~main.1d209993.js.map",
-  "static/css/main.12d1ac30.chunk.css.map": "/tft/static/css/main.12d1ac30.chunk.css.map",
+  "static/css/main.5c288e63.chunk.css.map": "/tft/static/css/main.5c288e63.chunk.css.map",
   "index.html": "/tft/index.html",
-  "precache-manifest.07f265a3282edb3c3ab826837e45be5f.js": "/tft/precache-manifest.07f265a3282edb3c3ab826837e45be5f.js",
+  "precache-manifest.f41a29fac7c3d663dcf3f5f01ee88423.js": "/tft/precache-manifest.f41a29fac7c3d663dcf3f5f01ee88423.js",
   "service-worker.js": "/tft/service-worker.js"
 }
