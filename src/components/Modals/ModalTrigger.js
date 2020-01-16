@@ -14,8 +14,8 @@ class ModalTrigger extends Component {
 	}
 
 	handleClick = event => {
-		event.preventDefault();
 		event.stopPropagation();
+		event.preventDefault();
 		let {modal_id, modal_action} = this.props;
 
 		if (modal_action === 'close') {
@@ -29,6 +29,7 @@ class ModalTrigger extends Component {
 		} else {
 			this.props.toggleModal(modal_id);
 		}
+
 	};
 
 	render() {

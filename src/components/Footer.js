@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import constants from '../utils/constants';
 import { 
 	// ModalTrigger,
-	ItemCheatSheetTrigger, 
+	// ItemCheatSheetTrigger, 
 } from '.';
 // import { ItemCheatSheetTrigger } from './Modals/ModalTrigger';
 
@@ -17,9 +17,6 @@ const Footer = props => {
 				<ul>
 					<li>
 						<a href='/'>Home</a>
-					</li>
-					<li>
-						<ItemCheatSheetTrigger/>
 					</li>
 					{process.env.NODE_ENV === 'dev' && (
 						<li>

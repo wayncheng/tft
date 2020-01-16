@@ -37,7 +37,8 @@ $modal-out-curve: $modal-in-curve;
 	padding: 1rem;
 	background-color: rgba(0, 0, 0, 0.33);
 	display: none; // * IMPORTANT: hide overlay by default
-
+	z-index: $z-base;
+	
 	@media all and (max-width: 420px) {
 		padding: 4rem 2rem;
 		// padding: 5vh 5%;
@@ -48,6 +49,7 @@ $modal-out-curve: $modal-in-curve;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		z-index: $z-top;
 		// transition: background-color $modal-in-duration;
 		// transition-timing-function: $modal-in-curve;
 	}
@@ -86,7 +88,7 @@ $modal-out-curve: $modal-in-curve;
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
-		z-index: $z-top;
+		z-index: $z-top+5;
 		font-size: 1.2rem;
 		width: 1.2em;
 		line-height: 1.2em;
