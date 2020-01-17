@@ -97,6 +97,7 @@ $size-2: 32px;
 .combos {
 	flex: 3;
 }
+
 // Detailed Combo =========================
 $detail-minw: 260px;
 $detail-maxw: 300px;
@@ -186,6 +187,24 @@ $split-into: 4;
 			}
 		}
 	}
+	// &.is-goal {
+	// 	background-color: rgba(#000, 0.8);
+	// 	background-color: #fff;
+	// 	background-color: rgba(#fff,0.8);
+	// 	&:hover {
+	// 		background-color: #fff;
+	// 	}
+	// 	.detail-text {
+	// 		color: $fg-light-primary;
+	// 		color: $fg-primary;
+	// 	}
+	// 	.ingredients {
+	// 		.item-img {
+	// 			opacity: 1;
+	// 		}
+	// 	}
+
+	// }
 }
 // Detail Toggle ============================
 .detail-toggle {
@@ -248,7 +267,7 @@ $split-into: 4;
 	border-top-left-radius: $radius;
 	border-top-right-radius: $radius;
 	// box-shadow: $shadow-5;
-	box-shadow: 0 9px 11px 0 rgba(36,50,66,0.8);
+	box-shadow: 0 9px 11px 0 rgba(36, 50, 66, 0.8);
 
 	.item {
 		// box-shadow: $shadow-1;
@@ -277,4 +296,32 @@ $split-into: 4;
 		margin: 0 .25rem;
 		margin-bottom: .5rem;
 	}
+}
+
+// Goals ==================================
+.goal-toggle-container {
+	label {
+		cursor: pointer;
+	}
+}
+.is-goal {
+	background-color: rgba(#000, 0.4);
+	box-shadow: 0 0px 0px 3px rgba(#fff, 0.2);
+	@extend %shadow-pulse;
+
+	&:hover {
+		// background-color: #fff;
+	}
+	.detail-text {
+		color: $fg-light-primary;
+		// color: $fg-primary !important;
+	}
+	.ingredients {
+		.item-img {
+			opacity: 1;
+		}
+	}
+
+	// }
+
 }

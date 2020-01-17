@@ -5,7 +5,8 @@ import {Helmet} from 'react-helmet';
 import {
 	// Item,
 	Footer,
-	Goals,
+	// Goals,
+	AllGoals,
 } from '../components';
 // import itemData from '../utils/item_data';
 class DevSandboxPage extends Component {
@@ -62,7 +63,7 @@ class DevSandboxPage extends Component {
 				<Helmet title='Sandbox (Dev)' />
 				<main>
 
-					<Goals/>
+					<AllGoals/>
 
 					{/* <section className='flex flex-col'>
 						<p>Combos</p>

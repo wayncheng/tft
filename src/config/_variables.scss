@@ -78,4 +78,28 @@ $medium-shadow         : 0 5px 20px 5px rgba(#333, 0.2);
 $medium-shadow-lifted  : 0 5px 20px 8px rgba(#333, 0.2);
 
 
+// Pulse Animation ===========
+%shadow-pulse {
+	$duration: 2s;
+	$pulse-color: #fff;
+	$spread: 6px;
+	$pulse-a: rgba($pulse-color, 0.5);
+	$pulse-b: rgba($pulse-color, 0);
+	box-shadow: 0 0 0 $pulse-a;
+	animation: marker-pulse $duration infinite;
+	@-webkit-keyframes marker-pulse {
+		0%   { -webkit-box-shadow: 0 0 0 0       $pulse-a; }
+		70%  { -webkit-box-shadow: 0 0 0 $spread $pulse-b; }
+		100% { -webkit-box-shadow: 0 0 0 0       $pulse-b; }
+	}
+	@keyframes marker-pulse {
+		0%   { -moz-box-shadow: 0 0 0 0       $pulse-a;
+			          box-shadow: 0 0 0 0       $pulse-a; }
+		70%  { -moz-box-shadow: 0 0 0 $spread $pulse-b;
+			          box-shadow: 0 0 0 $spread $pulse-b; }
+		100% { -moz-box-shadow: 0 0 0 0       $pulse-b;
+			          box-shadow: 0 0 0 0       $pulse-b; }
+	}
+
+}
 

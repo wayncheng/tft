@@ -203,8 +203,8 @@ const items = {
 	bow_bow         : {
 		id        : 'rapidfirecannon',
 		name      : `Rapid Fire Cannon`,
-		perk      : 'Doubles attack range',
-		perk_full : 'Attack range is doubled',
+		perk      : `Doubles atk range. Atks can't be dodged`,
+		perk_full : `Attack range is doubled. Wearer's attack cannot be dodged`,
 	},
 	bow_cloak       : {
 		id        : 'runaanshurricane',

@@ -48,9 +48,8 @@ const initialState = {
 	// tear_tear       : false,
 	tear_vest       : false,
 	vest_vest       : false,
-	
-	
-	belt_rod        : true, // morello 
+
+	belt_rod        : true, // morello
 	bow_rod         : true, // rageblade
 	bow_sword       : true, // giantslayer
 	cloak_tear      : true, // hush

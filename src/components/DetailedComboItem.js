@@ -63,8 +63,12 @@ class DetailedComboItem extends Component {
 		const combo = itemData[combo_id];
 
 		return (
-			<div className='detailed-container'>
-				<div className='detailed-combo'>
+			<div className={classNames('detailed-container',{
+				// 'is-goal': (this.props.goals[combo_id] === true),
+			})}>
+				<div className={classNames('detailed-combo',{
+					'is-goal': (this.props.goals[combo_id] === true),
+				})}>
 					<a
 						href='#!'
 						className={classNames('item sized', 'combo-item', 'flex flex-col', this.props.className)}
@@ -99,6 +103,7 @@ class DetailedComboItem extends Component {
 
 const mapStateToProps = state => ({
 	inventory : state.items.inventory,
+	goals: state.goals,
 });
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(

@@ -65,7 +65,9 @@ class ComboItem extends Component {
 		return (
 			<a
 				href='#!'
-				className={classNames('item', 'combo-item', 'p-2 flex flex-col', this.props.className)}
+				className={classNames('item', 'combo-item', 'p-2 flex flex-col', this.props.className, {
+					'is-goal' : this.props.goals[combo_id] === true,
+				})}
 				item1={item1}
 				item2={item2}
 				item_id={combo_id}
@@ -93,6 +95,7 @@ class ComboItem extends Component {
 
 const mapStateToProps = state => ({
 	inventory : state.items.inventory,
+	goals: state.goals,
 });
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(
