@@ -15,6 +15,7 @@ export {default as DetailedComboItem} from './DetailedComboItem';
 export {default as ComboSpotlight} from './ComboSpotlight';
 export {default as GoalToggle} from './Goals/GoalToggle';
 export {default as AllGoals} from './Goals/AllGoals';
+export {default as GoalsModalTrigger} from './Goals/GoalsModalTrigger';
 
 // Toggle Switch
 export {default as ToggleSwitch} from './ToggleSwitch';

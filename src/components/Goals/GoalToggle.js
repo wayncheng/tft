@@ -46,14 +46,14 @@ class GoalToggle extends Component {
 	// };
 
 	handleGoalToggle = checked => {
-		const {combo_id} = this.props;
-		if (checked === true) {
-			this.props.setGoal(combo_id);
-		} else if (checked === false) {
-			this.props.removeGoal(combo_id);
-		} else {
+		// const {combo_id} = this.props;
+		// if (checked === true) {
+		// 	this.props.setGoal(combo_id);
+		// } else if (checked === false) {
+		// 	this.props.removeGoal(combo_id);
+		// } else {
 			this.props.toggleGoal(this.props.combo_id);
-		}
+		// }
 	};
 
 	render = () => {

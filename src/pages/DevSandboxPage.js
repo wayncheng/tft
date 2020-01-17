@@ -6,7 +6,8 @@ import {
 	// Item,
 	Footer,
 	// Goals,
-	AllGoals,
+	// AllGoals,
+	GoalsModalTrigger,
 } from '../components';
 // import itemData from '../utils/item_data';
 class DevSandboxPage extends Component {
@@ -62,8 +63,8 @@ class DevSandboxPage extends Component {
 			<div>
 				<Helmet title='Sandbox (Dev)' />
 				<main>
-
-					<AllGoals/>
+					<GoalsModalTrigger/>
+					{/* <AllGoals/> */}
 
 					{/* <section className='flex flex-col'>
 						<p>Combos</p>

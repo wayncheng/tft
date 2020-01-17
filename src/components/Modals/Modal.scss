@@ -20,6 +20,7 @@ $modal-out-curve: $modal-in-curve;
 	left: 0;
 	margin: 0;
 	padding: 0;
+	max-width: 100vw;
 	// z-index: 100000;
 	// border-bottom: 1px solid transparent; // to force scroll bar and prevent "shifting on windows"
 
@@ -226,8 +227,8 @@ $modal-out-curve: $modal-in-curve;
 .default-modal {
 	background-color: #fff;
 	border-radius: 0.5rem;
-	overflow-x: hidden;
-	padding: 2rem 3rem;
+	// overflow-x: hidden;
+	padding: 1.5rem 1rem;
 	box-shadow: $big-box-shadow;
 	// width: 100%;
 	width: initial;

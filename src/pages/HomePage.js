@@ -36,12 +36,11 @@ class HomePage extends Component {
 					</section> */}
 					<BaseItemSelectionPanel className='' />
 				</main>
-				<aside className='big-img-container bg-gray-500'>
+				{/* <aside className='big-img-container bg-gray-500'>
 					<img className='cheat-sheet' src={constants.item_cheatsheet} alt='item cheat sheet' />
-					{/* <a href="https://progameguides.com/wp-content/uploads/2019/06/tft-full-item-cheat-sheet-set2-9-24b.png" target="_blank" rel="noopener noreferrer">
-					</a> */}
-				</aside>
-					{/* <PhotoLightbox/> */}
+				</aside> */}
+
+				{/* <PhotoLightbox/> */}
 				<Footer />
 				<KeyboardEventHandler
 					handleKeys={[

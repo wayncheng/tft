@@ -9,6 +9,7 @@ import {
 	Modal,
 	CloseBtn,
 	// PhotoLightbox,
+	GoalsModalTrigger,
 } from '.';
 import constants from '../utils/constants';
 import classNames from 'classnames';
@@ -25,7 +26,7 @@ class BaseItemSelectionPanel extends Component {
 		return (
 			<aside className='select-panel-container'>
 				<div className={classNames('select-panel items-sec', this.props.className)}>
-					<div className='panel-eyebrow flex flex-row justify-end align-center px-1 py-0'>
+					<div className='panel-eyebrow flex flex-row justify-end align-center px-1 py-0 mb-2'>
 						<div className='flex flex-row flex-1 justify-start items-center'>
 							<ItemCheatSheetTrigger className='eyebrow-item' />
 							<ModalTrigger modal_id='full_cheatsheet' modal_action='open' className='default-trigger btn eyebrow-item'>
@@ -47,9 +48,13 @@ class BaseItemSelectionPanel extends Component {
 								</Modal>
 							</ModalTrigger>
 						</div>
+						<div className='flex flex-row justify-end items-center'>
 
 						{/* <PhotoLightbox/> */}
+						<GoalsModalTrigger className="eyebrow-item"/>
 						<DetailToggle className='eyebrow-item' />
+
+						</div>
 					</div>
 					{this.props.base.map((baseItem, index) => {
 						return <Item className='sel-item' item_id={baseItem} key={'item-' + baseItem} />;
