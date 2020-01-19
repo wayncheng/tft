@@ -19,32 +19,6 @@ class GoalToggle extends Component {
 		};
 	}
 
-	// getPosibilities = () => {
-	// 	const {base} = this.props;
-	// 	const hash = {};
-	// 	for (let i = 0; i < base.length; i++) {
-	// 		const x = base[i];
-	// 		for (let j = 0; j < base.length; j++) {
-	// 			const y = base[j];
-	// 			const combo = [ x, y ].sort().join('_');
-	// 			hash[combo] = 1;
-	// 		}
-	// 	}
-	// 	return Object.keys(hash);
-	// };
-
-	// componentDidUpdate = prevProps => {
-	// 	let {combo_id} = this.props;
-
-	// 	if (prevProps[combo_id] !== this.props[combo_id]) {
-	// 		console.log('>>>>>>>>>>>>>>>>>>>>>>>')
-	// 		// const checkState = this.props[combo_id];
-	// 		this.setState({
-	// 			checked : this.props[combo_id],
-	// 		});
-	// 	}
-	// };
-
 	handleGoalToggle = checked => {
 		// const {combo_id} = this.props;
 		// if (checked === true) {
@@ -69,7 +43,7 @@ class GoalToggle extends Component {
 				{combo !== undefined && (
 					<ToggleSwitch
 						aria-label={`Toggle ${combo.name || 'Combo Item'}`}
-						label={<Image item_id={combo_id} className="tiny"/>}
+						label={<Image item_id={combo_id} className="size-3"/>}
 						onChange={this.handleGoalToggle}
 						// onChange={this.props.toggleGoal}
 						// checked={this.state.checked}

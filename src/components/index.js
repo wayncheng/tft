@@ -3,6 +3,7 @@
 //============================================================
 // Top Level
 export {default as Inventory} from './Inventory';
+export {default as ComboInventory} from './ComboInventory';
 export {default as Combos} from './Combos';
 export {default as BaseItemSelectionPanel} from './BaseItemSelectionPanel';
 export {default as Footer} from './Footer';

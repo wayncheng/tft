@@ -11,7 +11,7 @@ class ItemCheatSheetTrigger extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<ModalTrigger modal_id='item_cheatsheet' modal_action='open' className={classNames('default-trigger btn',this.props.className)}>
+				<ModalTrigger modal_id='item_cheatsheet' modal_action='open' className={classNames('default-trigger btn outline-btn',this.props.className)}>
 					Items
 				</ModalTrigger>
 

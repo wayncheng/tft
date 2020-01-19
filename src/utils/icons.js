@@ -9,6 +9,7 @@ import {
 	faLongArrowAltLeft,
 	faLongArrowAltRight,
 	faTimes,
+	faBullseye,
 	// faDice,
 	// faDiceSix,
 	// faHandPointer,
@@ -40,15 +41,16 @@ const buildIconLibrary = () => {
 		faInfoCircle,
 		faTimes,
 		faExternalLinkAlt,
+		faLongArrowAltLeft,
+		faChevronLeft,
+		faLongArrowAltRight,
+		faBullseye,
 		// faDice,
 		// faDiceSix,
 		// faHandPointer,
 		// faDiceOne,
 		// faDiceFive,
 		// faClipboardCheck,
-		faLongArrowAltLeft,
-		faChevronLeft,
-		faLongArrowAltRight,
 	)
 }
 export default buildIconLibrary;

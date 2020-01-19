@@ -22,17 +22,44 @@ $size-2: 32px;
 .sized,
 // .item,
 .item-img {
-	display: inline-block;
-	width: $size-0;
-	height: $size-0;
-	max-width: $size-0;
+	display   : inline-block;
+	width     : $size-0;
+	height    : $size-0;
+	max-width : $size-0;
 	max-height: $size-0;
-
 	&.tiny {
-		width: $size-0 / 2;
-		height: $size-0 / 2;
-		max-width: $size-0 / 2;
-		max-height: $size-0 / 2;
+		width     : $size-2;
+		height    : $size-2;
+		max-width : $size-2;
+		max-height: $size-2;
+		// width     : $size-0 / 2;
+		// height    : $size-0 / 2;
+		// max-width : $size-0 / 2;
+		// max-height: $size-0 / 2;
+	}
+	&.size-4 {
+		width     : 4rem;
+		height    : 4rem;
+		max-width : 4rem;
+		max-height: 4rem;
+	}
+	&.size-3 {
+		width     : 3rem;
+		height    : 3rem;
+		max-width : 3rem;
+		max-height: 3rem;
+	}
+	&.size-2 {
+		width     : 2rem;
+		height    : 2rem;
+		max-width : 2rem;
+		max-height: 2rem;
+	}
+	&.size-1 {
+		width     : 1rem;
+		height    : 1rem;
+		max-width : 1rem;
+		max-height: 1rem;
 	}
 }
 
@@ -90,6 +117,10 @@ $size-2: 32px;
 	min-height: 5rem;
 	// max-height: 50vh;
 	flex-basis: 50%;
+}
+.combo-inventory {
+	border-top-right-radius: .5rem;
+	border-top-left-radius : .5rem;
 }
 .items-container {
 	z-index: $z-above;
@@ -304,6 +335,23 @@ $split-into: 4;
 		cursor: pointer;
 	}
 }
+.goals {
+	> * {
+		flex-basis: 11.1%;
+		@media all and (max-width:$break-xl){
+			flex-basis: 20%;
+		}
+		@media all and (max-width:$break-m){
+			flex-basis: 33.3%;
+		}
+	}
+}
+.goals-trigger{
+	background-color: #fff !important;
+}
+.goals-modal {
+	max-width: 1400px;
+}
 .is-goal {
 	background-color: rgba(#000, 0.4);
 	box-shadow: 0 0px 0px 3px rgba(#fff, 0.2);
@@ -323,5 +371,4 @@ $split-into: 4;
 	}
 
 	// }
-
 }

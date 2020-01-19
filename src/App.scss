@@ -55,12 +55,53 @@ main {
 
 //=======================================
 .btn {
-	outline: 2px solid red;
 	background-color: rgba(#fff,0.5);
 	color: #fff;
 	padding: 1rem;
 	border-radius: .5rem;
 	font-size: 1rem;
+	&:hover,
+	&:active {
+		background-color: #fff;
+		color: $fg-primary;
+	}
+	
+	&.modal-trigger {
+		background-color: $fg-light-secondary;
+		background-color: rgba(#fff,0.7);
+		color: $fg-primary;
+		padding: 0 .5rem;
+		border-radius: .25rem;
+		// font-size: 0.85rem;
+		// line-height: 1.5em;
+		font-size: 0.75rem;
+		line-height: 2em;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+	}
+	&.outline-btn {
+		// text-transform: uppercase;
+		color: $fg-light-secondary;
+		border: 1px solid $fg-light-secondary;
+		background-color: rgba(#666,0.1);
+		&:hover,
+		&:active {
+			color: $fg-light-primary;
+			border-color: $fg-light-secondary;
+			// text-decoration: underline;
+		}
+	}
+	&.link-btn {
+		background-color: transparent ;
+		color: $fg-light-primary;
+		text-transform: uppercase;
+		&:hover,
+		&:active {
+			background-color: transparent;
+			text-decoration: underline;
+		}
+	}
+	
 }
 //=======================================
 .sec-title {
@@ -159,3 +200,14 @@ main {
 		color: #fff;
 	}
 }
+
+
+// Hide Utilities ==================
+.hide-on-xxs { @media all and (max-width:$break-xxs){ display: none; } }
+.hide-on-xs  { @media all and (max-width:$break-xs){ display: none; } }
+.hide-on-s   { @media all and (max-width:$break-s){ display: none; } }
+.hide-on-sm  { @media all and (max-width:$break-sm){ display: none; } }
+.hide-on-m   { @media all and (max-width:$break-m){ display: none; } }
+.hide-on-ml  { @media all and (max-width:$break-ml){ display: none; } }
+.hide-on-l   { @media all and (max-width:$break-l){ display: none; } }
+.hide-on-xl  { @media all and (max-width:$break-xl){ display: none; } }

@@ -63,39 +63,34 @@ class DetailedComboItem extends Component {
 		const combo = itemData[combo_id];
 
 		return (
-			<div className={classNames('detailed-container',{
-				// 'is-goal': (this.props.goals[combo_id] === true),
-			})}>
-				<div className={classNames('detailed-combo',{
-					'is-goal': (this.props.goals[combo_id] === true),
-				})}>
-					<a
-						href='#!'
-						className={classNames('item sized', 'combo-item', 'flex flex-col', this.props.className)}
-						item1={item1}
-						item2={item2}
-						item_id={combo_id}
-						onClick={this.handleClick}
-						title={combo.name}
-						// onMouseEnter={this.handleMouseEnter}
-						// onMouseLeave={this.handleMouseLeave}
-					>
+			<div
+				className={classNames(
+					'detailed-container',
+					// { 'is-goal': (this.props.goals[combo_id] === true), },
+				)}
+			>
+				<a
+					className={classNames('detailed-combo', {
+						'is-goal' : this.props.goals[combo_id] === true,
+					})}
+					href='#!'
+					onClick={this.handleClick}
+					title={combo.name}
+					item1={item1}
+					item2={item2}
+					item_id={combo_id}
+				>
+					<span href='#!' className={classNames('item sized', 'combo-item', 'flex flex-col', this.props.className)}>
 						<Image item_id={combo_id} />
-					</a>
+					</span>
 					<div className='details'>
 						<div className='ingredients'>
 							<Image className='tiny' item_id={item1} />
 							<Image className='tiny' item_id={item2} />
 						</div>
-						{/* <div className='detail-body'> */}
-						{/* <p className='detail-text'>{combo.perk_full}</p> */}
 						<p className='detail-text'>{combo.perk}</p>
-						{/* </div> */}
-
-						{/* <Emoji item={item1}/>
-					<Emoji item={item2}/> */}
 					</div>
-				</div>
+				</a>
 			</div>
 		);
 	}
@@ -103,7 +98,7 @@ class DetailedComboItem extends Component {
 
 const mapStateToProps = state => ({
 	inventory : state.items.inventory,
-	goals: state.goals,
+	goals     : state.goals,
 });
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(
@@ -123,3 +118,17 @@ DetailedComboItem.defaultProps = {
 	item1 : '',
 	item2 : '',
 };
+
+// {/* <a
+// 	href='#!'
+// 	className={classNames('item sized', 'combo-item', 'flex flex-col', this.props.className)}
+// 	item1={item1}
+// 	item2={item2}
+// 	item_id={combo_id}
+// 	onClick={this.handleClick}
+// 	title={combo.name}
+// 	// onMouseEnter={this.handleMouseEnter}
+// 	// onMouseLeave={this.handleMouseLeave}
+// >
+// 	<Image item_id={combo_id} />
+// </a> */}

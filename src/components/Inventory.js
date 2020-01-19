@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 // import './Inventory.scss';
-import {Item} from '../components';
+import {Item,ComboInventory} from '../components';
 
 class Inventory extends Component {
 	constructor(props) {
@@ -20,7 +20,7 @@ class Inventory extends Component {
 			<section
 				className={classNames(
 					'inventory items-sec',
-					'relative flex flex-row flex-wrap justify-center p-4',
+					'relative flex flex-col items-center justify-between p-4 pb-0',
 					this.props.className,
 					{
 						// 'empty-inv' : inventory.length === 0,
@@ -50,6 +50,9 @@ class Inventory extends Component {
 						);
 					})}
 				</div>
+
+				{/* Combos Inventory ====================== */}
+				<ComboInventory/>
 			</section>
 		);
 	}
