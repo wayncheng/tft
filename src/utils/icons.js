@@ -10,6 +10,11 @@ import {
 	faLongArrowAltRight,
 	faTimes,
 	faBullseye,
+	faHistory,
+	faRedo,
+	faUndo,
+	faTrash,
+	// faTrashAlt,
 	// faDice,
 	// faDiceSix,
 	// faHandPointer,
@@ -31,6 +36,7 @@ import {
 	// faHandPointer,
 	// faCaretSquareLeft,
 	// faArrowAltCircleLeft,
+	faTrashAlt,
 } from '@fortawesome/free-regular-svg-icons'
 
 
@@ -45,6 +51,11 @@ const buildIconLibrary = () => {
 		faChevronLeft,
 		faLongArrowAltRight,
 		faBullseye,
+		faHistory,
+		faRedo,
+		faUndo,
+		faTrash,
+		faTrashAlt,
 		// faDice,
 		// faDiceSix,
 		// faHandPointer,
@@ -54,3 +65,8 @@ const buildIconLibrary = () => {
 	)
 }
 export default buildIconLibrary;
+
+// Examples ----------------------------------------
+// <FontAwesomeIcon icon='trash-alt' />
+// <FontAwesomeIcon icon={['far','trash-alt']} /> 
+//--------------------------------------------------

@@ -4,20 +4,21 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import constants from '../utils/constants';
-import { 
-	// ModalTrigger,
-	// ItemCheatSheetTrigger, 
-} from '.';
+import { ResetBtn } from '.';
 // import { ItemCheatSheetTrigger } from './Modals/ModalTrigger';
 
 const Footer = props => {
 	return (
 		<footer className={classNames('footer row flex justify-center align-center bg-gray-700', props.className)}>
+			{/* <ResetBtn className="absolute top-0 left-0 p-1"/> */}
 			<div className='col'>
 				<ul>
 					<li>
 						<a href='/'>Home</a>
 					</li>
+					{/* <li>
+						<ResetBtn/>
+					</li> */}
 					{process.env.NODE_ENV === 'dev' && (
 						<li>
 							<a href='/dev'>Sandbox</a>

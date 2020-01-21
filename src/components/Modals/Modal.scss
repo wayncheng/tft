@@ -45,8 +45,9 @@ $modal-out-curve: $modal-in-curve;
 	visibility: hidden;
 	
 	@media all and (max-width: 420px) {
-		padding: 4rem 2rem;
+		// padding: 4rem 2rem;
 		// padding: 5vh 5%;
+		padding: 1rem .5rem;
 	}
 	
 	&.modal-overlay_after-open {
@@ -211,6 +212,7 @@ $modal-out-curve: $modal-in-curve;
 	border-radius: 0.5rem;
 	// overflow-x: hidden;
 	padding: 1.5rem 1rem;
+	// padding: 1rem 0.5rem;
 	box-shadow: $big-box-shadow;
 	// width: 100%;
 	width: initial;
@@ -230,13 +232,15 @@ $modal-out-curve: $modal-in-curve;
 	background-color: #fff;
 	border-radius: 0.5rem;
 	overflow: visible;
-	padding: 1rem;
+	// padding: 1rem;
+	padding: .5rem;
 	box-shadow: $big-box-shadow;
 	// width: 100%;
 	// height: 100%;
 	width: initial;
 	height: initial;
-	max-width: 90%;
+	// max-width: 95%;
+	max-width: 100%;
 	@media all and (max-width: 420px) {
 		padding: .5rem;
 		font-size: 1.2rem;
