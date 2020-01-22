@@ -32,23 +32,17 @@ class BaseItemSelectionPanel extends Component {
 					{/* Eyebrow ========================================================== */}
 					<div className='panel-eyebrow flex flex-row justify-end align-center px-1 py-0 mb-2'>
 						<div className='flex flex-row flex-1 justify-start items-center'>
-							<FontAwesomeIcon icon='info-circle' className='text-white mr-2' />
-							<ItemCheatSheetTrigger className='eyebrow-item' />
+							{/* <FontAwesomeIcon icon='info-circle' className='text-white mr-2' /> */}
+							{/* <ItemCheatSheetTrigger className='eyebrow-item' /> */}
 							<ModalTrigger
 								modal_id='full_cheatsheet'
 								modal_action='open'
 								className='default-trigger btn outline-btn eyebrow-item'
 							>
-								Full
+								{/* Full */}
+								Cheat Sheet
 							</ModalTrigger>
 							<FullCheatSheetModal/>
-							{/* <ModalTrigger
-								modal_id='wide_cheatsheet'
-								modal_action='open'
-								className='default-trigger btn outline-btn eyebrow-item'
-							>
-								Wide
-							</ModalTrigger> */}
 						</div>
 						<div className='flex flex-row justify-end items-center'>
 							{/* <PhotoLightbox/> */}

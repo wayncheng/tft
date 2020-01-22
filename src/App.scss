@@ -125,6 +125,22 @@ main {
 			color: $fg-light-primary;
 		}
 	}
+
+	&.eyebrow {
+		color: $fg-light-secondary;
+		color: $fg-light-divider;
+		color: rgba(#fff,0.24);
+	}
+}
+.sec-placeholder {
+	display: none; // temporary
+	color: rgba(#fff,0.24);
+	text-transform: uppercase;
+	font-size: .9rem;
+	letter-spacing: .2em;
+	font-weight: 600;
+	word-spacing: .1em;
+	// display: none;
 }
 
 //=======================================
@@ -143,6 +159,7 @@ main {
 	// padding-bottom: 8rem;
 	a {
 		color: $fg-light-secondary;
+		color: $fg-light-disabled;
 		text-decoration: none;
 		font-size: .9rem;
 		

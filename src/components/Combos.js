@@ -12,8 +12,10 @@ import {
 	DetailedComboItem,
 	// ToggleSwitch,
 	DetailToggle,
+	ComboInventory,
 } from '../components';
 import {toggleComboDetails} from '../modules/items';
+import Inventory from './Inventory';
 
 class Combos extends Component {
 	constructor(props) {
@@ -30,13 +32,15 @@ class Combos extends Component {
 		const {
 			// combos,
 			unique,
+			inventory,
+			comboInventory,
 		} = this.props;
 		// console.log('combos:',combos);
 		return (
-			<section className={classNames('combos items-sec px-4 pt-12 pb-16', this.props.className)}>
+			<section className={classNames('combos flex justify-center items-start px-4 pt-12 pb-16', this.props.className)}>
 				{/* <DetailToggle/> */}
 
-				{unique.length > 0 && (
+				{unique.length > 0 || comboInventory.length > 0 ? (
 					<React.Fragment>
 						{this.props.showComboDetails === true ? (
 							<div className='detailed-combos-container row-container items-container'>
@@ -62,8 +66,11 @@ class Combos extends Component {
 							</div>
 						)}
 					</React.Fragment>
+				) : (
+					<p className='sec-placeholder'>Possible Combinations</p>
 				)}
 
+				<p className='sec-title eyebrow'>Combos</p>
 				<ComboSpotlight />
 			</section>
 		);
