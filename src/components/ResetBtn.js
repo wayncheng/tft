@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {resetInventory} from '../modules/items';
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 class ResetBtn extends Component {
 	constructor(props) {

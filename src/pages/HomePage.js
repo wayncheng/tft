@@ -15,7 +15,7 @@ import {
 // import itemData from '../utils/item_data';
 // import itemTable from '../static/img/item-table.png';
 import {addItem, removeItem, processKey} from '../modules/items';
-import constants from '../utils/constants';
+// import constants from '../utils/constants';
 // const items = [ 'sword', 'vest', 'belt', 'rod', 'cloak', 'bow', 'spatula', 'tear', 'glove' ];
 class HomePage extends Component {
 	handleKeyEvent = (key, event) => {
@@ -25,7 +25,7 @@ class HomePage extends Component {
 
 	render() {
 		return (
-			<div className='page-root flex flex-col	justify-between'>
+			<div id="item-page-root" className='page-root flex flex-col	justify-between'>
 				{/* <Helmet title='TFT Items' /> */}
 
 				<main className='flex-1 flex flex-col justify-stretch align-stretch'>

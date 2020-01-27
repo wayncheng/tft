@@ -11,11 +11,11 @@ import {
 	ComboSpotlight,
 	DetailedComboItem,
 	// ToggleSwitch,
-	DetailToggle,
-	ComboInventory,
+	// DetailToggle,
+	// ComboInventory,
 } from '../components';
 import {toggleComboDetails} from '../modules/items';
-import Inventory from './Inventory';
+// import Inventory from './Inventory';
 
 class Combos extends Component {
 	constructor(props) {
@@ -31,11 +31,17 @@ class Combos extends Component {
 	render() {
 		const {
 			// combos,
+			// inventory,
 			unique,
-			inventory,
 			comboInventory,
 		} = this.props;
-		// console.log('combos:',combos);
+
+		// Sort so goal combos are at the beginning of the list
+		unique.sort((a,b)=>{
+			const aGoal = this.props.goals[a];
+			const bGoal = this.props.goals[b];
+			return bGoal-aGoal;
+		})
 		return (
 			<section className={classNames('combos flex justify-center items-start px-4 pt-12 pb-16', this.props.className)}>
 				{/* <DetailToggle/> */}
@@ -46,8 +52,6 @@ class Combos extends Component {
 							<div className='detailed-combos-container row-container items-container'>
 								{unique.map((pair, index) => {
 									const split = pair.split('_');
-
-									// return <ComboItem className='' item1={split[0]} item2={split[1]} key={'unique-' + index} />;
 									return <DetailedComboItem className='' item1={split[0]} item2={split[1]} key={'unique-' + index} />;
 								})}
 
@@ -60,7 +64,6 @@ class Combos extends Component {
 							<div className='row-container items-container flex flex-row justify-center m-auto'>
 								{unique.map((pair, index) => {
 									const split = pair.split('_');
-
 									return <ComboItem className='' item1={split[0]} item2={split[1]} key={'unique-' + index} />;
 								})}
 							</div>
@@ -81,6 +84,7 @@ const mapStateToProps = state => ({
 	// combos : state.items.combos,
 	// unique : state.items.unique,
 	...state.items,
+	goals: state.goals,
 });
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(

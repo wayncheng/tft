@@ -28,23 +28,6 @@ class ComboItem extends Component {
 		const {item1, item2} = this.props;
 		this.props.makeCombo(item1, item2);
 	};
-	// handleMouseEnter = event => {
-	// 	event.preventDefault();
-	// 	const {item1,item2} = this.props;
-	// 	this.props.mouseEnterCombo(item1,item2)
-	// }
-	// handleMouseLeave = event => {
-	// 	event.preventDefault();
-	// 	this.props.mouseLeaveCombo()
-	// }
-
-	// handleClick = event => {
-	// 	event.preventDefault();
-	// 	// const {item1, item2} = this.props;
-	// 	const combo_id = event.target.getAttribute('item_id');
-	// 	console.log('combo_id:', combo_id);
-	// 	this.props.spotlightCombo(combo_id);
-	// };
 	handleMouseEnter = event => {
 		event.preventDefault();
 		// this.setState({tooltipActive: true})
@@ -61,19 +44,19 @@ class ComboItem extends Component {
 		const item2 = sorted[1];
 		const combo_id = `${item1}_${item2}`;
 		// const combo = itemData[combo_id];
+		const isGoal = this.props.goals[combo_id] === true;
 
 		return (
 			<a
 				href='#!'
-				className={classNames('item', 'combo-item', 'p-2 flex flex-col', this.props.className, {
-					'is-goal' : this.props.goals[combo_id] === true,
-				})}
+				className={classNames('item', 'combo-item', 'p-2 flex flex-col', this.props.className, {'is-goal': isGoal})}
 				item1={item1}
 				item2={item2}
 				item_id={combo_id}
 				onClick={this.handleClick}
 				onMouseEnter={this.handleMouseEnter}
 				onMouseLeave={this.handleMouseLeave}
+				is_goal={`${isGoal}`}
 			>
 				<Image item_id={combo_id} />
 				<div className='help-container'>
@@ -95,7 +78,7 @@ class ComboItem extends Component {
 
 const mapStateToProps = state => ({
 	inventory : state.items.inventory,
-	goals: state.goals,
+	goals     : state.goals,
 });
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(

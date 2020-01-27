@@ -146,7 +146,7 @@ export const findCombos = inventory => (dispatch, getState) => {
 		}
 	}
 
-	console.log('combos:', combos);
+	// console.log('combos:', combos);
 	dispatch({
 		type   : SET_COMBOS,
 		combos,
@@ -158,7 +158,7 @@ export const findCombos = inventory => (dispatch, getState) => {
 };
 
 export const processKey = key => (dispatch, getState) => {
-	console.log('key:', key);
+	// console.log('key:', key);
 	const {base} = getState().items;
 
 	const num = parseInt(key[key.length - 1]);
@@ -192,7 +192,7 @@ export const removeItem = _item => (dispatch, getState) => {
 	// }
 };
 export const makeCombo = (item1, item2) => dispatch => {
-	console.log('combining:', item1, item2);
+	console.log(`combining items: ${item1} + ${item2}`);
 
 	// remove each item from inventory
 	dispatch(removeItem(item1));
@@ -203,6 +203,9 @@ export const makeCombo = (item1, item2) => dispatch => {
 		type  : SET_COMBO_INVENTORY,
 		combo : `${item1}_${item2}`,
 	});
+
+	// Remove focus from current element
+	document.activeElement.blur();
 };
 
 // Inventory --------------------------------------------------
@@ -213,6 +216,9 @@ export const setInventory = inventory => dispatch => {
 	});
 
 	dispatch(findCombos(inventory));
+
+	// Remove focus from current element
+	document.activeElement.blur();
 };
 export const resetInventory = inventory => dispatch => {
 	dispatch({type: RESET_INVENTORY});

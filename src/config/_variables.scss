@@ -1,4 +1,4 @@
-
+@import 'colors';
 
 //======================================================
 // App Variables
@@ -100,6 +100,41 @@ $medium-shadow-lifted  : 0 5px 20px 8px rgba(#333, 0.2);
 			          box-shadow: 0 0 0 $spread $pulse-b; }
 		100% { -moz-box-shadow: 0 0 0 0       $pulse-b;
 			          box-shadow: 0 0 0 0       $pulse-b; }
+	}
+
+}
+// Pulse Animation ===========
+%bg-pulse {
+	$rate: 2s;
+	$start: rgba(#000,0.5);
+	$end: rgba(#000,0.8);
+	background-color: $start;
+	animation: bg-pulse $rate infinite;
+	@-webkit-keyframes bg-pulse {
+		0%   { background-color: $start; }
+		35%  { background-color: $end; }
+		70%  { background-color: $start; }
+		100% { background-color: $start; }
+	}
+	@keyframes bg-pulse {
+		0%   { background-color: $start; }
+		35%  { background-color: $end; }
+		70%  { background-color: $start; }
+		100% { background-color: $start; }
+		
+		// 0%   { background-color: $start; }
+		// 40%  { background-color: $end; }
+		// 80%  { background-color: $start; }
+		// 100% { background-color: $start; }
+		
+		// 0%   { background-color: $start; }
+		// 50%  { background-color: $end; }
+		// 100% { background-color: $start; }
+
+		// 0%   { background-color: $start; }
+		// 40%  { background-color: $end; }
+		// 60%  { background-color: $end; }
+		// 100% { background-color: $start; }
 	}
 
 }

@@ -8,7 +8,7 @@ import {ToggleSwitch, Image} from '..';
 // import {toggleComboDetails} from '../modules/items';
 import {toggleGoal, setGoal, removeGoal} from '../../modules/goals';
 // import './Goals.scss';
-import constants from '../../utils/constants';
+// import constants from '../../utils/constants';
 import itemData from '../../utils/item_data';
 
 class GoalToggle extends Component {

@@ -11,6 +11,7 @@ import {
 	clearSpotlight,
 	//
 } from '../modules/items';
+// import {focusKeyHandler} from '../modules/general';
 import {
 	Image,
 	// Emoji,
@@ -27,6 +28,8 @@ class DetailedComboItem extends Component {
 		event.preventDefault();
 		const {item1, item2} = this.props;
 		this.props.makeCombo(item1, item2);
+		// this.props.focusKeyHandler();
+		document.activeElement.blur();
 	};
 	handleMouseEnter = event => {
 		event.preventDefault();
@@ -61,7 +64,7 @@ class DetailedComboItem extends Component {
 		const item2 = sorted[1];
 		const combo_id = `${item1}_${item2}`;
 		const combo = itemData[combo_id];
-
+		const isGoal = this.props.goals[combo_id] === true;
 		return (
 			<div
 				className={classNames(
@@ -70,15 +73,14 @@ class DetailedComboItem extends Component {
 				)}
 			>
 				<a
-					className={classNames('detailed-combo', {
-						'is-goal' : this.props.goals[combo_id] === true,
-					})}
+					className={classNames('detailed-combo', {'is-goal': isGoal})}
 					href='#!'
 					onClick={this.handleClick}
 					title={combo.name}
 					item1={item1}
 					item2={item2}
 					item_id={combo_id}
+					is_goal={`${isGoal}`}
 				>
 					<span href='#!' className={classNames('item sized', 'combo-item', 'flex flex-col', this.props.className)}>
 						<Image item_id={combo_id} />
@@ -108,6 +110,7 @@ const mapDispatchToProps = dispatch =>
 			mouseLeaveCombo,
 			spotlightCombo,
 			clearSpotlight,
+			// focusKeyHandler,
 		},
 		dispatch,
 	);

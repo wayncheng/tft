@@ -1,8 +1,8 @@
 module.exports = {
-	patch_version: '10.1',
-	item_cheatsheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-full-item-cheat-sheet-set2-10-1.png',
-	full_cheatsheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-full-item-cheat-sheet-extra-set2-10-1.png',
-	wide_cheatsheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-full-item-cheat-sheet-desktop-set2-10-1.png',
+	patch_version: '10.2',
+	item_cheatsheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-full-item-cheat-sheet-set2-10-2.png',
+	full_cheatsheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-full-item-cheat-sheet-extra-set2-10-2.png',
+	wide_cheatsheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-full-item-cheat-sheet-desktop-set2-10-2.png',
 	possible_combos: [ 
 		'belt_belt',  'belt_bow',  'belt_cloak',  'belt_glove',  'belt_rod',  'belt_spatula',  'belt_sword',  'belt_tear',  
 		'belt_vest',  'bow_bow',  'bow_cloak',  'bow_glove',  'bow_rod',  'bow_spatula',  'bow_sword',  'bow_tear',  

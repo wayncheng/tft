@@ -1,23 +1,17 @@
 
-export const INCREMENT   = 'general/INCREMENT';
-export const DECREMENT   = 'general/DECREMENT';
+export const FOCUS_KEY_HANDLER   = 'general/FOCUS_KEY_HANDLER';
 
 const initialState = {
-	count: 0,
+	keyHandlerFocused: false,
 };
 
 export default (state = initialState, action) => {
 	switch (action.type) {
 
-		case INCREMENT:
+		case FOCUS_KEY_HANDLER:
 			return {
 				...state,
-				count: state.count + 1,
-			}
-		case DECREMENT:
-			return {
-				...state,
-				count: state.count - 1,
+				keyHandlerFocused: true,
 			}
 
 		default:
@@ -26,9 +20,7 @@ export default (state = initialState, action) => {
 }
 
 // LAYER CONTROLS ========================================
-export const increment = () => dispatch => {
-	dispatch({ type: INCREMENT })
-}
-export const decrement = () => dispatch => {
-	dispatch({ type: DECREMENT })
+export const focusKeyHandler = () => dispatch => {
+	document.getElementById('item-page-root').focus();
+	dispatch({ type: FOCUS_KEY_HANDLER })
 }

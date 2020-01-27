@@ -278,8 +278,8 @@ const items = {
 	cloak_sword     : {
 		id        : 'bloodthirster',
 		name      : `Bloodthirster`,
-		perk      : 'Atks heal for 40% of dmg',
-		perk_full : 'Attacks heal for 40% of damage',
+		perk      : 'Atks heal for 50% of dmg',
+		perk_full : 'Attacks heal for 50% of damage',
 	},
 	cloak_tear      : {
 		id        : 'hush',
@@ -328,8 +328,8 @@ const items = {
 	glove_vest      : {
 		id        : 'iceborngauntlet',
 		name      : `Iceborn Gauntlet`,
-		perk      : `On spell cast, next basic atk freezes target for 1.5s`,
-		perk_full : `After casting a spell, the wearer's next basic attack freezes the target for 1.5 seconds.`,
+		perk      : `On spell cast, next basic atk freezes target for 2.5s`,
+		perk_full : `After casting a spell, the wearer's next basic attack freezes the target for 2.5 seconds.`,
 	},
 	rod_rod         : {
 		id        : 'rabadonsdeathcap',
@@ -346,21 +346,20 @@ const items = {
 	rod_sword       : {
 		id        : 'hextechgunblade',
 		name      : `Hextech Gunblade`,
-		perk      : 'Heal for 25% of dmg dealt',
-		perk_full : 'Heal for 25% of all damage dealt',
+		perk      : 'Heal for 33% of dmg dealt',
+		perk_full : 'Heal for 33% of all damage dealt',
 	},
 	rod_tear        : {
 		id        : 'ludensecho',
 		name      : `Luden's Echo`,
-		perk      : 'Deals 120/160/200 magic dmg',
-		perk_full : 'Deals 120/160/200 magic damage (scales with wearer’s Star Level)',
+		perk      : 'Deals 125/175/250 magic dmg',
+		perk_full : 'Deals 125/175/250 magic damage (scales with wearer’s Star Level)',
 	},
 	rod_vest        : {
 		id        : 'locketoftheironsolari',
 		name      : `Locket of the Iron Solari`,
-		perk      : 'Shields allies 2 L&R in row for 250/275/300 dmg for 8s',
-		perk_full :
-			'Shields allies within two hexes in the same row for 250/275/300 damage for 8 seconds (scales with wearer’s Star Level)',
+		perk      : 'Shields allies 2 L&R in row for 250/275/350 dmg for 8s',
+		perk_full : 'Shields allies within two hexes in the same row for 250/275/350 damage for 8 seconds (scales with wearer’s Star Level)',
 	},
 	spatula_spatula : {
 		id        : 'forceofnature',
@@ -419,10 +418,8 @@ const items = {
 	vest_vest       : {
 		id        : 'bramblevest',
 		name      : `Bramble Vest`,
-		perk      :
-			'Negates bonus dmg from crit. When hit by basic atk, deal 80/120/160 magic dmg to nearby enemies (Max every 1s)',
-		perk_full :
-			'Negates bonus damage from incoming critical hits. On being hit by a Basic Attack, deal 80/120/160 magic damage to all nearby enemies (once every 1 second maximum). Scales with wearer’s Star Level.',
+		perk      : 'Negates bonus dmg from crit. When hit by basic atk, deal 100/140/200 magic dmg to nearby enemies (Max every 1s)',
+		perk_full : 'Negates bonus damage from incoming critical hits. On being hit by a Basic Attack, deal 100/140/200 magic damage to all nearby enemies (once every 1 second maximum). Scales with wearer’s Star Level.',
 	},
 };
 

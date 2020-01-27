@@ -9,7 +9,7 @@
 
 html {
 	font-size: 16px;
-	background-color: #2d3748;
+	background-color: $gray-9;
 	font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	min-height: 100vh;
 	
@@ -155,8 +155,24 @@ main {
 
 // Footer =======================================
 .footer {
-	padding: 1.5rem 1rem 8rem 1rem;
+	// padding: 1.5rem 1rem 8rem 1rem;
 	// padding-bottom: 8rem;
+		font-size: .9rem;
+	.fine-print {
+		color: $fg-light-disabled;
+		color: rgba(#fff,0.3);
+		// background-color: rgba(#000,0.1);
+		// background-color: rgba(#fff,0.8);
+		color: $fg-secondary;
+		color: $fg-primary;
+		font-weight: 400;
+	}
+	.footer-list {
+		text-align: center;
+	}
+	li {
+		color: $fg-light-secondary;
+	}
 	a {
 		color: $fg-light-secondary;
 		color: $fg-light-disabled;

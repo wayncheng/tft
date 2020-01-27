@@ -4,18 +4,18 @@ import {connect} from 'react-redux';
 import {
 	Item,
 	DetailToggle,
-	ItemCheatSheetTrigger,
+	// ItemCheatSheetTrigger,
 	ModalTrigger,
 	// Modal,
 	// CloseBtn,
 	// PhotoLightbox,
 	GoalsModalTrigger,
-	ResetBtn,
+	// ResetBtn,
 	FullCheatSheetModal,
 } from '.';
-import constants from '../utils/constants';
+// import constants from '../utils/constants';
 import classNames from 'classnames';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 // import PhotoLightbox from './Lightbox/PhotoLightbox';
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 

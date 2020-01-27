@@ -167,6 +167,10 @@ $split-into: 4;
 	transition: all .2s;
 	width: 100%;
 	height: 100%;
+	color: $fg-light-secondary;
+	color: $fg-light-disabled;
+	color: rgba(#fff, .66);
+
 
 	.combo-item {
 		margin: 0;
@@ -174,7 +178,7 @@ $split-into: 4;
 	}
 	.details {
 		flex: 1;
-		color: $fg-light-secondary;
+		// color: $fg-light-secondary;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -185,16 +189,13 @@ $split-into: 4;
 		text-transform: uppercase;
 		font-size: .16em;
 		font-weight: 700;
-		color: $fg-light-secondary;
-		color: $fg-light-disabled;
-		color: rgba(#fff, .66);
+		color: inherit;
 		line-height: 1.2;
 		flex: 1;
 		letter-spacing: -0.06em;
 		padding: .5rem;
 		// padding-left: .75rem;
 	}
-
 	.ingredients {
 		display: flex;
 		flex-direction: column;
@@ -208,10 +209,12 @@ $split-into: 4;
 
 	&:hover,
 	&:focus {
-		background-color: rgba(#000, 0.5);
-		.detail-text {
-			color: $fg-light-primary;
-		}
+		// background-color: rgba(#000, 0.2);
+		background-color: rgba(#000, 0.3);
+		color: $fg-light-primary;
+		// .detail-text {
+		// 	color: $fg-light-primary;
+		// }
 		.ingredients {
 			.item-img {
 				opacity: 1;
@@ -301,10 +304,6 @@ $split-into: 4;
 	box-shadow: 0 9px 11px 0 rgba(36, 50, 66, 0.8);
 
 	.item {
-		// box-shadow: $shadow-1;
-		// box-shadow: $shadow-2;
-		// box-shadow: $shadow-3;
-		// box-shadow: $shadow-5;
 		box-shadow: $shadow-4;
 	}
 
@@ -353,16 +352,26 @@ $split-into: 4;
 	max-width: 1400px;
 }
 .is-goal {
-	background-color: rgba(#000, 0.4);
-	box-shadow: 0 0px 0px 3px rgba(#fff, 0.2);
-	@extend %shadow-pulse;
-
+	// Dark theme ......................
+	// background-color: rgba(#000, 0.5);
+	// box-shadow: 0 0px 0px 3px rgba(#fff, 0.2);
+	// @extend %shadow-pulse;
+	// @extend %bg-pulse;
+	// Light theme ......................
+	background-color: $gray-5;
+	background-color: $gray-4;
+	color: $fg-primary;
+	
+	&:focus,
 	&:hover {
-		// background-color: #fff;
-	}
-	.detail-text {
-		color: $fg-light-primary;
-		// color: $fg-primary !important;
+		// Dark theme .................
+		// background-color: rgba(#000, 0.6);
+		// background-color: rgba(#000, 0.8);
+		// Light theme .................
+		color: $fg-primary;
+		background-color: $gray-1;
+		background-color: $gray-2;
+	
 	}
 	.ingredients {
 		.item-img {
