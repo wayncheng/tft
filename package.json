@@ -49,5 +49,8 @@
 		"not dead",
 		"not ie <= 11",
 		"not op_mini all"
-	]
+	],
+	"devDependencies": {
+		"puppeteer": "^2.1.0"
+	}
 }
