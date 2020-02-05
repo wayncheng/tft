@@ -66,7 +66,8 @@ main {
 		color: $fg-primary;
 	}
 	
-	&.modal-trigger {
+	&.modal-trigger,
+	&.base-panel-btn {
 		background-color: $fg-light-secondary;
 		background-color: rgba(#fff,0.7);
 		color: $fg-primary;
@@ -101,7 +102,14 @@ main {
 			text-decoration: underline;
 		}
 	}
-	
+	// &.base-panel-btn {
+	// 	padding: 0 .5rem;
+	// 	font-size: .75rem;
+	// 	text-transform: uppercase;
+	// 	line-height: 2em;
+	// 	border-radius: .25rem;
+	// 	letter-spacing: .05em;
+	// }
 }
 //=======================================
 .sec-title {

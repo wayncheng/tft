@@ -8,6 +8,7 @@ import {
 	// Goals,
 	// AllGoals,
 	GoalsModalTrigger,
+	PhotoLightbox,
 } from '../components';
 // import itemData from '../utils/item_data';
 class DevSandboxPage extends Component {
@@ -63,7 +64,8 @@ class DevSandboxPage extends Component {
 			<div>
 				<Helmet title='Sandbox (Dev)' />
 				<main>
-					<GoalsModalTrigger/>
+					<PhotoLightbox/>
+					{/* <GoalsModalTrigger/> */}
 					{/* <AllGoals/> */}
 
 					{/* <section className='flex flex-col'>

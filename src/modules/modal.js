@@ -89,7 +89,7 @@ export const toggleModal = modalID => dispatch =>
 		modalID,
 	});
 
-export const openGallery = (photoID) => dispatch => {
+export const openGallery = (photoID = '') => dispatch => {
 	dispatch({
 		type      : OPEN_GALLERY,
 		// galleryID,

@@ -8,7 +8,7 @@ import {
 	ModalTrigger,
 	// Modal,
 	// CloseBtn,
-	// PhotoLightbox,
+	PhotoLightbox,
 	GoalsModalTrigger,
 	// ResetBtn,
 	FullCheatSheetModal,
@@ -34,15 +34,16 @@ class BaseItemSelectionPanel extends Component {
 						<div className='flex flex-row flex-1 justify-start items-center'>
 							{/* <FontAwesomeIcon icon='info-circle' className='text-white mr-2' /> */}
 							{/* <ItemCheatSheetTrigger className='eyebrow-item' /> */}
-							<ModalTrigger
+							{/* <ModalTrigger
 								modal_id='full_cheatsheet'
 								modal_action='open'
-								className='default-trigger btn outline-btn eyebrow-item'
+								className='base-panel-btn default-trigger btn outline-btn eyebrow-item'
 							>
-								{/* Full */}
 								Cheat Sheet
 							</ModalTrigger>
-							<FullCheatSheetModal/>
+							<FullCheatSheetModal/> */}
+
+							<PhotoLightbox/>
 						</div>
 						<div className='flex flex-row justify-end items-center'>
 							{/* <PhotoLightbox/> */}
