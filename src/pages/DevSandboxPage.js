@@ -5,8 +5,13 @@ import {Helmet} from 'react-helmet';
 import {
 	// Item,
 	Footer,
+	// Goals,
+	// AllGoals,
+	GoalsModalTrigger,
+	PhotoLightbox,
 } from '../components';
 // import itemData from '../utils/item_data';
+import constants from '../utils/constants';
 class DevSandboxPage extends Component {
 
 	calculate = () => {
@@ -49,25 +54,35 @@ class DevSandboxPage extends Component {
 
 
 	render() {
-		const {hash,combos,unique} = this.calculate();
-		const uniqueArr = Object.keys(unique);
+		// const {
+		// 	hash,
+		// 	combos,
+		// 	unique
+		// } = this.calculate();
+		// const uniqueArr = Object.keys(unique);
 
 		return (
 			<div>
 				<Helmet title='Sandbox (Dev)' />
 				<main>
+					<section className="text-white">
+						<p>{`Patch ${constants.patch_version}`}</p>
+						<p><a href={constants.item_cheatsheet}>Item Cheatsheet</a></p>
+						<p><a href={constants.full_cheatsheet}>Full Cheatsheet</a></p>
+						<p><a href={constants.wide_cheatsheet}>Wide Cheatsheet</a></p>
+					</section>
+					<PhotoLightbox/>
+					{/* <GoalsModalTrigger/> */}
+					{/* <AllGoals/> */}
 
-					
-
-					<section className='flex flex-col'>
+					{/* <section className='flex flex-col'>
 						<p>Combos</p>
 						<span>{combos.length}</span>
 						<pre> {JSON.stringify(combos.map(c => c.join('')), null, 2)} </pre>
 						<p>Unique</p>
 						<span>{uniqueArr.length}</span>
 						<pre> {JSON.stringify(uniqueArr, null, 2)} </pre>
-						{/* <pre> {JSON.stringify(uniqueArr.map(c => c.join('')))} </pre> */}
-					</section>
+					</section> */}
 				</main>
 				<Footer />
 			</div>

@@ -1,0 +1,306 @@
+@import "../../config/variables";
+
+$modal-in-duration: .1s;
+$modal-in-curve: cubic-bezier(0.17, 0.72, 0.36, 1.01);
+$modal-out-duration: .1s;
+$modal-out-curve: $modal-in-curve;
+
+// Modal Root that exists outside of the app's root (sibling to #root)
+// - NOT the overlay / backdrop
+// - No "styling" here
+// - Purpose is to ensure it covers the app properly (modal on top, fills window, etc)
+.modal-root {
+	position: relative;
+	// position: fixed;
+	// height: 100vh;
+	// width: 100vw;
+	height: initial;
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	max-width: 100vw;
+	// z-index: 100000;
+	// border-bottom: 1px solid transparent; // to force scroll bar and prevent "shifting on windows"
+
+	&.overflowing {
+		border: .5px solid transparent;
+	}
+}
+
+// Container just inside the modal-root
+// - handles styling of the backdrop that will cover the app (overlay)
+.modal-overlay {
+	min-height: 100vh;
+	width: 100%;
+	margin: 0;
+	padding: 2rem 1rem 3rem;
+	background-color: rgba(0, 0, 0, 0.33);
+	cursor: pointer;
+	// z-index: $z-base;
+	z-index: -1;
+	display: none; // * IMPORTANT: hide overlay by default
+	pointer-events: none;
+	visibility: hidden;
+	overflow-y: auto;
+	
+	@media all and (max-width: 420px) {
+		// padding: 4rem 2rem;
+		// padding: 5vh 5%;
+		padding: 1rem .5rem;
+	}
+	
+	&.modal-overlay_after-open {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: $z-top;
+		pointer-events: all;
+		visibility: visible;
+		// transition: background-color $modal-in-duration;
+		// transition-timing-function: $modal-in-curve;
+	}
+}
+
+// "HIDDEN" Modal Window -----------------------------------
+//   - Generally contains properties that are independent
+//     of modal state (open or closed)
+//   - HOWEVER, modal's default state is closed, so it
+//     should be hidden initially as the starting point
+//     and have the active style in another class (modal_after-open)
+// ---------------------------------------------------------
+.modal {
+	height: initial;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden; // hides corners of action bar
+	overflow: visible;
+
+	.body,
+	.modal-body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 2rem 1rem;
+	}
+
+	.overlay-btn {
+		background-color: rgba(#000, 0.4);
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: $z-top+5;
+		font-size: 1.2rem;
+		width: 1.2em;
+		line-height: 1.2em;
+		// height: 2em;
+		text-align: center;
+		cursor: pointer;
+		border-radius: 50%;
+		opacity: 0.81;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		span {
+			color: $fg-light-primary;
+		}
+	}
+}
+
+// VISIBLE Modal Window ------------------------------------
+//   - ACTIVE, VISIBLE state of the modal window
+//   - This class is toggled on the modal when opened/closed
+// ---------------------------------------------------------
+.modal_after-open {
+	display: block; /*** IMPORTANT ***/
+	position: relative;
+	height: 100%;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+// Change Position Type for the root wrappers so <body> dimensions is determined
+// by the modal's size rather than the app's root dimensions
+.modal_is-open {
+	#root {
+		position: fixed;
+		$blur: 2px;
+		filter: blur($blur);
+		margin-left: $blur/-2;
+		transition: filter $modal-in-duration;
+		transition-timing-function: $modal-in-curve;
+		// transition-timing-function: cubic-bezier(0.17, 0.72, 0.36, 1.01),cubic-bezier(0.17, 0.72, 0.36, 1.01);
+	}
+	#outer-space {
+		position: relative;
+	}
+}
+
+.modal-trigger {
+	background-color: transparent;
+	z-index: $z-top + 10;
+	cursor: pointer;
+	font-size: 1rem;
+	font-size: inherit;
+	border: none;
+	outline: none;
+	&:focus {
+		outline: none;
+	}
+
+	&.close-btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 1rem;
+		width: 2em;
+		height: 2em;
+		border-radius: 50%;
+		transform: translate(25%, -25%);
+		box-shadow: $shadow-3;
+		// box-shadow: 0 5px 7px  0 rgba(36,50,66,0.4);
+		transition: all .1s;
+		background-color: #fff;
+		// background-color: #eee;
+		color: $fg-secondary;
+		&:hover,&:focus {
+			background-color: #e74c3c;
+			color: #fff;
+			// background-color: $icon-white-active;
+			// color: $fg-primary;
+			
+		}
+	}
+	&.modal-close-btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		// transform: translate(50%,-50%);
+		font-size: 1rem;
+		width: 3em;
+		height: 3em;
+		line-height: 3em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		border: none;
+		outline: none;
+		box-shadow: none;
+		background-color: transparent;
+		color: $fg-secondary;
+		&:hover,
+		&:focus {
+			color: $fg-primary;
+		}
+	}
+}
+
+// Default Modal ------------------------
+.default-modal {
+	background-color: #fff;
+	border-radius: 0.5rem;
+	// overflow-x: hidden;
+	padding: 1.5rem 1rem;
+	// padding: 1rem 0.5rem;
+	box-shadow: $big-box-shadow;
+	// width: 100%;
+	width: initial;
+	height: 100%;
+	max-width: 100%;
+	@media all and (max-width: 420px) {
+		padding: .5rem 1.5rem;
+		font-size: 1.2rem;
+	}
+	&:focus {
+		outline: none;
+		// border: 2px solid $blue;
+		box-shadow: $big-box-shadow-focused;
+	}
+}
+.photo-modal {
+	background-color: #fff;
+	border-radius: 0.5rem;
+	overflow: visible;
+	// padding: 1rem;
+	padding: .5rem;
+	box-shadow: $big-box-shadow;
+	// width: 100%;
+	// height: 100%;
+	width: initial;
+	height: initial;
+	// max-width: 95%;
+	max-width: 100%;
+	@media all and (max-width: 420px) {
+		padding: .5rem;
+		font-size: 1.2rem;
+	}
+	&:focus {
+		outline: none;
+		// border: 2px solid $blue;
+		box-shadow: $big-box-shadow-focused;
+	}
+}
+
+// Compact Modal ------------------------
+.compact-modal {
+	background-color: #fff;
+	border-radius: 0.5rem;
+	overflow-x: hidden;
+	padding: 2rem 3rem;
+	box-shadow: $big-box-shadow;
+	@media all and (max-width: 420px) {
+		padding: .5rem 1.5rem;
+		font-size: 1.2rem;
+	}
+	&:focus {
+		outline: none;
+		// border: 2px solid $blue;
+		box-shadow: $big-box-shadow-focused;
+	}
+}
+
+// Full Page Modal ------------------------
+$fullpg-theme: #fff;
+.fullpage-modal-root {
+	.modal-overlay {
+		padding: 0;
+		// background-color: rgba($fullpg-theme,0.5);
+	}
+}
+.fullpage-modal {
+	background-color: rgba($fullpg-theme, 0.95);
+	border-radius: 0;
+	overflow-x: hidden;
+	padding: 2rem 3rem;
+	box-shadow: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 100vw;
+	height: 100vh;
+
+	// &:focus {
+	// 	outline: none;
+	// }
+	// .close-btn {
+	// 	position: absolute;
+	// }
+
+	@media all and (max-width: 420px) {
+		padding: 1rem 1.5rem;
+		font-size: 1.2rem;
+	}
+}

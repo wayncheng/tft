@@ -11,8 +11,9 @@ import {
 	clearSpotlight,
 	//
 } from '../modules/items';
+// import {focusKeyHandler} from '../modules/general';
 import {
-	Icon,
+	Image,
 	// Emoji,
 } from '.';
 
@@ -27,6 +28,8 @@ class DetailedComboItem extends Component {
 		event.preventDefault();
 		const {item1, item2} = this.props;
 		this.props.makeCombo(item1, item2);
+		// this.props.focusKeyHandler();
+		document.activeElement.blur();
 	};
 	handleMouseEnter = event => {
 		event.preventDefault();
@@ -61,37 +64,35 @@ class DetailedComboItem extends Component {
 		const item2 = sorted[1];
 		const combo_id = `${item1}_${item2}`;
 		const combo = itemData[combo_id];
-
+		const isGoal = this.props.goals[combo_id] === true;
 		return (
-			<div className='detailed-container'>
-				<div className='detailed-combo'>
-					<a
-						href='#!'
-						className={classNames('item sized', 'combo-item', 'flex flex-col', this.props.className)}
-						item1={item1}
-						item2={item2}
-						item_id={combo_id}
-						onClick={this.handleClick}
-						title={combo.name}
-						// onMouseEnter={this.handleMouseEnter}
-						// onMouseLeave={this.handleMouseLeave}
-					>
-						<Icon item_id={combo_id} />
-					</a>
+			<div
+				className={classNames(
+					'detailed-container',
+					// { 'is-goal': (this.props.goals[combo_id] === true), },
+				)}
+			>
+				<a
+					className={classNames('detailed-combo', {'is-goal': isGoal})}
+					href='#!'
+					onClick={this.handleClick}
+					title={combo.name}
+					item1={item1}
+					item2={item2}
+					item_id={combo_id}
+					is_goal={`${isGoal}`}
+				>
+					<span href='#!' className={classNames('item sized', 'combo-item', 'flex flex-col', this.props.className)}>
+						<Image item_id={combo_id} />
+					</span>
 					<div className='details'>
 						<div className='ingredients'>
-							<Icon className='tiny' item_id={item1} />
-							<Icon className='tiny' item_id={item2} />
+							<Image className='tiny' item_id={item1} />
+							<Image className='tiny' item_id={item2} />
 						</div>
-						{/* <div className='detail-body'> */}
-						{/* <p className='detail-text'>{combo.perk_full}</p> */}
 						<p className='detail-text'>{combo.perk}</p>
-						{/* </div> */}
-
-						{/* <Emoji item={item1}/>
-					<Emoji item={item2}/> */}
 					</div>
-				</div>
+				</a>
 			</div>
 		);
 	}
@@ -99,6 +100,7 @@ class DetailedComboItem extends Component {
 
 const mapStateToProps = state => ({
 	inventory : state.items.inventory,
+	goals     : state.goals,
 });
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(
@@ -108,6 +110,7 @@ const mapDispatchToProps = dispatch =>
 			mouseLeaveCombo,
 			spotlightCombo,
 			clearSpotlight,
+			// focusKeyHandler,
 		},
 		dispatch,
 	);
@@ -118,3 +121,17 @@ DetailedComboItem.defaultProps = {
 	item1 : '',
 	item2 : '',
 };
+
+// {/* <a
+// 	href='#!'
+// 	className={classNames('item sized', 'combo-item', 'flex flex-col', this.props.className)}
+// 	item1={item1}
+// 	item2={item2}
+// 	item_id={combo_id}
+// 	onClick={this.handleClick}
+// 	title={combo.name}
+// 	// onMouseEnter={this.handleMouseEnter}
+// 	// onMouseLeave={this.handleMouseLeave}
+// >
+// 	<Image item_id={combo_id} />
+// </a> */}

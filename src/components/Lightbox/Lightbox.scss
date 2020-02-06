@@ -1,0 +1,14 @@
+//------------------------------
+//    Photo Grid / Gallery 
+//------------------------------
+@import '../../config/variables';
+
+// UI to hide
+.pswp__button--share,
+.pswp__button--arrow--left,
+.pswp__button--arrow--right{
+	display: none;
+}
+.pswp {
+	z-index: $z-top + 1000; // IMPORTANT: must be higher than everything // 
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import itemData from '../utils/item_data';
 import classNames from 'classnames';
 
-const Icon = props => {
+const Image = props => {
 	const {item_id, src, ext} = props;
 	const item = itemData[item_id];
 	return (
@@ -15,9 +15,9 @@ const Icon = props => {
 		/>
 	)
 }
-export default Icon;
+export default Image;
 
-Icon.defaultProps = {
+Image.defaultProps = {
 	src: 'https://blitz-cdn.blitz.gg/blitz/tft/items',
 	ext: 'png',
 	item_id : '',

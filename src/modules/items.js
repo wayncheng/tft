@@ -10,6 +10,7 @@ export const MOUSE_LEAVE_COMBO = 'items/MOUSE_LEAVE_COMBO';
 export const SPOTLIGHT_COMBO = 'items/SPOTLIGHT_COMBO';
 export const CLEAR_SPOTLIGHT = 'items/CLEAR_SPOTLIGHT';
 export const TOGGLE_COMBO_DETAILS = 'items/TOGGLE_COMBO_DETAILS';
+export const RESET_INVENTORY = 'items/RESET_INVENTORY';
 
 const initialState = {
 	// base      : [ 'sword', 'vest', 'belt', 'rod', 'cloak', 'bow', 'spatula', 'tear', 'glove' ],
@@ -90,6 +91,17 @@ const items = (state = initialState, action) => {
 				// ingredient1 : -1,
 				// ingredient2 : -1,
 			};
+		case RESET_INVENTORY:
+			return {
+				...state,
+				comboInventory : [],
+				inventory      : [],
+				combos         : [],
+				unique           : [],
+				ingredients      : [ -1, -1 ],
+				hoveringCombo    : false,
+				comboSpotlight   : '',
+			};
 		default:
 			return state;
 	}
@@ -134,7 +146,7 @@ export const findCombos = inventory => (dispatch, getState) => {
 		}
 	}
 
-	console.log('combos:', combos);
+	// console.log('combos:', combos);
 	dispatch({
 		type   : SET_COMBOS,
 		combos,
@@ -146,7 +158,7 @@ export const findCombos = inventory => (dispatch, getState) => {
 };
 
 export const processKey = key => (dispatch, getState) => {
-	console.log('key:', key);
+	// console.log('key:', key);
 	const {base} = getState().items;
 
 	const num = parseInt(key[key.length - 1]);
@@ -180,7 +192,7 @@ export const removeItem = _item => (dispatch, getState) => {
 	// }
 };
 export const makeCombo = (item1, item2) => dispatch => {
-	console.log('combining:', item1, item2);
+	console.log(`combining items: ${item1} + ${item2}`);
 
 	// remove each item from inventory
 	dispatch(removeItem(item1));
@@ -191,7 +203,12 @@ export const makeCombo = (item1, item2) => dispatch => {
 		type  : SET_COMBO_INVENTORY,
 		combo : `${item1}_${item2}`,
 	});
+
+	// Remove focus from current element
+	document.activeElement.blur();
 };
+
+// Inventory --------------------------------------------------
 export const setInventory = inventory => dispatch => {
 	dispatch({
 		type      : SET_INVENTORY,
@@ -199,7 +216,15 @@ export const setInventory = inventory => dispatch => {
 	});
 
 	dispatch(findCombos(inventory));
+
+	// Remove focus from current element
+	document.activeElement.blur();
 };
+export const resetInventory = inventory => dispatch => {
+	dispatch({type: RESET_INVENTORY});
+};
+
+// Option Toggles --------------------------------------------------
 export const togglePerks = () => dispatch => {
 	dispatch({type: TOGGLE_PERKS});
 };
@@ -207,6 +232,7 @@ export const toggleComboDetails = () => dispatch => {
 	dispatch({type: TOGGLE_COMBO_DETAILS});
 };
 
+// Spotlight ---------------------------------------------------
 export const spotlightCombo = combo_id => dispatch => {
 	dispatch({
 		type     : SPOTLIGHT_COMBO,
@@ -216,7 +242,7 @@ export const spotlightCombo = combo_id => dispatch => {
 export const clearSpotlight = () => dispatch => {
 	dispatch({type: CLEAR_SPOTLIGHT});
 };
-
+// Hover -------------------------------------------------------
 export const mouseEnterCombo = (item1, item2) => (dispatch, getState) => {
 	// Find where the ingredients (base items) are located in the inventory
 	const {inventory} = getState().items;

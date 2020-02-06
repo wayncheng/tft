@@ -21,14 +21,15 @@ class ToggleSwitch extends Component {
 		this.setState({checked});
 	};
 
-	render() {
+	render = () => {
 		return (
 			<div className={classNames('react-switch-container', this.props.container_class)}>
 				<Switch
 					{...this.props}
 					id={this.props.id}
 					onChange={this.props.onChange || this.handleCheck}
-					checked={this.props.checked || this.state.checked}
+					// checked={this.props.checked || this.state.checked}
+					checked={this.props.checked}
 					disabled={this.props.disabled || this.state.disabled}
 					className={classNames('react-switch', this.props.className)}
 					// onColor='#2ecc71'
@@ -46,7 +47,7 @@ class ToggleSwitch extends Component {
 				{/* {this.props.children} */}
 			</div>
 		);
-	}
+	};
 }
 export default ToggleSwitch;
 
@@ -58,6 +59,6 @@ ToggleSwitch.propTypes = {
 };
 
 ToggleSwitch.defaultProps = {
-	uncheckedIcon: false,
-	checkedIcon: false,
-}
+	uncheckedIcon : false,
+	checkedIcon   : false,
+};
