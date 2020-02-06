@@ -1,9 +1,12 @@
 @import '../config/variables';
 
 // $size-0: 4rem;
-$size-0: 64px;
-$size-1: 48px;
-$size-2: 32px;
+$size-0: 68px;
+$size-1: 52px;
+$size-2: 36px;
+// $size-0: 64px;
+// $size-1: 48px;
+// $size-2: 32px;
 // Sizer ==================================
 // .sized {
 // 	width: $size-0;
@@ -121,6 +124,11 @@ $size-2: 32px;
 .combo-inventory {
 	border-top-right-radius: .5rem;
 	border-top-left-radius : .5rem;
+
+	&.full-w-style {
+		width: 100vw;
+		background-color: $gray-9;
+	}
 }
 .items-container {
 	z-index: $z-above;

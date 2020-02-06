@@ -20,7 +20,7 @@ const initialState = {
 	combos           : [],
 	unique           : [],
 	showPerks        : false,
-	showComboDetails : true,
+	showComboDetails : false,
 	ingredients      : [ -1, -1 ],
 	hoveringCombo    : false,
 	comboSpotlight   : '',
