@@ -84,6 +84,7 @@ const mapStateToProps = state => ({
 	// unique : state.items.unique,
 	...state.items,
 	goals: state.goals,
+	showComboDetails: state.general.prefs.showComboDetails,
 });
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(
