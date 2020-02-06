@@ -11,6 +11,7 @@ import {
 	PhotoLightbox,
 } from '../components';
 // import itemData from '../utils/item_data';
+import constants from '../utils/constants';
 class DevSandboxPage extends Component {
 
 	calculate = () => {
@@ -64,6 +65,12 @@ class DevSandboxPage extends Component {
 			<div>
 				<Helmet title='Sandbox (Dev)' />
 				<main>
+					<section className="text-white">
+						<p>{`Patch ${constants.patch_version}`}</p>
+						<p><a href={constants.item_cheatsheet}>Item Cheatsheet</a></p>
+						<p><a href={constants.full_cheatsheet}>Full Cheatsheet</a></p>
+						<p><a href={constants.wide_cheatsheet}>Wide Cheatsheet</a></p>
+					</section>
 					<PhotoLightbox/>
 					{/* <GoalsModalTrigger/> */}
 					{/* <AllGoals/> */}
