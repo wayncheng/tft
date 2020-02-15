@@ -8,7 +8,7 @@ import {
 	ModalTrigger,
 	// Modal,
 	// CloseBtn,
-	PhotoLightbox,
+	LightboxBtn,
 	GoalsModalTrigger,
 	// ResetBtn,
 	FullCheatSheetModal,
@@ -16,7 +16,6 @@ import {
 // import constants from '../utils/constants';
 import classNames from 'classnames';
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import PhotoLightbox from './Lightbox/PhotoLightbox';
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 class BaseItemSelectionPanel extends Component {
@@ -30,28 +29,22 @@ class BaseItemSelectionPanel extends Component {
 			<aside className='select-panel-container'>
 				<div className={classNames('select-panel items-sec', this.props.className)}>
 					{/* Eyebrow ========================================================== */}
-					<div className='panel-eyebrow flex flex-row justify-end align-center px-1 py-0 mb-2'>
-						<div className='flex flex-row flex-1 justify-start items-center'>
-							{/* <FontAwesomeIcon icon='info-circle' className='text-white mr-2' /> */}
-							{/* <ItemCheatSheetTrigger className='eyebrow-item' /> */}
-							{/* <ModalTrigger
-								modal_id='full_cheatsheet'
-								modal_action='open'
-								className='base-panel-btn default-trigger btn outline-btn eyebrow-item'
-							>
-								Cheat Sheet
-							</ModalTrigger>
-							<FullCheatSheetModal/> */}
-
-							<PhotoLightbox/>
+						<div className='panel-eyebrow sideburns left-eyebrow'>
+							<GoalsModalTrigger className='eyebrow-item' />
+							<DetailToggle className='eyebrow-item p-0' />
 						</div>
-						<div className='flex flex-row justify-end items-center'>
-							{/* <PhotoLightbox/> */}
+						<div className='panel-eyebrow sideburns right-eyebrow'>
+							<LightboxBtn/>
+						</div>
+					{/* <div className='panel-eyebrow-container sideburns flex flex-row justify-end align-center px-1 py-0 mb-2'> */}
+						{/* <div className='panel-eyebrow flex flex-row flex-1 justify-start items-center'>
+							<PhotoLightbox/>
+						</div> */}
+						{/* <div className='panel-eyebrow flex flex-row justify-end items-center'>
 							<GoalsModalTrigger className='eyebrow-item' />
 							<DetailToggle className='eyebrow-item' />
-							{/* <ResetBtn className="eyebrow-item pl-2"/> */}
-						</div>
-					</div>
+						</div> */}
+					{/* </div> */}
 
 					{/* Item Selectors ================================================== */}
 					{this.props.base.map((baseItem, index) => {

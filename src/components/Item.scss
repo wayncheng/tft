@@ -1,9 +1,12 @@
 @import '../config/variables';
 
 // $size-0: 4rem;
-$size-0: 64px;
-$size-1: 48px;
-$size-2: 32px;
+$size-0: 68px;
+$size-1: 52px;
+$size-2: 36px;
+// $size-0: 64px;
+// $size-1: 48px;
+// $size-2: 32px;
 // Sizer ==================================
 // .sized {
 // 	width: $size-0;
@@ -22,15 +25,15 @@ $size-2: 32px;
 .sized,
 // .item,
 .item-img {
-	display   : inline-block;
-	width     : $size-0;
-	height    : $size-0;
-	max-width : $size-0;
+	display: inline-block;
+	width: $size-0;
+	height: $size-0;
+	max-width: $size-0;
 	max-height: $size-0;
 	&.tiny {
-		width     : $size-2;
-		height    : $size-2;
-		max-width : $size-2;
+		width: $size-2;
+		height: $size-2;
+		max-width: $size-2;
 		max-height: $size-2;
 		// width     : $size-0 / 2;
 		// height    : $size-0 / 2;
@@ -38,27 +41,27 @@ $size-2: 32px;
 		// max-height: $size-0 / 2;
 	}
 	&.size-4 {
-		width     : 4rem;
-		height    : 4rem;
-		max-width : 4rem;
+		width: 4rem;
+		height: 4rem;
+		max-width: 4rem;
 		max-height: 4rem;
 	}
 	&.size-3 {
-		width     : 3rem;
-		height    : 3rem;
-		max-width : 3rem;
+		width: 3rem;
+		height: 3rem;
+		max-width: 3rem;
 		max-height: 3rem;
 	}
 	&.size-2 {
-		width     : 2rem;
-		height    : 2rem;
-		max-width : 2rem;
+		width: 2rem;
+		height: 2rem;
+		max-width: 2rem;
 		max-height: 2rem;
 	}
 	&.size-1 {
-		width     : 1rem;
-		height    : 1rem;
-		max-width : 1rem;
+		width: 1rem;
+		height: 1rem;
+		max-width: 1rem;
 		max-height: 1rem;
 	}
 }
@@ -120,7 +123,12 @@ $size-2: 32px;
 }
 .combo-inventory {
 	border-top-right-radius: .5rem;
-	border-top-left-radius : .5rem;
+	border-top-left-radius: .5rem;
+
+	&.full-w-style {
+		width: 100vw;
+		background-color: $gray-9;
+	}
 }
 .items-container {
 	z-index: $z-above;
@@ -170,7 +178,6 @@ $split-into: 4;
 	color: $fg-light-secondary;
 	color: $fg-light-disabled;
 	color: rgba(#fff, .66);
-
 
 	.combo-item {
 		margin: 0;
@@ -312,7 +319,8 @@ $split-into: 4;
 		// bottom: 100%;
 	}
 }
-.panel-eyebrow {
+// BASE PANEL EYEBROW ....................
+.panel-eyebrow-container {
 	position: absolute;
 	bottom: 100%;
 	left: 0;
@@ -326,6 +334,88 @@ $split-into: 4;
 		margin: 0 .25rem;
 		// margin-bottom: .5rem;
 	}
+
+	&.sideburns {
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		position: fixed;
+		margin: 0;
+		.cheat-sheet-btn {
+			font-size: 1.25rem;
+			width: 7em;
+			padding: 1rem;
+			line-height: 1.25;
+		}
+	}
+}
+
+.panel-eyebrow {
+	position: absolute;
+	bottom: 100%;
+	// width: initial;
+	height: 3rem;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	// padding: .5rem 0;
+	// justify-content: center;
+	.eyebrow-item {
+		position: relative;
+		margin: 0.5rem;
+	}
+	&.left-eyebrow {
+		left: 0;
+	}
+	&.right-eyebrow {
+		right: 0;
+	}
+
+	@media all and (min-width: 1250px) {
+		&.sideburns {
+			height: 100%;
+			align-items: center;
+			max-width: 8rem;
+			flex-direction: column;
+			.cheat-sheet-btn {
+				font-size: .9rem;
+				line-height: 1.25;
+				height: 100%;
+			}
+			&.left-eyebrow {
+				margin-left: -1rem;
+				bottom: 0;
+				top: unset;
+				transform: translate(-100%, 0%);
+			}
+			&.right-eyebrow {
+				bottom: 0;
+				top: unset;
+				margin-right: -1rem;
+				// left: 100%;
+				transform: translate(100%, 0%);
+			}
+		}
+	}
+	// &.left-eyebrow {
+	// 	left: 0;
+	// 	&.sideburns {
+	// 		margin-left: -1rem;
+	// 		bottom: 0;
+	// 		top: unset;
+	// 		transform: translate(-100%,0%);
+	// 	}
+	// }
+	// &.right-eyebrow {
+	// 	right: 0;
+	// 	&.sideburns {
+	// 		bottom: 0;
+	// 		top: unset;
+	// 		margin-right: -1rem;
+	// 		// left: 100%;
+	// 		transform: translate(100%,0%);
+	// 	}
+	// }
 }
 
 // Goals ==================================
@@ -337,15 +427,15 @@ $split-into: 4;
 .goals {
 	> * {
 		flex-basis: 11.1%;
-		@media all and (max-width:$break-xl){
+		@media all and (max-width: $break-xl) {
 			flex-basis: 20%;
 		}
-		@media all and (max-width:$break-m){
+		@media all and (max-width: $break-m) {
 			flex-basis: 33.3%;
 		}
 	}
 }
-.goals-trigger{
+.goals-trigger {
 	background-color: #fff !important;
 }
 .goals-modal {
@@ -361,7 +451,7 @@ $split-into: 4;
 	background-color: $gray-5;
 	background-color: $gray-4;
 	color: $fg-primary;
-	
+
 	&:focus,
 	&:hover {
 		// Dark theme .................
@@ -371,7 +461,6 @@ $split-into: 4;
 		color: $fg-primary;
 		background-color: $gray-1;
 		background-color: $gray-2;
-	
 	}
 	.ingredients {
 		.item-img {

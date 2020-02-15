@@ -20,7 +20,7 @@ const initialState = {
 	combos           : [],
 	unique           : [],
 	showPerks        : false,
-	showComboDetails : true,
+	// showComboDetails : false,
 	ingredients      : [ -1, -1 ],
 	hoveringCombo    : false,
 	comboSpotlight   : '',
@@ -225,9 +225,11 @@ export const resetInventory = inventory => dispatch => {
 };
 
 // Option Toggles --------------------------------------------------
+// TODO: move to general.js
 export const togglePerks = () => dispatch => {
 	dispatch({type: TOGGLE_PERKS});
 };
+// TODO: move to general.js
 export const toggleComboDetails = () => dispatch => {
 	dispatch({type: TOGGLE_COMBO_DETAILS});
 };

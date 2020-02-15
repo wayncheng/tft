@@ -12,3 +12,14 @@
 .pswp {
 	z-index: $z-top + 1000; // IMPORTANT: must be higher than everything // 
 }
+
+.pswp__ui--fit .pswp__top-bar, .pswp__ui--fit .pswp__caption {
+	background-color: transparent;
+	// background-color: rgba(#000,0.1);
+}
+
+.pswp__counter,
+.pswp__button {
+	// background-color: red;
+	background-color: rgba(#000,0.8);
+}

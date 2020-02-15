@@ -10,7 +10,7 @@ import {
 	BaseItemSelectionPanel,
 	// ItemTable,
 	Footer,
-	// PhotoLightbox,
+	PhotoLightbox,
 } from '../components';
 // import itemData from '../utils/item_data';
 // import itemTable from '../static/img/item-table.png';
@@ -40,8 +40,10 @@ class HomePage extends Component {
 					<img className='cheat-sheet' src={constants.item_cheatsheet} alt='item cheat sheet' />
 				</aside> */}
 
-				{/* <PhotoLightbox/> */}
 				<Footer />
+				<PhotoLightbox/>
+
+				
 				<KeyboardEventHandler
 					handleKeys={[
 						'1',

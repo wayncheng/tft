@@ -7,6 +7,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 // import './DetailToggle.scss';
 import {ToggleSwitch} from '../components';
 import {toggleComboDetails} from '../modules/items';
+import {setPrefs} from '../modules/general';
 
 class DetailToggle extends Component {
 	constructor(props) {
@@ -16,7 +17,8 @@ class DetailToggle extends Component {
 
 	handleDetailToggle = () => {
 		// event.preventDefault();
-		this.props.toggleComboDetails();
+		// this.props.toggleComboDetails();
+		this.props.setPrefs({showComboDetails: !this.props.showComboDetails})
 	};
 
 	render() {
@@ -41,12 +43,14 @@ class DetailToggle extends Component {
 
 const mapStateToProps = state => ({
 	// ...state.items,
-	showComboDetails : state.items.showComboDetails,
+	// showComboDetails : state.items.showComboDetails,
+	showComboDetails : state.general.prefs.showComboDetails,
 });
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(
 		{
 			toggleComboDetails,
+			setPrefs,
 		},
 		dispatch,
 	);
