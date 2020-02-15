@@ -30,11 +30,11 @@ class BaseItemSelectionPanel extends Component {
 				<div className={classNames('select-panel items-sec', this.props.className)}>
 					{/* Eyebrow ========================================================== */}
 						<div className='panel-eyebrow sideburns left-eyebrow'>
-							<LightboxBtn/>
-						</div>
-						<div className='panel-eyebrow sideburns right-eyebrow'>
 							<GoalsModalTrigger className='eyebrow-item' />
 							<DetailToggle className='eyebrow-item p-0' />
+						</div>
+						<div className='panel-eyebrow sideburns right-eyebrow'>
+							<LightboxBtn/>
 						</div>
 					{/* <div className='panel-eyebrow-container sideburns flex flex-row justify-end align-center px-1 py-0 mb-2'> */}
 						{/* <div className='panel-eyebrow flex flex-row flex-1 justify-start items-center'>
