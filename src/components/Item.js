@@ -52,6 +52,9 @@ class Item extends Component {
 				onClick={this.handleClick}
 			>
 				<Image item_id={item_id} />
+				{this.props.showKeybinds === true && this.props.keybind && (
+					<span className="item-keybind">{this.props.keybind}</span>
+				)}
 			</a>
 		);
 	}
@@ -59,6 +62,7 @@ class Item extends Component {
 
 const mapStateToProps = state => ({
 	ingredients : state.items.ingredients,
+	showKeybinds: state.general.showKeybinds,
 });
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(

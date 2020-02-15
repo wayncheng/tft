@@ -48,7 +48,7 @@ class BaseItemSelectionPanel extends Component {
 
 					{/* Item Selectors ================================================== */}
 					{this.props.base.map((baseItem, index) => {
-						return <Item className='sel-item' item_id={baseItem} key={'item-' + baseItem} />;
+						return <Item className='sel-item' item_id={baseItem} key={'item-' + baseItem} keybind={index+1} />;
 					})}
 				</div>
 

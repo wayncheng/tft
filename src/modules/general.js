@@ -4,8 +4,9 @@ export const UPDATE_PREFS = 'general/UPDATE_PREFS';
 const initialState = {
 	keyHandlerFocused : false,
 	prefs             : {
-		showPerks         : false,
-		showComboDetails  : false,
+		showPerks        : false,
+		showComboDetails : false,
+		showKeybinds     : false,
 	},
 };
 
