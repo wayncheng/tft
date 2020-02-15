@@ -32,6 +32,7 @@ export {default as ModalTrigger} from './Modals/ModalTrigger';
 export {default as FullCheatSheetModal} from './Modals/FullCheatSheetModal';
 export {default as ItemCheatSheetTrigger} from './Modals/ItemCheatSheetTrigger';
 export {default as PhotoLightbox} from './Lightbox/PhotoLightbox';
+export {default as LightboxBtn} from './Lightbox/LightboxBtn';
 
 // Table
 export {default as ItemTable} from './ItemTable';
