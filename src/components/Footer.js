@@ -10,7 +10,7 @@ import constants from '../utils/constants';
 const Footer = props => {
 	return (
 		<footer className={classNames('footer p-0 pb-32 bg-gray-900', props.className)}>
-			<p className='fine-print text-center text-sm w-full px-2 py-2 bg-gray-400'>{`Updated for Patch ${constants.patch_version}`}</p>
+			{/* <p className='fine-print text-center text-sm w-full px-2 py-2 bg-gray-400'>{`Updated for Patch ${constants.patch_version}`}</p> */}
 			{/* <ResetBtn className="absolute top-0 left-0 p-1"/> */}
 			<div className='footer-nav row flex justify-center items-start pt-4'>
 				<div className='col'>

@@ -1,12 +1,12 @@
 @import '../config/variables';
 
 // $size-0: 4rem;
-$size-0: 68px;
-$size-1: 52px;
-$size-2: 36px;
-// $size-0: 64px;
-// $size-1: 48px;
-// $size-2: 32px;
+// $size-0: 68px;
+// $size-1: 52px;
+// $size-2: 36px;
+$size-0: 64px;
+$size-1: 48px;
+$size-2: 32px;
 // Sizer ==================================
 // .sized {
 // 	width: $size-0;
@@ -208,16 +208,17 @@ $split-into: 4;
 		justify-content: space-between;
 	}
 	.detail-text {
-		// font-size: .2em;
-		text-transform: uppercase;
-		font-size: .16em;
-		font-weight: 700;
-		color: inherit;
-		line-height: 1.2;
 		flex: 1;
-		letter-spacing: -0.06em;
+		text-transform: uppercase;
+		// font-weight: 700;
+		// line-height: 1.2;
+		// letter-spacing: -0.06em;
 		padding: .5rem;
-		// padding-left: .75rem;
+		font-size: .16em;
+		font-weight: 600;
+		color: inherit;
+		line-height: 1.1;
+		letter-spacing: -0.025em;
 	}
 	.ingredients {
 		display: flex;
