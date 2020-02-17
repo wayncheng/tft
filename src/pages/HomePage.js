@@ -11,6 +11,7 @@ import {
 	// ItemTable,
 	Footer,
 	PhotoLightbox,
+	// PatchVersionBanner,
 } from '../components';
 // import itemData from '../utils/item_data';
 // import itemTable from '../static/img/item-table.png';
@@ -26,22 +27,13 @@ class HomePage extends Component {
 	render() {
 		return (
 			<div id='item-page-root' className='page-root flex flex-col	justify-between'>
-				<main className='flex-1 flex flex-col justify-stretch align-stretch'>
-					{this.props.inventory.length === 0 &&
-					this.props.comboInventory.length === 0 && (
-						<p className='fine-print text-center text-sm w-full px-2 py-2 bg-gray-400'>{`Updated for Patch ${constants.patch_version}`}</p>
-					)}
+				<main className='flex-1 flex flex-col justify-stretch align-stretch relative'>
+					<p className='patch-version eyebrow'>{`Patch ${constants.patch_version}`}</p>
 					<Inventory className='bg-gray-700' />
 					<Combos className='bg-gray-800' />
-					{/* <section className='section table-section w-full flex-col justify-center align-center flex-1 m-auto bg-gray-900'>
-						<ItemTable />
-					</section> */}
 					<BaseItemSelectionPanel className='' />
 				</main>
-				{/* <aside className='big-img-container bg-gray-500'>
-					<img className='cheat-sheet' src={constants.item_cheatsheet} alt='item cheat sheet' />
-				</aside> */}
-
+				
 				<Footer />
 				<PhotoLightbox />
 

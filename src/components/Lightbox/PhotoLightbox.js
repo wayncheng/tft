@@ -32,7 +32,6 @@ let items = [
 	},
 ];
 
-
 class PhotoLightbox extends Component {
 	constructor(props) {
 		super(props);
@@ -54,16 +53,26 @@ class PhotoLightbox extends Component {
 	};
 	render = () => {
 		return (
-					<PhotoSwipe
-						// isOpen={this.state.isOpen}
-						isOpen={this.props.galleryOpen}
-						items={items}
-						options={{
-							galleryUID : 'imgs',
-						}}
-						onClose={this.handleClose}
-					/>
-
+			<PhotoSwipe
+				// isOpen={this.state.isOpen}
+				isOpen={this.props.galleryOpen}
+				items={items}
+				options={{
+					galleryUID   : 'imgs',
+					// bgOpacity: 0.5,
+					preload      : [ 1, 2 ],
+					// Buttons/elements
+					shareEl      : false,
+					arrowEl      : false,
+					captionEl    : false,
+					fullscreenEl : false,
+					closeEl      : true,
+					zoomEl       : true,
+					counterEl    : true,
+					preloaderEl  : true,
+				}}
+				onClose={this.handleClose}
+			/>
 		);
 	};
 }

@@ -7,6 +7,7 @@ export {default as ComboInventory} from './ComboInventory';
 export {default as Combos} from './Combos';
 export {default as BaseItemSelectionPanel} from './BaseItemSelectionPanel';
 export {default as Footer} from './Footer';
+export {default as PatchVersionBanner} from './PatchVersionBanner';
 
 // Items
 export {default as Image} from './Image';

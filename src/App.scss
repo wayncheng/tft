@@ -134,11 +134,11 @@ main {
 		}
 	}
 
-	&.eyebrow {
-		color: $fg-light-secondary;
-		color: $fg-light-divider;
-		color: rgba(#fff,0.24);
-	}
+	// &.eyebrow {
+	// 	color: $fg-light-secondary;
+	// 	color: $fg-light-divider;
+	// 	color: rgba(#fff,0.24);
+	// }
 }
 .sec-placeholder {
 	display: none; // temporary
@@ -159,6 +159,15 @@ main {
 	font-weight: 600;
 	letter-spacing: .15em;
 	word-spacing: .15em;
+	color: $fg-light-secondary;
+	color: $fg-light-divider;
+	color: rgba(#fff,0.24);
+	z-index: $z-top;
+	&.patch-version {
+		top: .5rem;
+		left: .5rem;
+		position: absolute;
+	}
 }
 
 // Footer =======================================
@@ -242,6 +251,17 @@ main {
 	}
 }
 
+.patch-version-banner {
+	// flex-basis: 2rem;
+	font-size: .875rem;
+	line-height: 2rem;
+	text-align: center;
+	transition: all .4s;
+	&.collapsed {
+		// flex-basis: 0rem;
+		line-height: 0rem;
+	}
+}
 
 // Hide Utilities ==================
 .hide-on-xxs { @media all and (max-width:$break-xxs){ display: none; } }
