@@ -34,6 +34,8 @@ export {default as FullCheatSheetModal} from './Modals/FullCheatSheetModal';
 export {default as ItemCheatSheetTrigger} from './Modals/ItemCheatSheetTrigger';
 export {default as PhotoLightbox} from './Lightbox/PhotoLightbox';
 export {default as LightboxBtn} from './Lightbox/LightboxBtn';
+export {default as Instructions} from './Instructions/Instructions';
+export {default as InstructionsModalTrigger} from './Instructions/InstructionsModalTrigger';
 
 // Table
 export {default as ItemTable} from './ItemTable';

@@ -1,0 +1,45 @@
+import React, {Component} from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import classNames from 'classnames';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {openModal, closeModal, toggleModal} from '../../modules/modal';
+import {Modal, CloseBtn, ModalTrigger, Instructions} from '..';
+// import constants from '../../utils/constants';
+
+class InstructionsModalTrigger extends Component {
+	render() {
+		return (
+			<React.Fragment>
+				<ModalTrigger
+					modal_id='instructions'
+					modal_action='open'
+					className={classNames('default-trigger icon', this.props.className)}
+				>
+					{/* <FontAwesomeIcon icon={[ 'far', 'question-circle' ]} className={classNames('help-icon')} /> */}
+					<FontAwesomeIcon icon='question-circle' className={classNames('help-icon')} />
+				</ModalTrigger>
+
+				<Modal id='instructions' className='instructions-modal default-modal p-8' rootClass='top-left-modal-root guide-modal-root'>
+					<Instructions />
+					<CloseBtn modal_id='instructions' />
+				</Modal>
+			</React.Fragment>
+		);
+	}
+}
+const mapStateToProps = state => ({
+	...state.modal,
+});
+
+const mapDispatchToProps = dispatch =>
+	bindActionCreators(
+		{
+			openModal,
+			closeModal,
+			toggleModal,
+		},
+		dispatch,
+	);
+
+export default connect(mapStateToProps, mapDispatchToProps)(InstructionsModalTrigger);

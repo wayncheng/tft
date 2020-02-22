@@ -195,9 +195,9 @@ const items = {
 	belt_sword      : {
 		id        : 'zekesherald',
 		name      : `Zeke's Herald`,
-		perk      : 'At start, +20% Atk Speed for allies 2 spaces L&R',
-		perk_full : `When combat begins, the wearer and all allies within 2 hexes in the same row gain +20% Attack Speed for the rest of combat.`,
-		perk_100  : `On combat start, +20% Atk Speed for wearer & allies 2 hexes L&R (entire round) `,
+		perk      : 'At start, +15% Atk Speed for allies 2 spaces L&R',
+		perk_full : `When combat begins, the wearer and all allies within 2 hexes in the same row gain +15% Attack Speed for the rest of combat.`,
+		perk_100  : `On combat start, +15% Atk Speed for wearer & allies 2 hexes L&R (entire round) `,
 	},
 	belt_tear       : {
 		id        : 'redemption',

@@ -225,36 +225,6 @@ $split-into: 4;
 
 	// }
 }
-// Detail Toggle ============================
-.detail-toggle {
-	position: absolute;
-	top: 0rem;
-	right: 0rem;
-	display: flex;
-	flex-direction: row-reverse;
-	align-items: center;
-	justify-content: center;
-	// font-size: 1.5rem;
-	font-size: 1.33rem;
-	font-size: 1.25rem;
-	padding: .25rem;
-	padding-right: .5rem;
-	z-index: $z-above + 1;
-	cursor: pointer;
-	color: $icon-white-inactive;
-	color: $fg-light-secondary;
-	&:hover,
-	&:focus {
-		color: $fg-light-primary;
-		// color: $icon-white-active;
-	}
-
-	label {
-		color: inherit;
-		cursor: pointer;
-		margin-right: .5rem;
-	}
-}
 // .toggle-container {
 // }
 // Base Selection Panel ====================

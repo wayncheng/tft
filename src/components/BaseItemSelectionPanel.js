@@ -5,18 +5,16 @@ import {
 	Item,
 	DetailToggle,
 	// ItemCheatSheetTrigger,
-	ModalTrigger,
+	// ModalTrigger,
 	// Modal,
 	// CloseBtn,
 	LightboxBtn,
 	GoalsModalTrigger,
 	// ResetBtn,
-	FullCheatSheetModal,
+	// FullCheatSheetModal,
+	InstructionsModalTrigger,
 } from '.';
-// import constants from '../utils/constants';
 import classNames from 'classnames';
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 class BaseItemSelectionPanel extends Component {
 	constructor(props) {
@@ -34,6 +32,7 @@ class BaseItemSelectionPanel extends Component {
 							<DetailToggle className='eyebrow-item p-0' />
 						</div>
 						<div className='panel-eyebrow sideburns right-eyebrow'>
+							<InstructionsModalTrigger className="eyebrow-item"/>
 							<LightboxBtn/>
 						</div>
 					{/* <div className='panel-eyebrow-container sideburns flex flex-row justify-end align-center px-1 py-0 mb-2'> */}

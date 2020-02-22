@@ -34,7 +34,7 @@ class DetailToggle extends Component {
 				onChange={this.handleDetailToggle}
 				checked={this.props.showComboDetails}
 				className='detail-toggle-switch'
-				container_class={classNames('detail-toggle',this.props.className)}
+				container_class={classNames('detail-toggle icon',this.props.className)}
 				id='detail-toggle'
 			/>
 		);

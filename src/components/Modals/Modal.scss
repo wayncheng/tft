@@ -82,7 +82,15 @@ $modal-out-curve: $modal-in-curve;
 	position: relative;
 	overflow: hidden; // hides corners of action bar
 	overflow: visible;
-
+	cursor: default;
+	
+	h1,h2,h3,h4,h5,h6 {
+		color: $fg-primary;
+	}
+	li {
+		color: $fg-secondary;
+	}
+	
 	.body,
 	.modal-body {
 		display: flex;
@@ -302,5 +310,16 @@ $fullpg-theme: #fff;
 	@media all and (max-width: 420px) {
 		padding: 1rem 1.5rem;
 		font-size: 1.2rem;
+	}
+}
+
+// Dark Modal -----------------------------
+.dark-modal {
+	background-color: $gray-9;
+	h1,h2,h3,h4,h5,h6 {
+		color: $fg-light-primary;
+	}
+	li {
+		color: $fg-light-secondary;
 	}
 }

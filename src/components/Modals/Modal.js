@@ -96,7 +96,11 @@ closeModal = () => {
 //--------------------------------------------------
 	addOverlayEffects = () => { document.querySelector(this.props.rootSelector).classList.add("blur-for-modal"); }
 	removeOverlayEffects = () => { document.querySelector(this.props.rootSelector).classList.remove("blur-for-modal"); }
-	selectParent = () => document.getElementById('outer-space')
+	selectParent = () => {
+		// document.getElementById('outer-space')
+		// return document.getElementById(this.props.parentID)
+		return document.querySelector(this.props.parent)
+	}
 
 
 	hasScrollbar = () => {
@@ -189,6 +193,9 @@ GeneralModal.defaultProps = {
 	rootSelector: '#root',
 	rootClass: '',
 	overlayClass: '',
+	// parentID: 'outer-space',
+	parent: '#outer-space',
+	
 }
 GeneralModal.propTypes = {
 	id: PropTypes.string.isRequired,

@@ -40,17 +40,13 @@ main {
 	height: 100%;
 }
 
-
-
-.flex-kids { 
-	> * {
-		flex: 1;
-	}
-}
 .row {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+}
+li {
+	line-height: 2;
 }
 
 //=======================================
@@ -110,6 +106,38 @@ main {
 	// 	border-radius: .25rem;
 	// 	letter-spacing: .05em;
 	// }
+}
+// Detail Toggle ============================
+.detail-toggle {
+	position: absolute;
+	top: 0rem;
+	right: 0rem;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: center;
+	padding: .25rem;
+	padding-right: .5rem;
+	z-index: $z-above + 1;
+	cursor: pointer;
+	
+	label {
+		color: inherit;
+		cursor: pointer;
+		margin-right: .5rem;
+	}
+}
+
+.icon {
+	font-size: 1.25rem;
+	color: $icon-white-inactive;
+	color: $fg-light-secondary;
+	&:hover,
+	&:focus {
+		color: $fg-light-primary;
+		// color: $icon-white-active;
+	}
+
 }
 //=======================================
 .sec-title {
@@ -260,6 +288,41 @@ main {
 	&.collapsed {
 		// flex-basis: 0rem;
 		line-height: 0rem;
+	}
+}
+
+// Lists ===========================
+.bulleted {
+	list-style: disc;
+	padding-left: 1.25em;
+}
+.numbered {
+	list-style: decimal;
+	padding-left: 1em;
+	li {
+		list-style-type: decimal;
+		padding-left: .25em;
+	}
+}
+// li {
+// 	color: $fg-light-secondary;
+// }
+.outlined-mark {
+	background-color: transparent;
+	padding: .125em .25em;
+	border-radius: .5em;
+	border: 2px solid $fg-divider;	
+	// color: $fg-secondary;
+}
+// Utilities =======================
+.fg-primary { color: $fg-light-primary; }
+.fg-secondary { color: $fg-light-secondary; }
+.fg-disabled { color: $fg-light-disabled; }
+.fg-divider { color: $fg-light-divider; }
+
+.flex-kids { 
+	> * {
+		flex: 1;
 	}
 }
 
