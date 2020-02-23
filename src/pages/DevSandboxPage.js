@@ -7,7 +7,7 @@ import {
 	Footer,
 	// Goals,
 	// AllGoals,
-	GoalsModalTrigger,
+	// GoalsModalTrigger,
 	PhotoLightbox,
 } from '../components';
 // import itemData from '../utils/item_data';

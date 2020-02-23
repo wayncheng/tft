@@ -83,13 +83,28 @@ $modal-out-curve: $modal-in-curve;
 	overflow: hidden; // hides corners of action bar
 	overflow: visible;
 	cursor: default;
-	
+
 	h1,h2,h3,h4,h5,h6 {
 		color: $fg-primary;
 	}
+	h3 {
+		font-size: 1.2rem;
+		font-weight: 500;
+		line-height: 2em;
+	}
+
 	li {
 		color: $fg-secondary;
 	}
+
+	// &.dark-modal {
+	// 	li {
+	// 		color: $fg-light-secondary;
+	// 	}
+	// 	h1,h2,h3,h4,h5,h6 {
+	// 		color: $fg-light-primary;
+	// 	}
+	// }
 	
 	.body,
 	.modal-body {

@@ -3,20 +3,28 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {
+	PatchVersionBanner, 
+	// InstructionsModalTrigger, 
+	ModalTrigger
+} from '.';
 import constants from '../utils/constants';
-import { PatchVersionBanner } from '.';
-// import { ItemCheatSheetTrigger } from './Modals/ModalTrigger';
 
 const Footer = props => {
 	return (
 		<footer className={classNames('footer p-0 pb-32 bg-gray-900', props.className)}>
-			<PatchVersionBanner/>
+			<PatchVersionBanner />
 			<div className='footer-nav row flex justify-center items-start pt-4'>
 				<div className='col'>
 					<ul className='footer-list'>
-						<li>TFT Items</li>
-						<li>
+						<li>TFT Item Assistant</li>
+						{/* <li>
 							<a href='/'>Home</a>
+						</li> */}
+						<li>
+							<ModalTrigger modal_id='instructions' modal_action='open' className="">
+								Help
+							</ModalTrigger>
 						</li>
 						<li>
 							<FooterLink to='https://github.com/wayncheng/tft' external>

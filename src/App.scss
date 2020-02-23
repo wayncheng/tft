@@ -200,14 +200,10 @@ li {
 
 // Footer =======================================
 .footer {
-	// padding: 1.5rem 1rem 8rem 1rem;
-	// padding-bottom: 8rem;
 		font-size: .9rem;
 	.fine-print {
 		color: $fg-light-disabled;
 		color: rgba(#fff,0.3);
-		// background-color: rgba(#000,0.1);
-		// background-color: rgba(#fff,0.8);
 		color: $fg-secondary;
 		color: $fg-primary;
 		font-weight: 400;
@@ -218,7 +214,7 @@ li {
 	li {
 		color: $fg-light-secondary;
 	}
-	a {
+	a,button {
 		color: $fg-light-secondary;
 		color: $fg-light-disabled;
 		text-decoration: none;
@@ -250,16 +246,6 @@ li {
 }
 
 // React Switch =====================
-// .react-switch-container {
-// 	display: flex;
-// 	flex-direction: row;
-// 	align-items: center;
-// 	justify-content: flex-start;
-// 	label {
-// 		margin: 0;
-// 		margin: 0 .5rem;
-// 	}
-// }
 .react-switch-bg {
 	display: flex;
 	flex-direction: row;
@@ -278,6 +264,7 @@ li {
 		color: #fff;
 	}
 }
+
 
 .patch-version-banner {
 	// flex-basis: 2rem;
@@ -304,9 +291,6 @@ li {
 		padding-left: .25em;
 	}
 }
-// li {
-// 	color: $fg-light-secondary;
-// }
 .outlined-mark {
 	background-color: transparent;
 	padding: .125em .25em;
@@ -315,10 +299,15 @@ li {
 	// color: $fg-secondary;
 }
 // Utilities =======================
-.fg-primary { color: $fg-light-primary; }
+.fg-primary   { color: $fg-light-primary; }
 .fg-secondary { color: $fg-light-secondary; }
-.fg-disabled { color: $fg-light-disabled; }
-.fg-divider { color: $fg-light-divider; }
+.fg-disabled  { color: $fg-light-disabled; }
+.fg-divider   { color: $fg-light-divider; }
+
+.link-primary   { color: $fg-light-primary;   &:hover,&:focus{color:$fg-light-primary;}   }
+.link-secondary { color: $fg-light-secondary; &:hover,&:focus{color:$fg-light-primary;}   }
+.link-disabled  { color: $fg-light-disabled;  &:hover,&:focus{color:$fg-light-secondary;} }
+.link-divider   { color: $fg-light-divider;   &:hover,&:focus{color:$fg-light-disabled;}  }
 
 .flex-kids { 
 	> * {

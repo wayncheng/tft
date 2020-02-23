@@ -14,11 +14,19 @@ import {
 	faRedo,
 	faUndo,
 	faTrash,
-	faQuestionCircle,
+	// faQuestionCircle,
+
+	faMap,
+	faLayerGroup,
+	faNewspaper,
+	// faBook,
 } from '@fortawesome/free-solid-svg-icons'
 import {
 	faTrashAlt,
-	// faQuestionCircle,
+	faQuestionCircle,
+
+	faMap as farMap,
+	faNewspaper as farNewspaper,
 } from '@fortawesome/free-regular-svg-icons'
 
 
@@ -39,12 +47,14 @@ const buildIconLibrary = () => {
 		faTrash,
 		faTrashAlt,
 		faQuestionCircle,
-		// faDice,
-		// faDiceSix,
-		// faHandPointer,
-		// faDiceOne,
-		// faDiceFive,
-		// faClipboardCheck,
+		////////////////////////////////
+		faMap,
+		faNewspaper,
+		faLayerGroup,
+		// faBook,
+		//------------------------------
+		farMap,
+		farNewspaper,
 	)
 }
 export default buildIconLibrary;

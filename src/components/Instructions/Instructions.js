@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Modal, CloseBtn} from '..';
 
 const Instructions = props => {
 	return (
@@ -16,7 +17,7 @@ const Instructions = props => {
 					Toggle item details by flipping the <FontAwesomeIcon icon='info-circle' /> switch
 				</li>
 			</ul>
-			<h3 className="mt-4">How to Set Item Targets</h3>
+			<h3 className='mt-4'>How to Set Item Targets</h3>
 			<ol className='numbered'>
 				<li>
 					Press the{' '}
@@ -33,3 +34,16 @@ const Instructions = props => {
 const mapStateToProps = state => ({});
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
 export default connect(mapStateToProps, mapDispatchToProps)(Instructions);
+
+export const InstructionsModal = props => {
+	return (
+		<Modal
+			id='instructions'
+			className='instructions-modal default-modal p-8 px-12'
+			rootClass='top-left-modal-root guide-modal-root'
+		>
+			<Instructions />
+			<CloseBtn modal_id='instructions' />
+		</Modal>
+	);
+};

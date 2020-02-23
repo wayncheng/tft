@@ -3,7 +3,7 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {setGoalsFromLocal} from './modules/goals';
-import {setPrefsFromLocal} from './modules/general';
+import {setPrefsFromLocal,welcomeNewVisitors} from './modules/general';
 
 import HomePage from './pages/HomePage';
 import DevSandboxPage from './pages/DevSandboxPage';
@@ -16,6 +16,7 @@ class App extends Component {
 	componentDidMount = () => {
 		this.props.setGoalsFromLocal()
 		this.props.setPrefsFromLocal()
+		this.props.welcomeNewVisitors()
 	}
 	
 	render() {
@@ -38,6 +39,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => bindActionCreators({
 	setGoalsFromLocal,
 	setPrefsFromLocal,
+	welcomeNewVisitors,
 }, dispatch)
 
 export default connect(

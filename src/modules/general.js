@@ -1,5 +1,8 @@
+import {openModal} from './modal';
+
 export const FOCUS_KEY_HANDLER = 'general/FOCUS_KEY_HANDLER';
 export const UPDATE_PREFS = 'general/UPDATE_PREFS';
+export const WELCOME_PARTY = 'general/WELCOME_PARTY';
 
 const initialState = {
 	keyHandlerFocused : false,
@@ -8,6 +11,7 @@ const initialState = {
 		showComboDetails : false,
 		showKeybinds     : false,
 	},
+	isFirstVisit: false,
 };
 
 export default (state = initialState, action) => {
@@ -16,6 +20,11 @@ export default (state = initialState, action) => {
 			return {
 				...state,
 				keyHandlerFocused : true,
+			};
+		case WELCOME_PARTY:
+			return {
+				...state,
+				isFirstVisit: true,
 			};
 		case UPDATE_PREFS:
 			return {
@@ -69,4 +78,17 @@ export const updatePrefState = prefChanges => dispatch => {
 		type        : UPDATE_PREFS,
 		prefChanges,
 	});
+};
+
+
+// Check if first time visitor
+export const welcomeNewVisitors = () => dispatch => {
+	const hasVisited = localStorage.getItem('hasVisited');
+	if (hasVisited !== 'true') {
+		dispatch({ type: WELCOME_PARTY });
+		localStorage.setItem('hasVisited','true')
+		
+		// Open instructions modal 
+		dispatch(openModal('instructions'))
+	}
 };

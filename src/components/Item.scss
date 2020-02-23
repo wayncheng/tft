@@ -103,6 +103,7 @@ $size-2: 32px;
 	border-top-left-radius: .5rem;
 
 	&.full-w-style {
+		border-radius: 0;
 		width: 100vw;
 		background-color: $gray-9;
 	}
