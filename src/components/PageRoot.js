@@ -6,11 +6,12 @@ import KeyboardEventHandler from 'react-keyboard-event-handler';
 // import './PageRoot.scss';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {processKey} from '../modules/items';
+import {processKey, handledKeys} from '../modules/general';
 
 class PageRoot extends Component {
 	handleKeyEvent = (key, event) => {
 		event.preventDefault();
+		console.log('key:', key);
 		this.props.processKey(key);
 	};
 	render() {
@@ -25,29 +26,7 @@ class PageRoot extends Component {
 
 				{this.props.children}
 
-				<KeyboardEventHandler
-					handleKeys={[
-						'1',
-						'2',
-						'3',
-						'4',
-						'5',
-						'6',
-						'7',
-						'8',
-						'9',
-						'shift+1',
-						'shift+2',
-						'shift+3',
-						'shift+4',
-						'shift+5',
-						'shift+6',
-						'shift+7',
-						'shift+8',
-						'shift+9',
-					]}
-					onKeyEvent={this.handleKeyEvent}
-				/>
+				<KeyboardEventHandler handleKeys={handledKeys} onKeyEvent={this.handleKeyEvent} />
 			</div>
 		);
 	}

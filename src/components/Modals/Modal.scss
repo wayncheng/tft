@@ -94,7 +94,14 @@ $modal-out-curve: $modal-in-curve;
 	}
 
 	li {
+		color: $fg-primary;
 		color: $fg-secondary;
+			li {
+				// color: $fg-disabled;
+				// color: $fg-secondary;
+				// font-style: italic;
+				font-weight: 300;
+			}
 	}
 
 	// &.dark-modal {

@@ -63,7 +63,12 @@ class DevSandboxPage extends Component {
 
 		return (
 			<div>
-				<Helmet title='Sandbox (Dev)' />
+				<Helmet>
+					<title>Sandbox (DEV)</title>
+					{/* <link rel='shortcut icon' href='/favicon-blue.ico' /> */}
+					{/* <link rel='shortcut icon' href='/favicon-white.ico' /> */}
+					{/* <link rel='shortcut icon' href='/favicon-gray.ico' /> */}
+				</Helmet>
 				<main>
 					<section className="text-white">
 						<p>{`Patch ${constants.patch_version}`}</p>

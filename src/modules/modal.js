@@ -11,6 +11,7 @@ const initialState = {
 		full_cheatsheet : false,
 		wide_cheatsheet : false,
 		item_table      : false,
+		goals_modal      : false,
 	},
 	galleryOpen : false,
 	photoID     : 'items',

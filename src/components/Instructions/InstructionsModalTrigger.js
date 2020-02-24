@@ -20,11 +20,11 @@ class InstructionsModalTrigger extends Component {
 				<ModalTrigger
 					modal_id='instructions'
 					modal_action='open'
-					className={classNames('default-trigger icon', this.props.className)}
+					className={classNames('help-btn default-trigger icon', this.props.className)}
 				>
-					<FontAwesomeIcon icon={[ 'far', 'question-circle' ]} className={classNames('help-icon')} />
-					{/* <FontAwesomeIcon icon='question-circle' className={classNames('help-icon')} />
-					<span className='ml-2 hide-on-s'>Help</span> */}
+					{/* <FontAwesomeIcon icon={[ 'far', 'question-circle' ]} className={classNames('help-icon')} /> */}
+					<FontAwesomeIcon icon='question-circle' className={classNames('help-icon')} />
+					{/* <span className='ml-2 hide-on-s'>Help</span> */}
 				</ModalTrigger>
 
 				{/* <Modal id='instructions' className='instructions-modal default-modal p-8 px-12' rootClass='top-left-modal-root guide-modal-root'>

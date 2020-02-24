@@ -26,6 +26,7 @@ class DetailToggle extends Component {
 			<ToggleSwitch
 				aria-label='Toggle Details'
 				label={<FontAwesomeIcon icon='info-circle' className='' />}
+				// label={<FontAwesomeIcon icon='info' className='' />}
 				// label="Details"
 				// uncheckedIcon={<FontAwesomeIcon icon='info-circle' className='' />}
 				// checkedIcon={<FontAwesomeIcon icon='info-circle' className='' />}

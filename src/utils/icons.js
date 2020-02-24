@@ -14,7 +14,7 @@ import {
 	faRedo,
 	faUndo,
 	faTrash,
-	// faQuestionCircle,
+	faQuestionCircle,
 
 	faMap,
 	faLayerGroup,
@@ -23,7 +23,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import {
 	faTrashAlt,
-	faQuestionCircle,
+	faQuestionCircle as farQuestionCircle,
 
 	faMap as farMap,
 	faNewspaper as farNewspaper,
@@ -44,9 +44,12 @@ const buildIconLibrary = () => {
 		faHistory,
 		faRedo,
 		faUndo,
+		//------------------------------
 		faTrash,
 		faTrashAlt,
+		//------------------------------
 		faQuestionCircle,
+		farQuestionCircle,
 		////////////////////////////////
 		faMap,
 		faNewspaper,

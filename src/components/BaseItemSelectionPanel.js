@@ -30,11 +30,19 @@ class BaseItemSelectionPanel extends Component {
 					{/* Eyebrow ========================================================== */}
 						<div className='panel-eyebrow sideburns left-eyebrow'>
 							<GoalsModalTrigger className='eyebrow-item' />
+							{/* <DetailToggle className='eyebrow-item p-0' /> */}
+						</div>
+
+						<div className='panel-eyebrow perma-left'>
+							<InstructionsModalTrigger className="eyebrow-item"/>
+						</div>
+						<div className='panel-eyebrow perma-right'>
 							<DetailToggle className='eyebrow-item p-0' />
 						</div>
+
 						<div className='panel-eyebrow sideburns right-eyebrow'>
-							<InstructionsModalTrigger className="eyebrow-item"/>
-							<LightboxBtn/>
+							{/* <InstructionsModalTrigger className="eyebrow-item"/> */}
+							<LightboxBtn className="right-sideburn"/>
 						</div>
 
 					{/* Item Selectors ================================================== */}

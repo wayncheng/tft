@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import classNames from 'classnames';
 import {openGallery, closeGallery} from '../../modules/modal';
 // import {PhotoSwipe, PhotoSwipeGallery} from 'react-photoswipe';
 // import constants from '../../utils/constants';
@@ -56,7 +57,7 @@ class LightboxBtn extends Component {
 		return (
 			<React.Fragment>
 				{/* <aside className=""> */}
-					<button className='cheat-sheet-btn btn outline-btn eyebrow-item base-panel-btn px-2 py-0 text-xs uppercase' onClick={this.handleOpen}>
+					<button className={classNames('cheat-sheet-btn btn outline-btn eyebrow-item base-panel-btn px-2 py-0 text-xs uppercase',this.props.className)} onClick={this.handleOpen}>
 						Cheat Sheets
 					</button>
 					{/* <PhotoSwipe
