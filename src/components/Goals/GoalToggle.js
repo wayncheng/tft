@@ -2,13 +2,8 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-// import itemData from '../utils/item_data';
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {ToggleSwitch, Image} from '..';
-// import {toggleComboDetails} from '../modules/items';
 import {toggleGoal, setGoal, removeGoal} from '../../modules/goals';
-// import './Goals.scss';
-// import constants from '../../utils/constants';
 import itemData from '../../utils/item_data';
 
 class GoalToggle extends Component {

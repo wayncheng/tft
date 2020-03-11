@@ -2,11 +2,9 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-// import PropTypes from 'prop-types';
 import {openModal, closeModal, toggleModal} from '../../modules/modal';
 import {Modal, CloseBtn, ModalTrigger, AllBuilds, Image} from '..';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import constants from '../../utils/constants';
 
 class BuildsModalTrigger extends Component {
 	render() {

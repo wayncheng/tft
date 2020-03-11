@@ -1,8 +1,8 @@
 import React from 'react';
 import CaddiePage from './CaddiePage';
 
-const HomePage = props => (
+const NextPage = props => (
 	// <CaddiePage version="next"/>
-	<CaddiePage version="10.5"/>
+	<CaddiePage version="beta"/>
 )
-export default HomePage
+export default NextPage

@@ -3,15 +3,11 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import {openModal, closeModal, toggleModal} from '../../modules/modal';
 import {
-	// Modal, 
-	// CloseBtn, 
 	// Instructions, 
 	ModalTrigger, 
 	InstructionsModal,
 } from '..';
-// import constants from '../../utils/constants';
 
 class InstructionsModalTrigger extends Component {
 	render() {

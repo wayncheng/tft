@@ -7,9 +7,9 @@ export const CLOSE_GALLERY = 'modal/CLOSE_GALLERY';
 const initialState = {
 	isOpen      : false,
 	allModals   : {
-		item_cheatsheet : false,
-		full_cheatsheet : false,
-		wide_cheatsheet : false,
+		item_sheet : false,
+		full_sheet : false,
+		wide_sheet : false,
 		item_table      : false,
 		goals_modal      : false,
 	},

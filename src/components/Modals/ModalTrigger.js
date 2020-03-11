@@ -4,8 +4,6 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import {openModal, closeModal, toggleModal} from '../../modules/modal';
-// import {Modal,CloseBtn} from '..';
-// import constants from '../../utils/constants';
 
 class ModalTrigger extends Component {
 	constructor(props) {

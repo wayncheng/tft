@@ -3,7 +3,7 @@ import {PhotoSwipe} from 'react-photoswipe';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {openGallery, closeGallery} from '../../modules/modal';
-import constants from '../../utils/constants';
+// import constants from '../../utils/constants';
 import '../../static/libs/react-photoswipe/photoswipe.css';
 import './Lightbox.scss';
 // options: https://photoswipe.com/documentation/options.html
@@ -29,30 +29,32 @@ class PhotoLightbox extends Component {
 	};
 	render = () => {
 		const {
-			full_cheatsheet_local,
-			item_cheatsheet_local,
-			wide_cheatsheet_local,
-			full_cheatsheet,
-			item_cheatsheet,
-			wide_cheatsheet,
-		} = constants;
+			full_sheet_local,
+			item_sheet_local,
+			wide_sheet_local,
+			full_sheet,
+			item_sheet,
+			wide_sheet,
+		// } = constants.versions[constants.patch_version];
+		} = this.props.constants;
+
 		let items = [
 			{
-				src   : this.props.local ? full_cheatsheet_local : full_cheatsheet,
+				src   : this.props.local ? full_sheet_local : full_sheet,
 				w     : 1639,
 				h     : 1627,
 				title : 'Full Cheatsheet',
 				pid   : 'full',
 			},
 			{
-				src   : this.props.local ? item_cheatsheet_local : item_cheatsheet,
+				src   : this.props.local ? item_sheet_local : item_sheet,
 				w     : 1641,
 				h     : 740,
 				title : 'Items',
 				pid   : 'item',
 			},
 			{
-				src   : this.props.local ? wide_cheatsheet_local : wide_cheatsheet,
+				src   : this.props.local ? wide_sheet_local : wide_sheet,
 				w     : 1920,
 				h     : 1080,
 				title : 'Wide Cheatsheet',
@@ -89,6 +91,8 @@ class PhotoLightbox extends Component {
 const mapStateToProps = state => ({
 	galleryOpen : state.modal.galleryOpen,
 	photoID     : state.modal.photoID,
+	patch_version     : state.general.patch_version,
+	constants     : state.general.constants,
 });
 
 const mapDispatchToProps = dispatch =>

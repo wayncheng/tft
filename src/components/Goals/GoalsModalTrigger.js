@@ -6,7 +6,6 @@ import classNames from 'classnames';
 import {openModal, closeModal, toggleModal} from '../../modules/modal';
 import {Modal, CloseBtn, ModalTrigger, AllGoals,Image,} from '..';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import constants from '../../utils/constants';
 
 class GoalsModalTrigger extends Component {
 	render() {
