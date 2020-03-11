@@ -65,13 +65,9 @@ class DetailedComboItem extends Component {
 		const combo_id = `${item1}_${item2}`;
 		const combo = itemData[combo_id];
 		const isGoal = this.props.goals[combo_id] === true;
+		const perkInfo = combo.perk_100; // Switch perk version here
 		return (
-			<div
-				className={classNames(
-					'detailed-container',
-					// { 'is-goal': (this.props.goals[combo_id] === true), },
-				)}
-			>
+			<div className={classNames('detailed-container')}>
 				<a
 					className={classNames('detailed-combo', {'is-goal': isGoal})}
 					href='#!'
@@ -90,7 +86,7 @@ class DetailedComboItem extends Component {
 							<Image className='tiny' item_id={item1} />
 							<Image className='tiny' item_id={item2} />
 						</div>
-						<p className='detail-text'>{combo.perk}</p>
+						<p className='detail-text'>{perkInfo}</p>
 					</div>
 				</a>
 			</div>

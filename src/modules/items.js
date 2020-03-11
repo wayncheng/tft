@@ -14,16 +14,16 @@ export const RESET_INVENTORY = 'items/RESET_INVENTORY';
 
 const initialState = {
 	// base      : [ 'sword', 'vest', 'belt', 'rod', 'cloak', 'bow', 'spatula', 'tear', 'glove' ],
-	base             : [ 'belt', 'bow', 'cloak', 'glove', 'rod', 'spatula', 'sword', 'tear', 'vest' ],
-	comboInventory   : [],
-	inventory        : [],
-	combos           : [],
-	unique           : [],
-	showPerks        : false,
+	base           : [ 'belt', 'bow', 'cloak', 'glove', 'rod', 'spatula', 'sword', 'tear', 'vest' ],
+	comboInventory : [],
+	inventory      : [],
+	combos         : [],
+	unique         : [],
+	showPerks      : false,
 	// showComboDetails : false,
-	ingredients      : [ -1, -1 ],
-	hoveringCombo    : false,
-	comboSpotlight   : '',
+	ingredients    : [ -1, -1 ],
+	hoveringCombo  : false,
+	comboSpotlight : '',
 	// comboSpotlight : 'sword_vest',
 	// inventory : ['sword','vest'],
 	// combos    : ['sword_vest'],
@@ -97,10 +97,10 @@ const items = (state = initialState, action) => {
 				comboInventory : [],
 				inventory      : [],
 				combos         : [],
-				unique           : [],
-				ingredients      : [ -1, -1 ],
-				hoveringCombo    : false,
-				comboSpotlight   : '',
+				unique         : [],
+				ingredients    : [ -1, -1 ],
+				hoveringCombo  : false,
+				comboSpotlight : '',
 			};
 		default:
 			return state;
@@ -157,18 +157,20 @@ export const findCombos = inventory => (dispatch, getState) => {
 	});
 };
 
-export const processKey = key => (dispatch, getState) => {
-	// console.log('key:', key);
-	const {base} = getState().items;
+export const processItemKey = key => (dispatch, getState) => {
+	// Validate the key is an item key
+	const keyHasNumber = /\d/.test(key);
+	if (keyHasNumber === true) {
+		const {base} = getState().items;
+		const num = parseInt(key[key.length - 1]);
+		const action = key.startsWith('shift+') ? 'remove' : 'add';
+		const item = base[num - 1];
 
-	const num = parseInt(key[key.length - 1]);
-	const action = key.startsWith('shift+') ? 'remove' : 'add';
-	const item = base[num - 1];
-
-	if (action === 'add') {
-		dispatch(addItem(item));
-	} else if (action === 'remove') {
-		dispatch(removeItem(item));
+		if (action === 'add') {
+			dispatch(addItem(item));
+		} else if (action === 'remove') {
+			dispatch(removeItem(item));
+		}
 	}
 };
 

@@ -14,29 +14,19 @@ import {
 	faRedo,
 	faUndo,
 	faTrash,
-	// faTrashAlt,
-	// faDice,
-	// faDiceSix,
-	// faHandPointer,
-	// faDiceOne,
-	// faDiceFive,
-	// faClipboardCheck,
-	// faExchangeAlt,
-	// faArrowsAltH,
-	// faArrowLeft,
-	// faArrowCircleLeft,
-	// faRandom,
-	// faCompressAlt,
-	// faAngleDoubleLeft,
-	// faAngleLeft,
-	// faCaretLeft,
-	// faChevronCircleLeft,
+	faQuestionCircle,
+
+	faMap,
+	faLayerGroup,
+	faNewspaper,
+	// faBook,
 } from '@fortawesome/free-solid-svg-icons'
 import {
-	// faHandPointer,
-	// faCaretSquareLeft,
-	// faArrowAltCircleLeft,
 	faTrashAlt,
+	faQuestionCircle as farQuestionCircle,
+
+	faMap as farMap,
+	faNewspaper as farNewspaper,
 } from '@fortawesome/free-regular-svg-icons'
 
 
@@ -54,14 +44,20 @@ const buildIconLibrary = () => {
 		faHistory,
 		faRedo,
 		faUndo,
+		//------------------------------
 		faTrash,
 		faTrashAlt,
-		// faDice,
-		// faDiceSix,
-		// faHandPointer,
-		// faDiceOne,
-		// faDiceFive,
-		// faClipboardCheck,
+		//------------------------------
+		faQuestionCircle,
+		farQuestionCircle,
+		////////////////////////////////
+		faMap,
+		faNewspaper,
+		faLayerGroup,
+		// faBook,
+		//------------------------------
+		farMap,
+		farNewspaper,
 	)
 }
 export default buildIconLibrary;

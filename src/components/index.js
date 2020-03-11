@@ -2,11 +2,13 @@
 // Components Index
 //============================================================
 // Top Level
+export {default as PageRoot} from './PageRoot';
 export {default as Inventory} from './Inventory';
 export {default as ComboInventory} from './ComboInventory';
 export {default as Combos} from './Combos';
 export {default as BaseItemSelectionPanel} from './BaseItemSelectionPanel';
 export {default as Footer} from './Footer';
+export {default as PatchVersionBanner} from './PatchVersionBanner';
 
 // Items
 export {default as Image} from './Image';
@@ -33,6 +35,8 @@ export {default as FullCheatSheetModal} from './Modals/FullCheatSheetModal';
 export {default as ItemCheatSheetTrigger} from './Modals/ItemCheatSheetTrigger';
 export {default as PhotoLightbox} from './Lightbox/PhotoLightbox';
 export {default as LightboxBtn} from './Lightbox/LightboxBtn';
+export {default as Instructions, InstructionsModal} from './Instructions/Instructions';
+export {default as InstructionsModalTrigger} from './Instructions/InstructionsModalTrigger';
 
 // Table
 export {default as ItemTable} from './ItemTable';

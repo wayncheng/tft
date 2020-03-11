@@ -1,25 +1,38 @@
 //------------------------------
-//    Photo Grid / Gallery 
+//    Photo Grid / Gallery
 //------------------------------
 @import '../../config/variables';
 
-// UI to hide
-.pswp__button--share,
-.pswp__button--arrow--left,
-.pswp__button--arrow--right{
-	display: none;
-}
+// // UI to hide
+// .pswp__button--share,
+// .pswp__button--arrow--left,
+// .pswp__button--arrow--right {
+// 	display: none;
+// }
 .pswp {
-	z-index: $z-top + 1000; // IMPORTANT: must be higher than everything // 
+	z-index: $z-top + 1000; // IMPORTANT: must be higher than everything //
 }
 
-.pswp__ui--fit .pswp__top-bar, .pswp__ui--fit .pswp__caption {
-	background-color: transparent;
+.pswp__ui--fit .pswp__top-bar,
+.pswp__ui--fit .pswp__caption {
+	background-color: transparent !important;
 	// background-color: rgba(#000,0.1);
 }
 
 .pswp__counter,
 .pswp__button {
 	// background-color: red;
-	background-color: rgba(#000,0.8);
+	background-color: rgba(#000, 0.8);
+}
+
+.pswp--animate_opacity,
+.pswp__bg,
+.pswp__caption,
+.pswp__top-bar,
+.pswp--has_mouse .pswp__button--arrow--left,
+.pswp--has_mouse .pswp__button--arrow--right{
+    -webkit-transition: opacity 333ms cubic-bezier(.4,0,.22,1);
+    transition: opacity 333ms cubic-bezier(.4,0,.22,1);
+    // -webkit-transition: opacity 0ms cubic-bezier(.4,0,.22,1) !important;
+    // transition: opacity 0ms cubic-bezier(.4,0,.22,1) !important;
 }

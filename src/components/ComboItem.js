@@ -60,8 +60,6 @@ class ComboItem extends Component {
 			>
 				<Image item_id={combo_id} />
 				<div className='help-container'>
-					{/* <Emoji item={item1}/>
-					<Emoji item={item2}/> */}
 					<Image className='tiny' item_id={item1} />
 					<Image className='tiny' item_id={item2} />
 				</div>

@@ -6,7 +6,6 @@ import classNames from 'classnames';
 import {openModal, closeModal, toggleModal} from '../../modules/modal';
 import {Modal, CloseBtn, ModalTrigger, AllGoals,Image,} from '..';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import constants from '../../utils/constants';
 
 class GoalsModalTrigger extends Component {
 	render() {
@@ -55,7 +54,7 @@ class GoalsModalTrigger extends Component {
 					<span className='ml-2 hide-on-s'>Targets</span>
 				</ModalTrigger>
 
-				<Modal id='goals_modal' className='default-modal goals-modal bg-gray-900' rootClass='goals-modal-root'>
+				<Modal id='goals_modal' className='default-modal goals-modal dark-modal' rootClass='goals-modal-root'>
 					<ul className='ingredients-list text-white flex flex-row justify-center'>
 						{ingredientsList.map((item, index) => {
 							return(

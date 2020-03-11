@@ -3,7 +3,6 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import {Image} from '.';
-// import constants from '../../utils/constants';
 
 const ComboInventory = props => {
 	return (

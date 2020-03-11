@@ -7,11 +7,22 @@ import {
 	Footer,
 	// Goals,
 	// AllGoals,
-	GoalsModalTrigger,
+	// GoalsModalTrigger,
 	PhotoLightbox,
 } from '../components';
 // import itemData from '../utils/item_data';
 import constants from '../utils/constants';
+const {patch_version,versions} = constants;
+const {
+	full_sheet_local,
+	item_sheet_local,
+	wide_sheet_local,
+	item_sheet,
+	wide_sheet,
+	full_sheet,
+} = versions[patch_version];
+
+
 class DevSandboxPage extends Component {
 
 	calculate = () => {
@@ -63,13 +74,21 @@ class DevSandboxPage extends Component {
 
 		return (
 			<div>
-				<Helmet title='Sandbox (Dev)' />
+				<Helmet>
+					<title>Sandbox (DEV)</title>
+					{/* <link rel='shortcut icon' href='/favicon-blue.ico' /> */}
+					{/* <link rel='shortcut icon' href='/favicon-white.ico' /> */}
+					{/* <link rel='shortcut icon' href='/favicon-gray.ico' /> */}
+				</Helmet>
 				<main>
 					<section className="text-white">
-						<p>{`Patch ${constants.patch_version}`}</p>
-						<p><a href={constants.item_cheatsheet}>Item Cheatsheet</a></p>
-						<p><a href={constants.full_cheatsheet}>Full Cheatsheet</a></p>
-						<p><a href={constants.wide_cheatsheet}>Wide Cheatsheet</a></p>
+						<p>{`Patch ${patch_version}`}</p>
+						<p><a href={item_sheet}>Item Sheet</a></p>
+						<p><a href={full_sheet}>Full Sheet</a></p>
+						<p><a href={wide_sheet}>Wide Sheet</a></p>
+						<p><a href={item_sheet_local}>Item Sheet Local</a></p>
+						<p><a href={full_sheet_local}>Full Sheet Local</a></p>
+						<p><a href={wide_sheet_local}>Wide Sheet Local</a></p>
 					</section>
 					<PhotoLightbox/>
 					{/* <GoalsModalTrigger/> */}
