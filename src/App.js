@@ -30,6 +30,11 @@ class App extends Component {
 		this.props.setGoalsFromLocal();
 		this.props.setPrefsFromLocal();
 		this.props.welcomeNewVisitors();
+
+		console.log('process.env.NODE_ENV:',process.env.NODE_ENV);
+		console.log('process.env.VERSION:',process.env.VERSION);
+		console.log('process.env._VERSION_:',process.env._VERSION_);
+		// console.log('_VERSION_:',_VERSION_);
 	};
 
 	render() {
