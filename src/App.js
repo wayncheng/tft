@@ -15,9 +15,11 @@ import {setPrefsFromLocal, welcomeNewVisitors} from './modules/general';
 // import NextPage from './pages/NextPage';
 import DevSandboxPage from './pages/DevSandboxPage';
 import {
-	// HomePage, 
-	// BetaPage, 
+	HomePage, 
+	BetaPage, 
 	// NextPage,
+	PatchPageV10_4,
+	PatchPageV10_5,
 } from './pages/VersionedPage';
 import CaddiePage from './pages/CaddiePage';
 
@@ -41,15 +43,19 @@ class App extends Component {
 			// <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
 			<BrowserRouter basename={basename}>
 				<Switch>
-					{process.env.NODE_ENV !== 'production' && <Route exact path='/dev' component={DevSandboxPage} />}
+					{/* {process.env.NODE_ENV !== 'production' && <Route exact path='/dev' component={DevSandboxPage} />} */}
+					<Route exact path='/dev' component={DevSandboxPage} />
 
-					<Route exact path='/10.4' render={() => <CaddiePage version='10.4' />} />
-					<Route exact path='/10.5' render={() => <CaddiePage version='10.5' />} />
-					<Route exact path='/beta' render={() => <CaddiePage version='beta' />} />
-					<Route exact path='/' render={() => <CaddiePage version={constants.patch_version} />} />
-					{/* <Route exact path='/next' component={NextPage} /> */}
-					{/* <Route exact path='/beta' component={BetaPage} /> */}
-					{/* <Route exact path='/' component={HomePage} /> */}
+					{/* <Route exact path='/10.4' render={() => <CaddiePage version='10.4' />} /> */}
+					{/* <Route exact path='/10.5' render={() => <CaddiePage version='10.5' />} /> */}
+					{/* <Route exact path='/beta' render={() => <CaddiePage version='beta' />} /> */}
+					{/* <Route exact path='/' render={() => <CaddiePage version={constants.patch_version} />} /> */}
+					<Route exact path='/test' component={() => <CaddiePage version='beta' />} />
+					
+					<Route exact path='/10.4' component={PatchPageV10_4} />
+					<Route exact path='/10.5' component={PatchPageV10_5} />
+					<Route exact path='/beta' component={BetaPage} />
+					<Route exact path='/' component={HomePage} />
 
 
 					{/* 404 Page */}

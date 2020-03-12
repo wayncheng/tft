@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {Helmet} from 'react-helmet';
+import {Link} from 'react-router-dom';
 import {
 	// Item,
 	Footer,
@@ -93,6 +94,15 @@ class DevSandboxPage extends Component {
 					<PhotoLightbox/>
 					{/* <GoalsModalTrigger/> */}
 					{/* <AllGoals/> */}
+
+					<section className="text-white pt-12">
+					<p>
+						<Link to='/test'>Test Page Link (react-router-dom)</Link>
+					</p>
+					<p>
+						<a href='/test'>Test Page Link (standard html)</a>
+					</p>
+					</section>
 
 					{/* <section className='flex flex-col'>
 						<p>Combos</p>

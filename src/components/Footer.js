@@ -1,7 +1,7 @@
 import React from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import classNames from 'classnames';
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {PatchVersionBanner, ModalTrigger} from '.';
@@ -19,24 +19,31 @@ const Footer = props => {
 				{/* Navigation ========================================== */}
 				<div className='col'>
 					<ul className='footer-list'>
-						<li className="footer-title">TFT Item Caddie</li>
+						<li className='footer-title'>TFT Item Caddie</li>
 						<li>
-							<a href='/'>{`Current Patch (${patch_version})`}</a>
+							<Link to='/'>{`Current Patch (${patch_version})`}</Link>
+							{/* <a href='/'>{`Current Patch (${patch_version})`}</a> */}
 						</li>
 						<li>
-							<a href='/beta'>PBE Patch</a>
+							<Link to='/beta'>PBE Patch</Link>
+							{/* <a href='/beta'>PBE Patch</a> */}
 						</li>
 						{process.env.NODE_ENV === 'development' && (
-							<li>
-								<a href='/dev'>Sandbox</a>
-							</li>
+							<React.Fragment>
+								<li>
+									<a href='/dev'>Sandbox</a>
+								</li>
+								<li>
+									<a href='/test'>Test</a>
+								</li>
+							</React.Fragment>
 						)}
 					</ul>
 				</div>
 				{/* About Column ======================================== */}
 				<div className='col'>
 					<ul className='footer-list'>
-						<li className="footer-title">About the App</li>
+						<li className='footer-title'>About the App</li>
 						<li>{`Version ${process.env.REACT_APP_VERSION}`}</li>
 						<li>
 							<ModalTrigger modal_id='instructions' modal_action='open' className=''>
@@ -53,7 +60,7 @@ const Footer = props => {
 				{/* Resources =========================================== */}
 				<div className='col'>
 					<ul className='footer-list'>
-						<li className="footer-title">{`Cheat Sheets (${patch_version})`}</li>
+						<li className='footer-title'>{`Cheat Sheets (${patch_version})`}</li>
 						<li>
 							<FooterLink to={item_sheet} external>
 								Items
@@ -73,13 +80,12 @@ const Footer = props => {
 				</div>
 			</div>
 
-
-		{/* ========================================================================================================== */}
+			{/* ========================================================================================================== */}
 			{/* <div className='row flex flex-col justify-center items-center text-gray-600 text-sm'>
 				<p>{`App Version: ${process.env.REACT_APP_VERSION}`}</p>
 				<p className='fg-disabled'>{`Environment: ${process.env.REACT_APP_ENV}`}</p>
 			</div> */}
-		{/* ========================================================================================================== */}
+			{/* ========================================================================================================== */}
 		</footer>
 	);
 };
