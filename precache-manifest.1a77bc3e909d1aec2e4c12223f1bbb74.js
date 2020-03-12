@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/tft/static/media/tft-sheet-item-10.4.cc91fcf8.png"
   },
   {
-    "revision": "d460387c858d1e8ba0ec",
-    "url": "/tft/static/css/main.f08bd645.chunk.css"
+    "revision": "b0ddc59b5aee4c21000a",
+    "url": "/tft/static/css/main.eb300ecd.chunk.css"
   },
   {
-    "revision": "5aa3866ffd2b3927dced",
-    "url": "/tft/static/js/1.5aa3866f.chunk.js"
+    "revision": "c895556d8e908833cfa4",
+    "url": "/tft/static/js/1.c895556d.chunk.js"
   },
   {
     "revision": "1d2099939e97e6da5e4c",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/tft/static/media/tft-sheet-wide-10.5.3b468dda.png"
   },
   {
-    "revision": "d460387c858d1e8ba0ec",
-    "url": "/tft/static/js/main.d460387c.chunk.js"
+    "revision": "b0ddc59b5aee4c21000a",
+    "url": "/tft/static/js/main.b0ddc59b.chunk.js"
   },
   {
     "revision": "a5370fbaaa37c1064466c48d9b42ef04",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/tft/static/media/default-skin.b257fa9c.svg"
   },
   {
-    "revision": "a92c2e36a3cca77a0427b242744ec453",
+    "revision": "e5ebab1f7aef2c4d0f3367c16c1f8f39",
     "url": "/tft/index.html"
   }
 ];
