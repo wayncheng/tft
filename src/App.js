@@ -30,11 +30,16 @@ class App extends Component {
 		this.props.setGoalsFromLocal();
 		this.props.setPrefsFromLocal();
 		this.props.welcomeNewVisitors();
+		console.log('app version:',constants.app_version);
 	};
 
 	render() {
+		const basename = (process.env.NODE_ENV === 'production') ? '/tft' : '/';
+		console.log('basename:',basename);
 		return (
-			<BrowserRouter basename={'/tft'}>
+			// <BrowserRouter basename={'/tft'}>
+			// <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
+			<BrowserRouter basename={basename}>
 				<Switch>
 					{process.env.NODE_ENV !== 'production' && <Route exact path='/dev' component={DevSandboxPage} />}
 
