@@ -7,6 +7,9 @@ import {
 } from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import './App.scss';
+import './static/libs/tailwind.min.css';
+
 import {setGoalsFromLocal} from './modules/goals';
 import {setPrefsFromLocal, welcomeNewVisitors} from './modules/general';
 
@@ -23,9 +26,7 @@ import {
 } from './pages/VersionedPage';
 import CaddiePage from './pages/CaddiePage';
 
-import constants from './utils/constants';
-import './App.scss';
-import './static/libs/tailwind.min.css';
+// import constants from './utils/constants';
 
 class App extends Component {
 	componentDidMount = () => {

@@ -1,7 +1,9 @@
 import {openModal, openGallery} from './modal';
 import {processItemKey} from './items';
 // import constants from '../utils/constants';
-import defaultPatch from '../utils/data/10.6';
+// import defaultPatch from '../utils/data/10.6';
+// import {constants as defaultConstants,items as defaultItems} from '../utils/data/10.6';
+const defaultPatch = require('../utils/data/10.6');
 
 // import itemSheetLocal from '../static/img/beta/tft-sheet-item-beta.png';
 // import fullSheetLocal from '../static/img/beta/tft-sheet-full-beta.png';
@@ -63,6 +65,8 @@ const initialState = {
 	// },
 	constants: defaultPatch.constants,
 	itemData          : defaultPatch.items,
+	// constants: defaultConstants,
+	// itemData          : defaultItems,
 
 	//----------------------------------------
 	keyHandlerFocused : false,

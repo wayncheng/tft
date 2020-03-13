@@ -7,9 +7,7 @@ module.exports = {
 		full_sheet_local : require(`../../static/img/beta/tft-sheet-full-beta.png`),
 		wide_sheet_local : require(`../../static/img/beta/tft-sheet-wide-beta.png`),
 	},
-
 	items     : {
-		// Base Items --------------------------------------
 		belt            : {
 			id   : 'giantsbelt',
 			name : "Giant's Belt",
@@ -64,9 +62,7 @@ module.exports = {
 			perk_100 : `Every second, Wearer regenerates 5% of missing HP (Max 150HP/tick)`,
 			perk : `Every second, Wearer regenerates 5% of missing HP (Max 150HP/tick)`,
 		},
-		//****************************************************************************************************
-		//* NEW: Zz’Rot Portal (prev. titanic hydra)
-		//****************************************************************************************************
+		//* NEW: Zz’Rot Portal (prev. titanic hydra) *********************************************************
 		belt_bow        : {
 			id        : 'zzrotportal',
 			name      : `Zz’Rot Portal`,
@@ -193,7 +189,7 @@ module.exports = {
 			name      : `Quicksilver`,
 			perk_full : `Wearer is immune to Crowd Control for the first 10 seconds [UNIQUE]`,
 			perk_100 : `Wearer is immune to Crowd Control for the first 10s [UNIQUE]`,
-			perk_100 : `Wearer is immune to Crowd Control for first 10s [UNIQUE]`,
+			perk : `Wearer is immune to Crowd Control for first 10s [UNIQUE]`,
 		},
 		cloak_rod       : {
 			id        : 'ionicspark',
@@ -216,9 +212,7 @@ module.exports = {
 			perk_100  : `Basic Attacks heal the wearer for 40% of the damage dealt`,
 			perk      : 'Atks heal for 50% of dmg',
 		},
-		//********************************************************************************
-		//* NEW: Chalice of Favor (replaced hush)
-		//********************************************************************************
+		//* NEW: Chalice of Favor (replaced hush) ****************************************
 		cloak_tear      : {
 			id        : 'chaliceoffavor',
 			name      : `Chalice of Favor`,
@@ -269,9 +263,7 @@ module.exports = {
 			perk_100  : `At planning start, either get: +50% Dmg (Basic & Spells) or Basic On-Hits heal 50HP`,
 			perk      : 'Start w/ +50% dmg or +50 life on hit for round',
 		},
-		//********************************************************************************
-		//* NEW: Shroud of Stillness (prev. iceborn gauntlet)
-		//********************************************************************************
+		//* NEW: Shroud of Stillness (prev. iceborn gauntlet) ****************************
 		glove_vest      : {
 			id        : 'shroudofstillness',
 			name      : `Shroud of Stillness`,
@@ -315,7 +307,6 @@ module.exports = {
 			perk_100  : `Shields allies within 2 hexes left and right for 250/275/300 Damage for 8s`,
 			perk      : 'Shields allies 2 L&R in row for 250/275/350 dmg for 8s',
 		},
-		// SPATULA
 		spatula_spatula : {
 			id        : 'forceofnature',
 			name      : `Force of Nature`,
@@ -368,7 +359,6 @@ module.exports = {
 			perk_100  : `Revive after 2s with 400 HP and clean of negative effects (Once per combat)`,
 			perk      : 'Revives w/ 400HP after 2s',
 		},
-		// TEAR
 		tear_tear       : {
 			id        : 'seraphsembrace',
 			name      : `Seraph's Embrace`,
@@ -383,7 +373,6 @@ module.exports = {
 			perk_100  : `Nearby enemies' Attack Speed slowed 40% (Stacking increases radius, not slowness)`,
 			perk      : `Nearby enemy atk speed slowed 40%. (Stack increases effect radius)`,
 		},
-		// VEST
 		vest_vest       : {
 			id        : 'bramblevest',
 			name      : `Bramble Vest`,
