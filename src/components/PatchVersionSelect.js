@@ -35,7 +35,6 @@ class PatchVersionSelect extends Component {
 							<option value="beta">Beta</option>
 							<option value="10.6">10.6</option>
 							<option value="10.5">10.5</option>
-							<option value="10.4">10.4</option>
 						</select>
 					</div>
 				</form>
