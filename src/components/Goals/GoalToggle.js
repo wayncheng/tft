@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 import {ToggleSwitch, Image} from '..';
 import {toggleGoal, setGoal, removeGoal} from '../../modules/goals';
-import itemData from '../../utils/item_data';
 
 class GoalToggle extends Component {
 	constructor(props) {
@@ -32,7 +31,7 @@ class GoalToggle extends Component {
 		// 	<section className={classNames('goals items-sec', this.props.className)}>
 		// 		{possible_combos.map((combo_id, index) => {
 		const {combo_id} = this.props;
-		const combo = itemData[combo_id];
+		const combo = this.props.itemData[combo_id];
 		return (
 			<React.Fragment>
 				{combo !== undefined && (
@@ -62,6 +61,7 @@ class GoalToggle extends Component {
 
 const mapStateToProps = state => ({
 	...state.goals,
+	itemData : state.general.itemData,
 });
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-// import itemData from '../utils/item_data';
 import {
 	makeCombo,
 	mouseEnterCombo,
@@ -43,7 +42,6 @@ class ComboItem extends Component {
 		const item1 = sorted[0];
 		const item2 = sorted[1];
 		const combo_id = `${item1}_${item2}`;
-		// const combo = itemData[combo_id];
 		const isGoal = this.props.goals[combo_id] === true;
 
 		return (

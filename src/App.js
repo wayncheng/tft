@@ -32,12 +32,13 @@ class App extends Component {
 		this.props.setGoalsFromLocal();
 		this.props.setPrefsFromLocal();
 		this.props.welcomeNewVisitors();
-		console.log('app version:',constants.app_version);
+		// console.log('app version:',constants.app_version);
+		// console.log('process.env.REACT_APP_VERSION:',process.env.REACT_APP_VERSION);
 	};
 
 	render() {
 		const basename = (process.env.NODE_ENV === 'production') ? '/tft' : '/';
-		console.log('basename:',basename);
+		// console.log('basename:',basename);
 		return (
 			// <BrowserRouter basename={'/tft'}>
 			// <BrowserRouter basename={process.env.REACT_APP_BASENAME}>

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-import itemData from '../utils/item_data';
 import {
 	Image,
 	// asdfasdf,
@@ -23,7 +22,7 @@ class ComboSpotlight extends Component {
 
 	render() {
 		const _spotlight = this.props.comboSpotlight;
-		const combo = itemData[_spotlight];
+		const combo = this.props.itemData[_spotlight];
 		const ingredients = _spotlight.split('_');
 		const item1 = ingredients[0];
 		const item2 = ingredients[1];
@@ -54,6 +53,7 @@ class ComboSpotlight extends Component {
 
 const mapStateToProps = state => ({
 	comboSpotlight : state.items.comboSpotlight,
+	itemData : state.general.itemData,
 });
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(

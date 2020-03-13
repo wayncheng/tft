@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-import itemData from '../utils/item_data';
 import {
 	makeCombo,
 	mouseEnterCombo,
@@ -63,7 +62,7 @@ class DetailedComboItem extends Component {
 		const item1 = sorted[0];
 		const item2 = sorted[1];
 		const combo_id = `${item1}_${item2}`;
-		const combo = itemData[combo_id];
+		const combo = this.props.itemData[combo_id];
 		const isGoal = this.props.goals[combo_id] === true;
 		const perkInfo = combo.perk_100; // Switch perk version here
 		return (
@@ -97,6 +96,7 @@ class DetailedComboItem extends Component {
 const mapStateToProps = state => ({
 	inventory : state.items.inventory,
 	goals     : state.goals,
+	itemData : state.general.itemData,
 });
 const mapDispatchToProps = dispatch =>
 	bindActionCreators(

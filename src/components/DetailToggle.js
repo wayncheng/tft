@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-// import itemData from '../utils/item_data';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 // import './DetailToggle.scss';
 import {ToggleSwitch} from '../components';

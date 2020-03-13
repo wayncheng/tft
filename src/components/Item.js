@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-// import itemData from '../utils/item_data';
 import {addItem, removeItem} from '../modules/items';
 import {Image} from '../components';
 // import './ItemOld.scss';
