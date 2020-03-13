@@ -20,12 +20,12 @@ class PatchVersionSelect extends Component {
 
 	render() {
 		return (
-			<div {...this.props} className={classNames('patch-control-container mb-4',this.props.className)}>
-				<form id='patch-control' onSubmit={this.handleSubmit}>
+			<div {...this.props} className={classNames('patch-control-container',this.props.className)}>
+				<form id='patch-control' className="patch-control" onSubmit={this.handleSubmit}>
 					<div className='field'>
-						<label htmlFor='patch-control-input' className='hidden'>
+						{/* <label htmlFor='patch-control-input' className='hidden'>
 							Patch
-						</label>
+						</label> */}
 						<select
 							id='patch-control-input'
 							className='form-select input'

@@ -25,17 +25,9 @@ class CaddiePage extends Component {
 		return (
 			<PageRoot id='item-page-root' className='page-root flex flex-col	justify-between' version={patch_version}>
 				<main className='flex-1 flex flex-col justify-stretch align-stretch relative'>
-					<PatchVersionSelect className='absolute top-0 left-0 p-1' style={{
-						zIndex: '10001',
-					}} />
+					<PatchVersionSelect className='' />
 
-					{/* <p className='patch-version eyebrow'>{`Patch ${patch_version}`}</p> */}
-					<p className='patch-version eyebrow' data-version={patch_version}>
-						{/* <span className="">v</span> */}
-						{/* <span className="mr-2">Patch</span> */}
-						<span className='fg-light-disabled'>{patch_version}</span>
-						{/* <span className="ml-2">Patch</span> */}
-					</p>
+					{/* <p className='patch-version eyebrow' data-version={patch_version}> <span className='fg-light-disabled'>{patch_version}</span> </p> */}
 					<Inventory className='bg-gray-700' />
 					<Combos version={patch_version} className='bg-gray-800' />
 					<BaseItemSelectionPanel version={patch_version} className='' />
