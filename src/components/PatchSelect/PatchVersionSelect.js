@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {setPatchVersion} from '../modules/general';
+import {setPatchVersion} from '../../modules/general';
 import classNames from 'classnames';
 
 class PatchVersionSelect extends Component {

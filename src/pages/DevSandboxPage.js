@@ -10,6 +10,7 @@ import {
 	// AllGoals,
 	// GoalsModalTrigger,
 	PhotoLightbox,
+	PatchSelectCustom,
 } from '../components';
 import constants from '../utils/constants';
 const {patch_version,versions} = constants;
@@ -80,8 +81,10 @@ class DevSandboxPage extends Component {
 					{/* <link rel='shortcut icon' href='/favicon-white.ico' /> */}
 					{/* <link rel='shortcut icon' href='/favicon-gray.ico' /> */}
 				</Helmet>
-				<main>
-					<section className="text-white">
+				<main className="text-white">
+					<section 
+					// className="text-white"
+					>
 						<p>{`Patch ${patch_version}`}</p>
 						<p><a href={item_sheet}>Item Sheet</a></p>
 						<p><a href={full_sheet}>Full Sheet</a></p>
@@ -94,13 +97,14 @@ class DevSandboxPage extends Component {
 					{/* <GoalsModalTrigger/> */}
 					{/* <AllGoals/> */}
 
-					<section className="text-white pt-12">
-					<p>
-						<Link to='/test'>Test Page Link (react-router-dom)</Link>
-					</p>
-					<p>
-						<a href='/test'>Test Page Link (standard html)</a>
-					</p>
+					<section className="pt-12">
+					<p> <Link to='/test'>Test Page Link (react-router-dom)</Link> </p>
+					<p> <a href='/test'>Test Page Link (standard html)</a> </p>
+					</section>
+
+					<section className="pt-12">
+						{/* <h3> Custom Select UI </h3> */}
+						<PatchSelectCustom/>
 					</section>
 
 					{/* <section className='flex flex-col'>
