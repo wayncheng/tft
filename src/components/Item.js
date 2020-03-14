@@ -45,6 +45,7 @@ class Item extends Component {
 				href='#!'
 				className={classNames('item sized', this.props.className, {
 					ingredient : isIngredient,
+					'show-keybind': this.props.showKeybinds === true && this.props.keybind, 
 				})}
 				data-ingredient={this.props.ingredient}
 				data-item-id={item_id}
