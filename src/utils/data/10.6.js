@@ -91,12 +91,13 @@ module.exports = {
 			perk_100  : `If you deal Spell, burn 18% of their Max HP (True) & -80% heal over 10s. 1 burn/unit (stronger burn)`,
 			perk      : 'Spells burn for 18% of max HP over 10s, 80% heal reduction during burn',
 		},
+		//* NEW: Protector's Chestguard ************************************************************
 		belt_spatula    : {
-			id        : 'frozenmallet',
-			name      : `Frozen Mallet`,
-			perk_full : `Wearer is also a Glacial`,
-			perk_100  : `Wearer is also a Glacial`,
-			perk      : 'Also Glacial',
+			id        : `protectorschestguard`,
+			name      : `Protector's Chestguard`,
+			perk_full : `Wearer gains the Protector trait`,
+			perk_100  : `Wearer is also Protector`,
+			perk      : `Also Protector`,
 		},
 		belt_sword      : {
 			id        : 'zekesherald',
@@ -147,12 +148,13 @@ module.exports = {
 			perk_100  : `Basic Atks grant wearer +4% Atk Speed for rest of combat (infinite stacks)`,
 			perk      : 'Atks give +5% atk speed (stacks infinitely)',
 		},
+		//* NEW: Infiltrator's Talons ************************************************************
 		bow_spatula     : {
-			id        : 'bladeoftheruinedking',
-			name      : `Blade of the Ruined King`,
-			perk_full : `Wearer is also a Blademaster`,
-			perk_100  : `Wearer is also a Blademaster`,
-			perk      : 'Also Blademaster',
+			id        : `infiltratorstalons`,
+			name      : `Infiltrator's Talons`,
+			perk_full : `Wearer gains the Infiltrator trait`,
+			perk_100  : `Wearer is also Infiltrator`,
+			perk      : `Also Infiltrator`,
 		},
 		bow_sword       : {
 			id        : 'giantslayer',
@@ -175,8 +177,6 @@ module.exports = {
 			perk_100  : `When you get hit or crit strike, stack +2% Dmg. @ 100% max, +25 Armor & MR (round reset)`,
 			perk      : 'When hit or crits, gain 2% dmg (100% max). At 50 stacks, +25 armor & MR (resets each round)',
 		},
-
-		// CLOAK
 		cloak_cloak     : {
 			id        : 'dragonsclaw',
 			name      : `Dragon's Claw`,
@@ -198,12 +198,13 @@ module.exports = {
 			perk_100  : `Zap enemies that cast a spell w/in 3 hexes for 225% of their Max Mana (Magic) & -50% MR (no stack)`,
 			perk      : 'Zap nearby enemies that cast spell for 225% their max mana (Magic) & -50% MR (no stack)',
 		},
+		//* NEW: Celestial Orb ********************************************************
 		cloak_spatula   : {
-			id        : 'talismanoflight',
-			name      : `Talisman of Light`,
-			perk_full : `Wearer is also a Light`,
-			perk_100  : `Wearer is also a Light`,
-			perk      : 'Also Light',
+			id        : `celestialorb`,
+			name      : `Celestial Orb`,
+			perk_full : `Wearer gains the Celestial trait`,
+			perk_100  : `Wearer is also Celestial`,
+			perk      : `Also Celestial`,
 		},
 		cloak_sword     : {
 			id        : 'bloodthirster',
@@ -242,12 +243,13 @@ module.exports = {
 			perk_100  : `Wearer's spells can critically strike`,
 			perk      : 'Abilities can crit strike',
 		},
+		//* NEW: Dark Star's Heart *********************************************************************
 		glove_spatula   : {
-			id        : 'berserkeraxe',
-			name      : `Berserker Axe`,
-			perk_full : `Wearer is also a Berserker`,
-			perk_100  : `Wearer is also a Berserker`,
-			perk      : 'Also Berserker',
+			id        : `darkstarsheart`,
+			name      : `Dark Star's Heart`,
+			perk_full : `Wearer gains the Dark Star trait`,
+			perk_100  : `Wearer is also Dark Star`,
+			perk      : `Also Dark Star`,
 		},
 		glove_sword     : {
 			id        : 'infinityedge',
@@ -263,6 +265,7 @@ module.exports = {
 			perk_100  : `At planning start, either get: +50% Dmg (Basic & Spells) or Basic On-Hits heal 50HP`,
 			perk      : 'Start w/ +50% dmg or +50 life on hit for round',
 		},
+		
 		//* NEW: Shroud of Stillness (prev. iceborn gauntlet) ****************************
 		glove_vest      : {
 			id        : 'shroudofstillness',
@@ -271,20 +274,20 @@ module.exports = {
 			perk_100  : `At combat start, shoot beam forward. Increase Max Mana on Enemies hit by 40% until first cast`,
 			perk      : `At combat start, shoot beam forward. Increase Max Mana on Enemies hit by 40% until first cast`,
 		},
-		// ROD
 		rod_rod         : {
 			id        : 'rabadonsdeathcap',
 			name      : `Rabadon's Death Cap`,
 			perk_full : `Wearer gains +50% Spell Power Amplification. (All sources of Spell Power are 50% more effective)`,
 			perk_100  : `+50% Spell Power Amplification. (All sources of Spell Power are 50% more effective)`,
 			perk      : '+50% spell power from all sources',
-		},
+		},		
+		//* NEW: Demolitionist's Charge ************************************************************
 		rod_spatula     : {
-			id        : 'infernocinder',
-			name      : `Inferno Cinder`,
-			perk_full : `Wearer is also Inferno`,
-			perk_100  : `Wearer is also Inferno`,
-			perk      : 'Also Inferno',
+			id        : `demolitionistscharge`,
+			name      : `Demolitionist's Charge`,
+			perk_full : `Wearer gains the Demolitionist trait`,
+			perk_100  : `Wearer is also Demolitionist`,
+			perk      : `Also Demolitionist`,
 		},
 		rod_sword       : {
 			id        : 'hextechgunblade',
@@ -314,26 +317,29 @@ module.exports = {
 			perk_100  : `Wearer's team gains +1 maximum team size`,
 			perk      : '+1 team size',
 		},
+		// New blademaster spat **************************************************
 		spatula_sword   : {
-			id        : 'youmuusghostblade',
-			name      : `Youmuu's Ghostblade`,
-			perk_full : `Wearer is also an Assassin`,
-			perk_100  : `Wearer is also an Assassin`,
-			perk      : 'Also Assassin',
+			id        : 'bladeoftheruinedking',
+			name      : `Blade of the Ruined King`,
+			perk_full : `Wearer gains the Demolitionist trait`,
+			perk_100  : `Wearer is also Demolitionist`,
+			perk      : `Also Demolitionist`,
 		},
+		//* NEW: Star Guardian spat *************************************************
 		spatula_tear    : {
-			id        : 'magescap',
-			name      : `Mage's Cap`,
-			perk_full : `Wearer is also a Mage`,
-			perk_100  : `Wearer is also a Mage`,
-			perk      : 'Also Mage',
+			id        : `starguardianscharm`,
+			name      : `Star Guardian's Charm`,
+			perk_full : `Wearer gains the Star Guardian trait`,
+			perk_100  : `Wearer is also Star Guardian`,
+			perk      : `Also Star Guardian`,
 		},
+		//* NEW: Rebel spat ************************************************************
 		spatula_vest    : {
-			id        : 'wardensmail',
-			name      : `Warden's Mail`,
-			perk_full : `Wearer is also a Warden`,
-			perk_100  : `Wearer is also a Warden`,
-			perk      : 'Also Warden',
+			id        : `rebelmedal`,
+			name      : `Rebel Medal`,
+			perk_full : `Wearer gains the Rebel trait`,
+			perk_100  : `Wearer is also Rebel`,
+			perk      : `Also Rebel`,
 		},
 
 		// TODO: figure out what this change is 
