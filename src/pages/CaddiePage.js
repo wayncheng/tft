@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {
-	//
-	PatchVersionSelect,
+	PatchToggle,
+	// PatchSelectCustom,
+	// PatchVersionSelect,
 	Inventory,
 	Combos,
 	BaseItemSelectionPanel,
@@ -25,7 +26,8 @@ class CaddiePage extends Component {
 		return (
 			<PageRoot id='item-page-root' className='page-root flex flex-col	justify-between' version={patch_version}>
 				<main className='flex-1 flex flex-col justify-stretch align-stretch relative'>
-					<PatchVersionSelect className='' />
+					{/* <PatchSelectCustom /> */}
+					<PatchToggle />
 
 					{/* <p className='patch-version eyebrow' data-version={patch_version}> <span className='fg-light-disabled'>{patch_version}</span> </p> */}
 					<Inventory className='bg-gray-700' />

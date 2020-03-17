@@ -285,6 +285,7 @@ li {
 
 // $select-height: 1.5rem;
 $select-height: 1.8rem;
+.patch-select-container,
 .patch-control-container {
 	position   : absolute;
 	height     : $select-height;
@@ -353,7 +354,31 @@ $select-height: 1.8rem;
 		}
 	}
 }
-
+.patch-toggle {
+	background-color: transparent;
+	font-size: .8rem;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: .15em;
+	word-spacing: .15em;
+	color: $fg-light-secondary;
+	padding: .5rem;
+	&:focus, &:hover {
+		background-color: transparent;
+		outline: none;
+		box-shadow: none;
+		border: none;
+		color: $fg-light-primary;
+	}
+}
+.patch-toggle-container {
+	position   : absolute;
+	top        : 0;
+	left       : 0;
+	padding    : .5rem;
+	outline: 1px solid red;
+}
 // Lists ===========================
 .bulleted {
 	list-style: disc;
@@ -381,42 +406,18 @@ mark,
 	font-style: normal !important;
 }
 // Utilities =======================
-.fg-dark-primary {
-	color: $fg-primary !important;
-}
-.fg-dark-secondary {
-	color: $fg-secondary !important;
-}
-.fg-dark-disabled {
-	color: $fg-disabled !important;
-}
-.fg-dark-divider {
-	color: $fg-divider !important;
-}
-.fg-light-primary {
-	color: $fg-light-primary;
-}
-.fg-light-secondary {
-	color: $fg-light-secondary;
-}
-.fg-light-disabled {
-	color: $fg-light-disabled;
-}
-.fg-light-divider {
-	color: $fg-light-divider;
-}
-.fg-primary {
-	color: $fg-light-primary;
-}
-.fg-secondary {
-	color: $fg-light-secondary;
-}
-.fg-disabled {
-	color: $fg-light-disabled;
-}
-.fg-divider {
-	color: $fg-light-divider;
-}
+.fg-dark-primary { color: $fg-primary !important; }
+.fg-dark-secondary { color: $fg-secondary !important; }
+.fg-dark-disabled { color: $fg-disabled !important; }
+.fg-dark-divider { color: $fg-divider !important; }
+.fg-light-primary { color: $fg-light-primary; }
+.fg-light-secondary { color: $fg-light-secondary; }
+.fg-light-disabled { color: $fg-light-disabled; }
+.fg-light-divider { color: $fg-light-divider; }
+.fg-primary { color: $fg-light-primary; }
+.fg-secondary { color: $fg-light-secondary; }
+.fg-disabled { color: $fg-light-disabled; }
+.fg-divider { color: $fg-light-divider; }
 
 .link-primary {
 	color: $fg-light-primary;
@@ -452,6 +453,15 @@ mark,
 		flex: 1;
 	}
 }
+.offscreen {
+	position: fixed;
+	top: -92963px;
+	left: -92963px;
+}
+
+.z-top { z-index: $z-top; }
+.z-above { z-index: $z-above; }
+.z-base { z-index: $z-base; }
 
 // Hide Utilities ==================
 .hide-on-xxs {
