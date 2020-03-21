@@ -8,7 +8,6 @@ import {
 	Item,
 } from '.';
 import classNames from 'classnames';
-import itemData from '../utils/item_data';
 import './ItemTable.scss';
 
 class ItemTable extends Component {
@@ -48,7 +47,7 @@ class ItemTable extends Component {
 									const comboIndex = this.props.unique.indexOf(comboID);
 									// const isRepeat = (indexB < indexA);
 									const isRepeat = indexB > indexA;
-									const item = itemData[comboID];
+									const item = this.props.itemData[comboID];
 
 									return (
 										<td
@@ -96,6 +95,7 @@ const mapStateToProps = state => ({
 	inventory : state.items.inventory,
 	unique    : state.items.unique,
 	showPerks : state.items.showPerks,
+	itemData : state.general.itemData,
 });
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
 

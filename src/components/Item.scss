@@ -30,6 +30,9 @@ $size-2: 32px;
 	height: $size-0;
 	max-width: $size-0;
 	max-height: $size-0;
+	vertical-align: top;
+	// Tailwind aligns middle by default Suddenly became an issue one day.
+	// TODO: highlight style not working on compact combos 
 	&.tiny {
 		width: $size-2;
 		height: $size-2;
@@ -71,7 +74,9 @@ $size-2: 32px;
 	flex: 1;
 }
 
-.item {
+// .item 
+.show-keybind
+{
 	padding: 0;
 	position: relative;
 	.item-keybind {
@@ -115,12 +120,28 @@ $size-2: 32px;
 	flex: 3;
 }
 
+// Simple Combo =========================
+// .simple-combos-container {
+// 	display: flex;
+// 	flex-direction: row;
+// 	flex-wrap: wrap;
+// 	justify-content: center;
+// 	align-items: center;
+// 	margin: auto;
+// }
+.simple-combo {
+	// Background color is changed for goal items (simple style). Need to have a little bit of space so bg can be seen
+	// padding: .25rem;
+	// margin: .25rem;
+	// display: flex;
+	// flex-direction: column;
+}
 // Detailed Combo =========================
 $detail-minw: 260px;
 $detail-maxw: 300px;
 $split-into: 4;
 // $split: 25%;
-.row-container,
+// .row-container,
 .detailed-combos-container {
 	display: flex;
 	flex-direction: row;

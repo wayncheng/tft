@@ -1,6 +1,8 @@
 module.exports = {
-	patch_version: '10.5',
-	next_version: 'PBE',
+	app_version: '2.3.1',
+	patch_version: '10.6',
+	next_version: '10.6',
+	newest_version: '10.6',
 	versions: require('../utils/versions'),
 	
 

@@ -9,6 +9,9 @@ export {default as Combos} from './Combos';
 export {default as BaseItemSelectionPanel} from './BaseItemSelectionPanel';
 export {default as Footer} from './Footer';
 export {default as PatchVersionBanner} from './PatchVersionBanner';
+export {default as PatchVersionSelect} from './PatchSelect/PatchVersionSelect';
+export {default as PatchSelectCustom} from './PatchSelect/PatchSelectCustom';
+export {default as PatchToggle} from './PatchSelect/PatchToggle';
 
 // Items
 export {default as Image} from './Image';

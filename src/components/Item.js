@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-// import itemData from '../utils/item_data';
 import {addItem, removeItem} from '../modules/items';
 import {Image} from '../components';
 // import './ItemOld.scss';
@@ -46,6 +45,7 @@ class Item extends Component {
 				href='#!'
 				className={classNames('item sized', this.props.className, {
 					ingredient : isIngredient,
+					'show-keybind': this.props.showKeybinds === true && this.props.keybind, 
 				})}
 				data-ingredient={this.props.ingredient}
 				data-item-id={item_id}

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-// import itemData from '../utils/item_data';
 import classNames from 'classnames';
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 // import './Inventory.scss';
@@ -20,7 +19,7 @@ class Inventory extends Component {
 			<section
 				className={classNames(
 					'inventory items-sec',
-					'relative flex flex-col items-center justify-between p-4 pb-0',
+					'relative flex flex-col items-center justify-between p-4 pt-8 pb-0',
 					this.props.className,
 					{
 						// 'empty-inv' : inventory.length === 0,

@@ -7,6 +7,9 @@ import {
 } from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import './App.scss';
+import './static/libs/tailwind.min.css';
+
 import {setGoalsFromLocal} from './modules/goals';
 import {setPrefsFromLocal, welcomeNewVisitors} from './modules/general';
 
@@ -15,36 +18,46 @@ import {setPrefsFromLocal, welcomeNewVisitors} from './modules/general';
 // import NextPage from './pages/NextPage';
 import DevSandboxPage from './pages/DevSandboxPage';
 import {
-	// HomePage, 
-	// BetaPage, 
+	HomePage, 
+	BetaPage, 
 	// NextPage,
+	// PatchPageV10_4,
+	// PatchPageV10_5,
 } from './pages/VersionedPage';
 import CaddiePage from './pages/CaddiePage';
 
-import constants from './utils/constants';
-import './App.scss';
-import './static/libs/tailwind.min.css';
+// import constants from './utils/constants';
 
 class App extends Component {
 	componentDidMount = () => {
 		this.props.setGoalsFromLocal();
 		this.props.setPrefsFromLocal();
 		this.props.welcomeNewVisitors();
+		// console.log('app version:',constants.app_version);
+		// console.log('process.env.REACT_APP_VERSION:',process.env.REACT_APP_VERSION);
 	};
 
 	render() {
+		const basename = (process.env.NODE_ENV === 'production') ? '/tft' : '/';
+		// console.log('basename:',basename);
 		return (
-			<BrowserRouter basename={'/tft'}>
+			// <BrowserRouter basename={'/tft'}>
+			// <BrowserRouter basename={process.env.REACT_APP_BASENAME}>
+			<BrowserRouter basename={basename}>
 				<Switch>
-					{process.env.NODE_ENV !== 'production' && <Route exact path='/dev' component={DevSandboxPage} />}
+					{/* {process.env.NODE_ENV !== 'production' && <Route exact path='/dev' component={DevSandboxPage} />} */}
+					<Route exact path='/dev' component={DevSandboxPage} />
 
-					<Route exact path='/10.4' render={() => <CaddiePage version='10.4' />} />
-					<Route exact path='/10.5' render={() => <CaddiePage version='10.5' />} />
-					<Route exact path='/beta' render={() => <CaddiePage version='beta' />} />
-					<Route exact path='/' render={() => <CaddiePage version={constants.patch_version} />} />
-					{/* <Route exact path='/next' component={NextPage} /> */}
-					{/* <Route exact path='/beta' component={BetaPage} /> */}
-					{/* <Route exact path='/' component={HomePage} /> */}
+					{/* <Route exact path='/10.4' render={() => <CaddiePage version='10.4' />} /> */}
+					{/* <Route exact path='/10.5' render={() => <CaddiePage version='10.5' />} /> */}
+					{/* <Route exact path='/beta' render={() => <CaddiePage version='beta' />} /> */}
+					{/* <Route exact path='/' render={() => <CaddiePage version={constants.patch_version} />} /> */}
+					<Route exact path='/test' component={() => <CaddiePage version='beta' />} />
+					
+					{/* <Route exact path='/10.4' component={PatchPageV10_4} />
+					<Route exact path='/10.5' component={PatchPageV10_5} /> */}
+					<Route exact path='/beta' component={BetaPage} />
+					<Route exact path='/' component={HomePage} />
 
 
 					{/* 404 Page */}

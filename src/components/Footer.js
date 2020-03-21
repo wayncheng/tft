@@ -1,30 +1,50 @@
 import React from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import classNames from 'classnames';
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {
-	PatchVersionBanner, 
-	ModalTrigger
-} from '.';
+import {PatchVersionBanner, ModalTrigger} from '.';
 import constants from '../utils/constants';
 
 const Footer = props => {
-	const {patch_version,versions} = constants;
+	const {patch_version, versions} = constants;
 	const versionConstants = versions[patch_version];
-	const {item_sheet,full_sheet,wide_sheet} = versionConstants;
+	const {item_sheet, full_sheet, wide_sheet} = versionConstants;
 
 	return (
-		<footer className={classNames('footer p-0 pb-32 bg-gray-900', props.className)}>
+		<footer className={classNames('footer p-0 pb-48 bg-gray-900', props.className)}>
 			<PatchVersionBanner />
 			<div className='footer-nav row flex justify-center items-start pt-4'>
+				{/* Navigation ========================================== */}
 				<div className='col'>
 					<ul className='footer-list'>
-						<li>TFT Item Caddie</li>
-						<li><a href='/'>{`Current Patch (${patch_version})`}</a></li>
-						<li><a href='/beta'>PBE Patch</a></li>
+						<li className='footer-title'>TFT Item Caddie</li>
 						<li>
-							<ModalTrigger modal_id='instructions' modal_action='open' className="">
+							<Link to='/'>{`Current Patch (${patch_version})`}</Link>
+						</li>
+						<li>
+							<Link to='/beta'>PBE Patch</Link>
+						</li>
+						{process.env.NODE_ENV === 'development' && (
+							<React.Fragment>
+								<li>
+									<a href='/dev'>Sandbox</a>
+								</li>
+								<li>
+									<a href='/test'>Test</a>
+								</li>
+							</React.Fragment>
+						)}
+					</ul>
+				</div>
+				{/* About Column ======================================== */}
+				<div className='col'>
+					<ul className='footer-list'>
+						<li className='footer-title'>About the App</li>
+						<li>{`Version ${process.env.REACT_APP_VERSION}`}</li>
+						<li>
+							<ModalTrigger modal_id='instructions' modal_action='open' className=''>
 								Help
 							</ModalTrigger>
 						</li>
@@ -33,16 +53,12 @@ const Footer = props => {
 								GitHub
 							</FooterLink>
 						</li>
-						{process.env.NODE_ENV === 'dev' && (
-							<li>
-								<a href='/dev'>Sandbox</a>
-							</li>
-						)}
 					</ul>
 				</div>
+				{/* Resources =========================================== */}
 				<div className='col'>
 					<ul className='footer-list'>
-						<li>{`Cheat Sheets (${patch_version})`}</li>
+						<li className='footer-title'>{`Cheat Sheets (${patch_version})`}</li>
 						<li>
 							<FooterLink to={item_sheet} external>
 								Items
@@ -61,6 +77,13 @@ const Footer = props => {
 					</ul>
 				</div>
 			</div>
+
+			{/* ========================================================================================================== */}
+			{/* <div className='row flex flex-col justify-center items-center text-gray-600 text-sm'>
+				<p>{`App Version: ${process.env.REACT_APP_VERSION}`}</p>
+				<p className='fg-disabled'>{`Environment: ${process.env.REACT_APP_ENV}`}</p>
+			</div> */}
+			{/* ========================================================================================================== */}
 		</footer>
 	);
 };

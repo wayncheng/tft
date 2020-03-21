@@ -1,10 +1,13 @@
-import {openModal,openGallery,} from './modal';
+import {openModal, openGallery} from './modal';
 import {processItemKey} from './items';
-import constants from '../utils/constants';
+// import constants from '../utils/constants';
+// import defaultPatch from '../utils/data/10.6';
+// import {constants as defaultConstants,items as defaultItems} from '../utils/data/10.6';
+const defaultPatch = require('../utils/data/10.6');
+
 // import itemSheetLocal from '../static/img/beta/tft-sheet-item-beta.png';
 // import fullSheetLocal from '../static/img/beta/tft-sheet-full-beta.png';
 // import wideSheetLocal from '../static/img/beta/tft-sheet-wide-beta.png';
-
 
 export const FOCUS_KEY_HANDLER = 'general/FOCUS_KEY_HANDLER';
 export const UPDATE_PREFS = 'general/UPDATE_PREFS';
@@ -12,9 +15,25 @@ export const WELCOME_PARTY = 'general/WELCOME_PARTY';
 export const SET_PATCH_VERSION = 'general/SET_PATCH_VERSION';
 
 export const handledKeys = [
-	'1', '2', '3', '4', '5', '6', '7', '8', '9',
-	'shift+1', 'shift+2', 'shift+3', 'shift+4', 'shift+5', 'shift+6', 'shift+7', 'shift+8', 'shift+9',
-	 // Help ..........
+	'1',
+	'2',
+	'3',
+	'4',
+	'5',
+	'6',
+	'7',
+	'8',
+	'9',
+	'shift+1',
+	'shift+2',
+	'shift+3',
+	'shift+4',
+	'shift+5',
+	'shift+6',
+	'shift+7',
+	'shift+8',
+	'shift+9',
+	// Help ..........
 	'shift+/',
 	'q',
 	'h',
@@ -27,30 +46,35 @@ export const handledKeys = [
 	// Cheat Sheets ..........
 	'c',
 	's',
-]
+];
 const initialState = {
-	patch_version: 'beta',
-	constants: {
-		item_sheet: '#',
-		full_sheet: '#',
-		wide_sheet: '#',
-		item_sheet_local: '#',
-		full_sheet_local: '#',
-		wide_sheet_local: '#',
-		// item_sheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-item-cheat-sheet-set-3-2.png',
-		// full_sheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-ultimate-cheat-sheet-set3-3.png',
-		// wide_sheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-desktop-cheat-sheet-set3-2.png',
-		// item_sheet_local: require(`../static/img/beta/tft-sheet-item-beta.png`),
-		// full_sheet_local: require(`../static/img/beta/tft-sheet-full-beta.png`),
-		// wide_sheet_local: require(`../static/img/beta/tft-sheet-wide-beta.png`),
-	},
+	patch_version     : 'beta',
+	// constants         : {
+	// 	item_sheet       : '#',
+	// 	full_sheet       : '#',
+	// 	wide_sheet       : '#',
+	// 	item_sheet_local : '#',
+	// 	full_sheet_local : '#',
+	// 	wide_sheet_local : '#',
+	// 	// item_sheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-item-cheat-sheet-set-3-2.png',
+	// 	// full_sheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-ultimate-cheat-sheet-set3-3.png',
+	// 	// wide_sheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-desktop-cheat-sheet-set3-2.png',
+	// 	// item_sheet_local: require(`../static/img/beta/tft-sheet-item-beta.png`),
+	// 	// full_sheet_local: require(`../static/img/beta/tft-sheet-full-beta.png`),
+	// 	// wide_sheet_local: require(`../static/img/beta/tft-sheet-wide-beta.png`),
+	// },
+	constants: defaultPatch.constants,
+	itemData          : defaultPatch.items,
+	// constants: defaultConstants,
+	// itemData          : defaultItems,
+
+	//----------------------------------------
 	keyHandlerFocused : false,
 	prefs             : {
 		showPerks        : false,
 		showComboDetails : false,
 		showKeybinds     : false,
 	},
-	// isFirstVisit: false,
 	isFirstVisit      : true,
 };
 
@@ -60,7 +84,8 @@ export default (state = initialState, action) => {
 			return {
 				...state,
 				patch_version : action.patch_version,
-				constants : action.constants,
+				constants     : action.constants,
+				itemData      : action.itemData,
 			};
 		case FOCUS_KEY_HANDLER:
 			return {
@@ -95,21 +120,17 @@ export const processKey = key => (dispatch, getState) => {
 		console.log('==== help / instructions ===>');
 		// Open instructions modal
 		dispatch(openModal('instructions'));
-	} 
-	else if (key === 'i' || key === 'd') {
+	} else if (key === 'i' || key === 'd') {
 		console.log('==== toggle combo details / info ===>');
 		dispatch(setPrefs({showComboDetails: !general.prefs.showComboDetails}));
-	} 
-	else if (key === 't' || key === 'g') {
+	} else if (key === 't' || key === 'g') {
 		// Open Goals/Targets modal
 		console.log('===> open target panel ===>');
 		dispatch(openModal('goals_modal'));
-	}
-	else if (key === 'c' || key === 's') {
+	} else if (key === 'c' || key === 's') {
 		console.log('===> view cheat sheets ===>');
-		dispatch(openGallery())
-	}
-	 else if (keyHasNumber === true) {
+		dispatch(openGallery());
+	} else if (keyHasNumber === true) {
 		// If the key isn't a "general" key, pass it along to the item key processor
 		dispatch(processItemKey(key));
 	} else {
@@ -134,13 +155,42 @@ export const setPrefs = prefChanges => dispatch => {
 	dispatch(savePrefsLocally());
 };
 // Set patch version
-export const setPatchVersion = patch_version => dispatch => {
-	const patchConstants = constants.versions[patch_version];
-	dispatch({
-		type: SET_PATCH_VERSION,
-		patch_version,
-		constants: patchConstants,
-	})
+export const setPatchVersion = patch_version => (dispatch, getState) => {
+	// const currentState = getState().general;
+	// let patchConstants = currentState.constants;
+	// let patchItemData = currentState.itemData;
+
+	// let newData = {};
+	try {
+		const newData = require(`../utils/data/${patch_version}.js`);
+
+		let newConstants = newData.constants;
+		let newItemData = newData.items;
+
+		// if (newConstants && newItemData) {
+		// 	patchConstants = newConstants;
+		// 	patchItemData = newItemData;
+		// }
+
+		if (!newConstants || !newItemData) {
+			throw new Error('bad data source')
+		}
+
+		// Dispatch inside of try block because we want to avoid updating 
+		// the state with bad data if something is wrong. Only update if 
+		// the values we need are found in new data.
+		dispatch({
+			type          : SET_PATCH_VERSION,
+			patch_version,
+			constants     : newConstants,
+			itemData      : newItemData,
+		});
+
+		dispatch(focusKeyHandler())
+	} catch (error) {
+		console.log(`[ERROR] unable to read item data for patch version ${patch_version}. Item data will not be changed`);
+	}
+	
 };
 
 // Save pref state to local storage

@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-// import itemData from '../utils/item_data';
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
 	// Item,
 	ComboItem,
@@ -60,7 +58,7 @@ class Combos extends Component {
 								<div className='detailed-container' />
 							</div>
 						) : (
-							<div className='simple-combos-container row-container items-container flex flex-row justify-center items-center m-auto pb-16'>
+							<div className='simple-combos-container row-container items-container flex flex-row justify-center items-center flex-wrap m-auto pb-24'>
 								{unique.map((pair, index) => {
 									const split = pair.split('_');
 									return <ComboItem className='' item1={split[0]} item2={split[1]} key={'unique-' + index} />;
