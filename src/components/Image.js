@@ -8,13 +8,20 @@ class Image extends Component {
 	render() {
 		const {item_id, src, ext} = this.props;
 		const item = this.props.itemData[item_id];
+		let description = item.name || item.id;
+		if (item_id.indexOf('_') !== -1){
+			const parts = item_id.split('_')
+			description = `${item.name} (${parts[0]} + ${parts[1]})`
+		}
+
 		return (
 			<img
-				{...this.props}
-				// className={classNames('item-img',this.props.className)}
+				// {...this.props}
+				id={this.props.id}
 				className={classNames('item-img sized', this.props.className)}
 				src={`${src}/${item.id}.${ext}`}
-				alt={item.name || item.id}
+				alt={description}
+				title={description}
 			/>
 		);
 	}
