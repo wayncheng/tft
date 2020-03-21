@@ -321,9 +321,9 @@ module.exports = {
 		spatula_sword   : {
 			id        : 'bladeoftheruinedking',
 			name      : `Blade of the Ruined King`,
-			perk_full : `Wearer gains the Demolitionist trait`,
-			perk_100  : `Wearer is also Demolitionist`,
-			perk      : `Also Demolitionist`,
+			perk_full : `Wearer gains the Blademaster trait`,
+			perk_100  : `Wearer is also Blademaster`,
+			perk      : `Also Blademaster`,
 		},
 		//* NEW: Star Guardian spat *************************************************
 		spatula_tear    : {

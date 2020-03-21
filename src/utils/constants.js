@@ -1,5 +1,5 @@
 module.exports = {
-	app_version: '2.3.1',
+	app_version: '2.3.2',
 	patch_version: '10.6',
 	next_version: '10.6',
 	newest_version: '10.6',
