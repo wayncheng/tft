@@ -21,8 +21,8 @@ import {
 	HomePage, 
 	BetaPage, 
 	// NextPage,
-	PatchPageV10_4,
-	PatchPageV10_5,
+	// PatchPageV10_4,
+	// PatchPageV10_5,
 } from './pages/VersionedPage';
 import CaddiePage from './pages/CaddiePage';
 
@@ -54,8 +54,8 @@ class App extends Component {
 					{/* <Route exact path='/' render={() => <CaddiePage version={constants.patch_version} />} /> */}
 					<Route exact path='/test' component={() => <CaddiePage version='beta' />} />
 					
-					<Route exact path='/10.4' component={PatchPageV10_4} />
-					<Route exact path='/10.5' component={PatchPageV10_5} />
+					{/* <Route exact path='/10.4' component={PatchPageV10_4} />
+					<Route exact path='/10.5' component={PatchPageV10_5} /> */}
 					<Route exact path='/beta' component={BetaPage} />
 					<Route exact path='/' component={HomePage} />
 

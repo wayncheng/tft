@@ -10,7 +10,7 @@ const PatchVersionBanner = props => {
 			collapsed: props.collapse === true && (props.inventory.length !== 0 || props.comboInventory.length !== 0) 
 		})}>
 			<p className='fine-print'>
-				{`Updated for Patch ${constants.patch_version}`}
+				{`Updated for Patch ${constants.newest_version}`}
 			</p>
 		</aside>
 	);

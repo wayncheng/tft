@@ -1,6 +1,6 @@
 {
 	"name": "tft-items",
-	"version": "2.2.3",
+	"version": "2.3.1",
 	"homepage": "https://wayncheng.github.io/tft",
 	"license": "Apache-2.0",
 	"dependencies": {

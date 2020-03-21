@@ -11,7 +11,7 @@ import {processKey, handledKeys} from '../modules/general';
 class PageRoot extends Component {
 	handleKeyEvent = (key, event) => {
 		event.preventDefault();
-		console.log('key:', key);
+		// console.log('key:', key);
 		this.props.processKey(key);
 	};
 	render() {

@@ -186,16 +186,11 @@ export const setPatchVersion = patch_version => (dispatch, getState) => {
 			itemData      : newItemData,
 		});
 
+		dispatch(focusKeyHandler())
 	} catch (error) {
 		console.log(`[ERROR] unable to read item data for patch version ${patch_version}. Item data will not be changed`);
 	}
 	
-	// dispatch({
-	// 	type          : SET_PATCH_VERSION,
-	// 	patch_version,
-	// 	constants     : patchConstants,
-	// 	itemData      : patchItemData,
-	// });
 };
 
 // Save pref state to local storage

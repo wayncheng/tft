@@ -22,11 +22,9 @@ const Footer = props => {
 						<li className='footer-title'>TFT Item Caddie</li>
 						<li>
 							<Link to='/'>{`Current Patch (${patch_version})`}</Link>
-							{/* <a href='/'>{`Current Patch (${patch_version})`}</a> */}
 						</li>
 						<li>
 							<Link to='/beta'>PBE Patch</Link>
-							{/* <a href='/beta'>PBE Patch</a> */}
 						</li>
 						{process.env.NODE_ENV === 'development' && (
 							<React.Fragment>

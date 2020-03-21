@@ -6,17 +6,27 @@ import classNames from 'classnames';
 import constants from '../../utils/constants';
 
 class PatchToggle extends Component {
-	// constructor(props) {
-	// 	super(props);
-	// 	this.state = {
-	// 	};
+	constructor(props) {
+		super(props);
+		this.state = {
+			isBeta : false,
+		};
+	}
+
+	// componentDidUpdate = (prevProps,prevState) => {
+	// 	if (prevProps.patch_version === constants.patch_version){
+	// 		this.setState({isBeta: false})
+	// 	} else {
+	// 		this.setState({isBeta: true})
+	// 	}
 	// }
 
 	handleToggle = event => {
 		event.preventDefault();
 		const currentVersion = constants.patch_version;
 		const nextVersion = constants.next_version;
-		const selectedVersion = this.props.patch_version === currentVersion ? nextVersion : currentVersion;
+		const isCurrent = this.props.patch_version === currentVersion;
+		const selectedVersion = isCurrent ? nextVersion : currentVersion;
 		this.props.setPatchVersion(selectedVersion);
 	};
 
@@ -25,7 +35,9 @@ class PatchToggle extends Component {
 			<a
 				id='patch-toggle-btn'
 				href='#!'
-				className={classNames('patch-toggle absolute top-0 left-0 p-2 z-top', this.props.className)}
+				className={classNames('patch-toggle absolute top-0 left-0 p-2 z-top', this.props.className,{
+					'is-beta-patch': this.props.patch_version !== constants.patch_version,
+				})}
 				onClick={this.handleToggle}
 			>
 				{this.props.patch_version}

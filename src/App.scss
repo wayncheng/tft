@@ -371,6 +371,14 @@ $select-height: 1.8rem;
 		border: none;
 		color: $fg-light-primary;
 	}
+	&.is-beta-patch {
+		color: $yellow-3;
+		color: $yellow-4;
+		&:focus,&:hover {
+			color: $yellow-3;
+			color: $yellow-5;
+		}
+	}
 }
 .patch-toggle-container {
 	position   : absolute;
