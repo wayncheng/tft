@@ -1,6 +1,14 @@
 module.exports = {
 
 	// Set 3 ....................
+	'10.7': {
+		item_sheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-item-cheat-sheet-set-3-10-7.png',
+		full_sheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-ultimate-cheat-sheet-set3-10-7.png',
+		wide_sheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-desktop-cheat-sheet-set3-10-7.png',
+		item_sheet_local: require(`../static/img/beta/tft-sheet-item-beta.png`),
+		full_sheet_local: require(`../static/img/beta/tft-sheet-full-beta.png`),
+		wide_sheet_local: require(`../static/img/beta/tft-sheet-wide-beta.png`),
+	},
 	'10.6': {
 		item_sheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-item-cheat-sheet-set-3-2.png',
 		full_sheet: 'https://progameguides.com/wp-content/uploads/2019/06/tft-ultimate-cheat-sheet-set3-3.png',

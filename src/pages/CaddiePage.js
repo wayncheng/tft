@@ -36,7 +36,7 @@ class CaddiePage extends Component {
 				</main>
 
 				<Footer version={patch_version} />
-				<PhotoLightbox version={patch_version} local />
+				<PhotoLightbox version={patch_version} />
 			</PageRoot>
 		);
 	}
