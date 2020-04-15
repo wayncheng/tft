@@ -8,9 +8,8 @@ import {PatchVersionBanner, ModalTrigger} from '.';
 import constants from '../utils/constants';
 
 const Footer = props => {
-	const {patch_version, versions} = constants;
-	const versionConstants = versions[patch_version];
-	const {item_sheet, full_sheet, wide_sheet} = versionConstants;
+	const {patch_version} = constants;
+	const {item_sheet, full_sheet, wide_sheet} = props.constants;
 
 	return (
 		<footer className={classNames('footer p-0 pb-48 bg-gray-900', props.className)}>
@@ -87,7 +86,9 @@ const Footer = props => {
 		</footer>
 	);
 };
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+	constants: state.general.constants,
+});
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
 export default connect(mapStateToProps, mapDispatchToProps)(Footer);
 

@@ -13,15 +13,15 @@ import {
 	PatchSelectCustom,
 } from '../components';
 import constants from '../utils/constants';
-const {patch_version,versions} = constants;
-const {
-	full_sheet_local,
-	item_sheet_local,
-	wide_sheet_local,
-	item_sheet,
-	wide_sheet,
-	full_sheet,
-} = versions[patch_version];
+const {patch_version} = constants;
+// const {
+// 	full_sheet_local,
+// 	item_sheet_local,
+// 	wide_sheet_local,
+// 	item_sheet,
+// 	wide_sheet,
+// 	full_sheet,
+// } = versions[patch_version];
 
 
 class DevSandboxPage extends Component {
@@ -72,7 +72,15 @@ class DevSandboxPage extends Component {
 		// 	unique
 		// } = this.calculate();
 		// const uniqueArr = Object.keys(unique);
-
+		const {
+			full_sheet_local,
+			item_sheet_local,
+			wide_sheet_local,
+			item_sheet,
+			wide_sheet,
+			full_sheet,
+		} = this.props.constants;
+		
 		return (
 			<div>
 				<Helmet>
@@ -122,7 +130,9 @@ class DevSandboxPage extends Component {
 	}
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+	constants: state.general.constants,
+});
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(DevSandboxPage);

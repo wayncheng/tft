@@ -1,9 +1,9 @@
 module.exports = {
-	app_version   : '2.5.1',
-	patch_version : '10.7',
-	next_version  : '10.7',
-	newest_version: '10.7',
-	versions: require('../utils/versions'),
+	app_version   : '2.5.4',
+	patch_version : '10.8',
+	next_version  : '10.8',
+	newest_version: '10.8',
+	// versions: require('../utils/versions'),
 	
 
 	//========================================================================================================================

@@ -35,8 +35,8 @@ class PhotoLightbox extends Component {
 			full_sheet,
 			item_sheet,
 			wide_sheet,
-		// } = constants.versions[constants.patch_version];
 		} = this.props.constants;
+		// } = constants.versions[constants.patch_version];
 
 		let items = [
 			{
