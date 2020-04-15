@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/tft/precache-manifest.9a14ba73f044ce8dca16cf903a07da6d.js"
+  "/tft/precache-manifest.30dd7a3037911887adde0c0af943f1aa.js"
 );
 
 workbox.clientsClaim();
