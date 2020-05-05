@@ -41,15 +41,15 @@ class PhotoLightbox extends Component {
 		let items = [
 			{
 				src   : this.props.local ? full_sheet_local : full_sheet,
-				w     : 1639,
-				h     : 1627,
+				w     : 1920,
+				h     : 1676,
 				title : 'Full Cheatsheet',
 				pid   : 'full',
 			},
 			{
 				src   : this.props.local ? item_sheet_local : item_sheet,
-				w     : 1641,
-				h     : 740,
+				w     : 1920,
+				h     : 750,
 				title : 'Items',
 				pid   : 'item',
 			},
@@ -69,7 +69,7 @@ class PhotoLightbox extends Component {
 				options={{
 					galleryUID            : 'imgs',
 					// bgOpacity: 0.5,
-					preload               : [ 1, 2 ],
+					preload               : [ 0, 1 ],
 					// showAnimationDuration : 0,
 					// Buttons/elements
 					shareEl               : false,

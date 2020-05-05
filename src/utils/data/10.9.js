@@ -1,11 +1,11 @@
 module.exports = {
 	constants : {
-		item_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-item-cheat-sheet-set-3-10-8.png',
-		full_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-ultimate-cheat-sheet-set3-10-8.png',
-		wide_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-desktop-cheat-sheet-set3-10-8-1.png',
-		item_sheet_local : require(`../../static/img/beta/tft-sheet-item-beta.png`),
-		full_sheet_local : require(`../../static/img/beta/tft-sheet-full-beta.png`),
-		wide_sheet_local : require(`../../static/img/beta/tft-sheet-wide-beta.png`),
+		item_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-item-cheat-sheet-set-3-10-9-1.png',
+		full_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-ultimate-cheat-sheet-set3-10-9.png',
+		wide_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-desktop-cheat-sheet-set3-10-9.png',
+		item_sheet_local : require(`../../static/img/10.9/tft-sheet-item-10.9.png`),
+		full_sheet_local : require(`../../static/img/10.9/tft-sheet-full-10.9.png`),
+		wide_sheet_local : require(`../../static/img/10.9/tft-sheet-wide-10.9.png`),
 	},
 	items     : {
 		belt            : {
@@ -184,9 +184,9 @@ module.exports = {
 		cloak_glove     : {
 			id        : 'quicksilver',
 			name      : `Quicksilver`,
-			perk_full : `Wearer is immune to Crowd Control for the first 15 seconds [UNIQUE]`,
-			perk_100  : `Wearer is immune to Crowd Control for the first 15s [UNIQUE]`,
-			perk      : `Wearer is immune to Crowd Control for first 15s [UNIQUE]`,
+			perk_full : `Wearer is immune to Crowd Control for the first 10 seconds [UNIQUE]`,
+			perk_100  : `Wearer is immune to Crowd Control for the first 10s [UNIQUE]`,
+			perk      : `Wearer is immune to Crowd Control for first 10s [UNIQUE]`,
 		},
 		cloak_rod       : {
 			id        : 'ionicspark',
