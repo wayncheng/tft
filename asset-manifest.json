@@ -1,9 +1,9 @@
 {
-  "main.css": "/tft/static/css/main.e2231ca4.chunk.css",
-  "main.js": "/tft/static/js/main.ca3ee9c0.chunk.js",
-  "main.js.map": "/tft/static/js/main.ca3ee9c0.chunk.js.map",
-  "static/js/1.c6e0f45d.chunk.js": "/tft/static/js/1.c6e0f45d.chunk.js",
-  "static/js/1.c6e0f45d.chunk.js.map": "/tft/static/js/1.c6e0f45d.chunk.js.map",
+  "main.css": "/tft/static/css/main.3e6dbb63.chunk.css",
+  "main.js": "/tft/static/js/main.c513a78d.chunk.js",
+  "main.js.map": "/tft/static/js/main.c513a78d.chunk.js.map",
+  "static/js/1.abbf7e99.chunk.js": "/tft/static/js/1.abbf7e99.chunk.js",
+  "static/js/1.abbf7e99.chunk.js.map": "/tft/static/js/1.abbf7e99.chunk.js.map",
   "runtime~main.js": "/tft/static/js/runtime~main.1d209993.js",
   "runtime~main.js.map": "/tft/static/js/runtime~main.1d209993.js.map",
   "static/media/tft-sheet-item-beta.png": "/tft/static/media/tft-sheet-item-beta.1f724f22.png",
@@ -16,8 +16,8 @@
   "static/media/tft-sheet-full-10.5.png": "/tft/static/media/tft-sheet-full-10.5.a5370fba.png",
   "static/media/tft-sheet-wide-10.5.png": "/tft/static/media/tft-sheet-wide-10.5.3b468dda.png",
   "static/media/photoswipe.css": "/tft/static/media/default-skin.b257fa9c.svg",
-  "static/css/main.e2231ca4.chunk.css.map": "/tft/static/css/main.e2231ca4.chunk.css.map",
+  "static/css/main.3e6dbb63.chunk.css.map": "/tft/static/css/main.3e6dbb63.chunk.css.map",
   "index.html": "/tft/index.html",
-  "precache-manifest.53b4bba9539492da1c99d3ed5fc823cf.js": "/tft/precache-manifest.53b4bba9539492da1c99d3ed5fc823cf.js",
+  "precache-manifest.436a28100aafa23a051e5b9f0c394c9d.js": "/tft/precache-manifest.436a28100aafa23a051e5b9f0c394c9d.js",
   "service-worker.js": "/tft/service-worker.js"
 }
