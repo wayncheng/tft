@@ -58,11 +58,10 @@ module.exports = {
 		belt_belt       : {
 			id        : 'warmogsarmor',
 			name      : `Warmog's Armor`,
-			perk_full : `Wearer regenerates 4% of their missing Health per second. Max of 150HP per tick`,
-			perk_100 : `Every second, Wearer regenerates 4% of missing HP (Max 150HP/tick)`,
-			perk : `Every second, Wearer regenerates 4% of missing HP (Max 150HP/tick)`,
+			perk_full : `Wearer regenerates 5% of their missing Health per second. Max of 150HP per tick`,
+			perk_100 : `Every second, Wearer regenerates 5% of missing HP (Max 150HP/tick)`,
+			perk : `Every second, Wearer regenerates 5% of missing HP (Max 150HP/tick)`,
 		},
-		//* NEW: Zz’Rot Portal (prev. titanic hydra) *********************************************************
 		belt_bow        : {
 			id        : 'zzrotportal',
 			name      : `Zz’Rot Portal`,
@@ -87,11 +86,10 @@ module.exports = {
 		belt_rod        : {
 			id        : 'morellonomicon',
 			name      : `Morellonomicon`,
-			perk_full : `When the wearer deals damage with their spell, they burn the target, dealing 30% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn. A champion can only have one burn effect at a time, preferring the strongest.`,
-			perk_100  : `If you deal Spell, burn 30% of their Max HP (True) & -80% heal over 10s. 1 burn/unit (stronger burn)`,
-			perk      : 'Spells burn for 30% of max HP over 10s, 80% heal reduction during burn',
+			perk_full : `When the wearer deals damage with their spell, they burn the target, dealing 27% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn. A champion can only have one burn effect at a time, preferring the strongest.`,
+			perk_100  : `If you deal Spell, burn 27% of their Max HP (True) & -80% heal over 10s. 1 burn/unit (stronger burn)`,
+			perk      : 'Spells burn for 27% of max HP over 10s, 80% heal reduction during burn',
 		},
-		//* NEW: Protector's Chestguard ************************************************************
 		belt_spatula    : {
 			id        : `protectorschestguard`,
 			name      : `Protector's Chestguard`,
@@ -116,9 +114,9 @@ module.exports = {
 		belt_vest       : {
 			id        : 'redbuff',
 			name      : `Red Buff`,
-			perk_full : `Wearer's Basic Attacks burn the target on-hit, dealing 30% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn. A champion can only have one burn effect at a time, preferring the strongest.`,
-			perk_100  : `Basic on-hits burn 30% of their Max HP (True) & -80% healing over 10s. 1 burn/unit (stronger burn)`,
-			perk      : 'Atks burn for 30% max HP over 10s & disable healing',
+			perk_full : `Wearer's Basic Attacks burn the target on-hit, dealing 27% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn. A champion can only have one burn effect at a time, preferring the strongest.`,
+			perk_100  : `Basic on-hits burn 27% of their Max HP (True) & -80% healing over 10s. 1 burn/unit (stronger burn)`,
+			perk      : 'Atks burn for 27% max HP over 10s & disable healing',
 		},
 		bow_bow         : {
 			id        : 'rapidfirecannon',
@@ -148,7 +146,6 @@ module.exports = {
 			perk_100  : `Basic Atks grant wearer +4% Atk Speed for rest of combat (infinite stacks)`,
 			perk      : 'Atks give +5% atk speed (stacks infinitely)',
 		},
-		//* NEW: Infiltrator's Talons ************************************************************
 		bow_spatula     : {
 			id        : `infiltratorstalons`,
 			name      : `Infiltrator's Talons`,
@@ -166,9 +163,9 @@ module.exports = {
 		bow_tear        : {
 			id        : 'statikkshiv',
 			name      : `Statikk Shiv`,
-			perk_full : `Every third Basic Attack from the wearer deals 75 magic damage to 3/4/5 enemies (scales with wearer’s Star Level).`,
-			perk_100  : `Every 3rd Basic Attack from wearer deals 75 Magic Damage to 3/4/5 enemies`,
-			perk      : 'Deal 75 magic dmg to 3/4/5 enemies every 3rd atk',
+			perk_full : `Every third Basic Attack from the wearer deals 80 magic damage to 3/4/5 enemies (scales with wearer’s Star Level).`,
+			perk_100  : `Every 3rd Basic Attack from wearer deals 80 Magic Damage to 3/4/5 enemies`,
+			perk      : 'Deal 80 magic dmg to 3/4/5 enemies every 3rd atk',
 		},
 		bow_vest        : {
 			id        : 'titansresolve',
@@ -198,7 +195,6 @@ module.exports = {
 			perk_100  : `Zap enemies that cast a spell w/in 3 hexes for 225% of their Max Mana (Magic) & -50% MR (no stack)`,
 			perk      : 'Zap nearby enemies that cast spell for 225% their max mana (Magic) & -50% MR (no stack)',
 		},
-		//* NEW: Celestial Orb ********************************************************
 		cloak_spatula   : {
 			id        : `celestialorb`,
 			name      : `Celestial Orb`,
@@ -213,7 +209,6 @@ module.exports = {
 			perk_100  : `Basic Attacks heal the wearer for 40% of the damage dealt`,
 			perk      : 'Atks heal for 50% of dmg',
 		},
-		//* NEW: Chalice of Favor (replaced hush) ****************************************
 		cloak_tear      : {
 			id        : 'chaliceoffavor',
 			name      : `Chalice of Favor`,
@@ -243,7 +238,6 @@ module.exports = {
 			perk_100  : `Wearer's spells can critically strike`,
 			perk      : 'Abilities can crit strike',
 		},
-		//* NEW: Dark Star's Heart *********************************************************************
 		glove_spatula   : {
 			id        : `darkstarsheart`,
 			name      : `Dark Star's Heart`,
@@ -266,7 +260,6 @@ module.exports = {
 			perk      : 'Start w/ +50% dmg or +50 life on hit for round',
 		},
 		
-		//* NEW: Shroud of Stillness (prev. iceborn gauntlet) ****************************
 		glove_vest      : {
 			id        : 'shroudofstillness',
 			name      : `Shroud of Stillness`,
@@ -281,7 +274,6 @@ module.exports = {
 			perk_100  : `+50% Spell Power Amplification. (All sources of Spell Power are 50% more effective)`,
 			perk      : '+50% spell power from all sources',
 		},		
-		//* NEW: Demolitionist's Charge ************************************************************
 		rod_spatula     : {
 			id        : `demolitionistscharge`,
 			name      : `Demolitionist's Charge`,
@@ -325,7 +317,6 @@ module.exports = {
 			perk_100  : `Wearer is also Blademaster`,
 			perk      : `Also Blademaster`,
 		},
-		//* NEW: Star Guardian spat *************************************************
 		spatula_tear    : {
 			id        : `starguardianscharm`,
 			name      : `Star Guardian's Charm`,
@@ -333,7 +324,6 @@ module.exports = {
 			perk_100  : `Wearer is also Star Guardian`,
 			perk      : `Also Star Guardian`,
 		},
-		//* NEW: Rebel spat ************************************************************
 		spatula_vest    : {
 			id        : `rebelmedal`,
 			name      : `Rebel Medal`,

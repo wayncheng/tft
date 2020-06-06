@@ -1,21 +1,23 @@
 import React, {Component} from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 import {Modal, CloseBtn} from '..';
-import constants from '../../utils/constants';
-const {
-	// full_sheet_local,
-	// item_sheet_local,
-	// wide_sheet_local,
-	// item_sheet,
-	// wide_sheet,
-	full_sheet,
-} = constants.versions[constants.patch_version];
+// import constants from '../../utils/constants';
+// const {
+// 	// full_sheet_local,
+// 	// item_sheet_local,
+// 	// wide_sheet_local,
+// 	// item_sheet,
+// 	// wide_sheet,
+// 	full_sheet,
+// } = constants.versions[constants.patch_version];
 
 class FullCheatSheetModal extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			orientation : 'portrait',
-			src         : full_sheet,
+			src         : props.constants.full_sheet,
 		};
 	}
 
@@ -40,4 +42,9 @@ class FullCheatSheetModal extends Component {
 		);
 	}
 }
-export default FullCheatSheetModal;
+// export default FullCheatSheetModal;
+const mapStateToProps = state => ({
+	constants: state.general.constants,
+});
+const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
+export default connect(mapStateToProps, mapDispatchToProps)(FullCheatSheetModal);

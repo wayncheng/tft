@@ -1,11 +1,11 @@
 module.exports = {
 	constants : {
-		item_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-item-cheat-sheet-set-3-2.png',
-		full_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-ultimate-cheat-sheet-set3-3.png',
-		wide_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-desktop-cheat-sheet-set3-2.png',
-		item_sheet_local : require(`../../static/img/beta/tft-sheet-item-beta.png`),
-		full_sheet_local : require(`../../static/img/beta/tft-sheet-full-beta.png`),
-		wide_sheet_local : require(`../../static/img/beta/tft-sheet-wide-beta.png`),
+		item_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-item-cheat-sheet-set-3-10-11.png',
+		full_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-ultimate-cheat-sheet-set3-10-11.png',
+		wide_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-desktop-cheat-sheet-set3-10-11.png',
+		item_sheet_local : require(`../../static/img/10.9/tft-sheet-item-10.9.png`),
+		full_sheet_local : require(`../../static/img/10.9/tft-sheet-full-10.9.png`),
+		wide_sheet_local : require(`../../static/img/10.9/tft-sheet-wide-10.9.png`),
 	},
 	items     : {
 		belt            : {
@@ -46,7 +46,7 @@ module.exports = {
 		tear            : {
 			id   : 'tearofthegoddess',
 			name : 'Tear of the Goddess',
-			perk : '+20 Starting Mana',
+			perk : '+15 Starting Mana',
 		},
 		vest            : {
 			id   : 'chainvest',
@@ -58,11 +58,10 @@ module.exports = {
 		belt_belt       : {
 			id        : 'warmogsarmor',
 			name      : `Warmog's Armor`,
-			perk_full : `Wearer regenerates 4% of their missing Health per second. Max of 150HP per tick`,
-			perk_100 : `Every second, Wearer regenerates 4% of missing HP (Max 150HP/tick)`,
-			perk : `Every second, Wearer regenerates 4% of missing HP (Max 150HP/tick)`,
+			perk_full : `Wearer regenerates 5% of their missing Health per second. Max of 150HP per tick`,
+			perk_100 : `Every second, Wearer regenerates 5% of missing HP (Max 150HP/tick)`,
+			perk : `Every second, Wearer regenerates 5% of missing HP (Max 150HP/tick)`,
 		},
-		//* NEW: Zz’Rot Portal (prev. titanic hydra) *********************************************************
 		belt_bow        : {
 			id        : 'zzrotportal',
 			name      : `Zz’Rot Portal`,
@@ -87,11 +86,10 @@ module.exports = {
 		belt_rod        : {
 			id        : 'morellonomicon',
 			name      : `Morellonomicon`,
-			perk_full : `When the wearer deals damage with their spell, they burn the target, dealing 30% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn. A champion can only have one burn effect at a time, preferring the strongest.`,
-			perk_100  : `If you deal Spell, burn 30% of their Max HP (True) & -80% heal over 10s. 1 burn/unit (stronger burn)`,
-			perk      : 'Spells burn for 30% of max HP over 10s, 80% heal reduction during burn',
+			perk_full : `When the wearer deals damage with their spell, they burn the target, dealing 25% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn. A champion can only have one burn effect at a time, preferring the strongest.`,
+			perk_100  : `If you deal Spell, burn 25% of their Max HP (True) & -80% heal over 10s. 1 burn/unit (stronger burn)`,
+			perk      : 'Spells burn for 25% of max HP over 10s, 80% heal reduction during burn',
 		},
-		//* NEW: Protector's Chestguard ************************************************************
 		belt_spatula    : {
 			id        : `protectorschestguard`,
 			name      : `Protector's Chestguard`,
@@ -102,9 +100,9 @@ module.exports = {
 		belt_sword      : {
 			id        : 'zekesherald',
 			name      : `Zeke's Herald`,
-			perk_full : `When combat begins, the wearer and all allies within 2 hexes in the same row gain +18% Attack Speed for the rest of combat.`,
-			perk_100  : `On combat start, +18% Atk Speed for wearer & allies 2 hexes L&R (entire round) `,
-			perk      : 'At start, +18% Atk Speed for allies 2 spaces L&R',
+			perk_full : `When combat begins, the wearer and all allies within 1 hex in the same row gain +30% Attack Speed for the rest of combat.`,
+			perk_100  : `On combat start, +30% Atk Speed for wearer & allies 1 hex L&R (entire round) `,
+			perk      : 'At start, +30% Atk Speed for allies 1 space L&R',
 		},
 		belt_tear       : {
 			id        : 'redemption',
@@ -116,16 +114,16 @@ module.exports = {
 		belt_vest       : {
 			id        : 'redbuff',
 			name      : `Red Buff`,
-			perk_full : `Wearer's Basic Attacks burn the target on-hit, dealing 30% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn. A champion can only have one burn effect at a time, preferring the strongest.`,
-			perk_100  : `Basic on-hits burn 30% of their Max HP (True) & -80% healing over 10s. 1 burn/unit (stronger burn)`,
-			perk      : 'Atks burn for 30% max HP over 10s & disable healing',
+			perk_full : `Wearer's Basic Attacks burn the target on-hit, dealing 25% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn. A champion can only have one burn effect at a time, preferring the strongest.`,
+			perk_100  : `Basic on-hits burn 25% of their Max HP (True) & -80% healing over 10s. 1 burn/unit (stronger burn)`,
+			perk      : 'Atks burn for 25% max HP over 10s & disable healing',
 		},
 		bow_bow         : {
 			id        : 'rapidfirecannon',
 			name      : `Rapid Fire Cannon`,
-			perk_full : `Wearer gains +100% Attack Range.`,
-			perk_100  : `Wearer gains +100% Attack Range`,
-			perk      : `Doubles atk range. Atks can't be dodged`,
+			perk_full : `Wearer gains +200% Attack Range.`,
+			perk_100  : `Wearer gains +200% Attack Range`,
+			perk      : `Triples attack range`,
 		},
 		bow_cloak       : {
 			id        : 'runaanshurricane',
@@ -137,9 +135,9 @@ module.exports = {
 		bow_glove       : {
 			id        : 'lastwhisper',
 			name      : `Last Whisper`,
-			perk_full : `Critical hits reduce the target’s Armor by 90% for 3 seconds. This effect does not stack.`,
-			perk_100  : `Crit hits reduce target’s Armor by 90% for 3s (doesn't stack)`,
-			perk      : 'Crit hits reduce armor by 90% for 3s (no stack)',
+			perk_full : `Critical hits reduce the target’s Armor by 75% for 3 seconds. This effect does not stack.`,
+			perk_100  : `Crit hits reduce target’s Armor by 75% for 3s (doesn't stack)`,
+			perk      : 'Crit hits reduce armor by 75% for 3s (no stack)',
 		},
 		bow_rod         : {
 			id        : 'guinsoosrageblade',
@@ -148,7 +146,6 @@ module.exports = {
 			perk_100  : `Basic Atks grant wearer +4% Atk Speed for rest of combat (infinite stacks)`,
 			perk      : 'Atks give +5% atk speed (stacks infinitely)',
 		},
-		//* NEW: Infiltrator's Talons ************************************************************
 		bow_spatula     : {
 			id        : `infiltratorstalons`,
 			name      : `Infiltrator's Talons`,
@@ -166,9 +163,9 @@ module.exports = {
 		bow_tear        : {
 			id        : 'statikkshiv',
 			name      : `Statikk Shiv`,
-			perk_full : `Every third Basic Attack from the wearer deals 75 magic damage to 3/4/5 enemies (scales with wearer’s Star Level).`,
-			perk_100  : `Every 3rd Basic Attack from wearer deals 75 Magic Damage to 3/4/5 enemies`,
-			perk      : 'Deal 75 magic dmg to 3/4/5 enemies every 3rd atk',
+			perk_full : `Every third Basic Attack from the wearer deals 80 magic damage to 3/4/5 enemies (scales with wearer’s Star Level).`,
+			perk_100  : `Every 3rd Basic Attack from wearer deals 80 Magic Damage to 3/4/5 enemies`,
+			perk      : 'Deal 80 magic dmg to 3/4/5 enemies every 3rd atk',
 		},
 		bow_vest        : {
 			id        : 'titansresolve',
@@ -188,8 +185,8 @@ module.exports = {
 			id        : 'quicksilver',
 			name      : `Quicksilver`,
 			perk_full : `Wearer is immune to Crowd Control for the first 10 seconds [UNIQUE]`,
-			perk_100 : `Wearer is immune to Crowd Control for the first 10s [UNIQUE]`,
-			perk : `Wearer is immune to Crowd Control for first 10s [UNIQUE]`,
+			perk_100  : `Wearer is immune to Crowd Control for the first 10s [UNIQUE]`,
+			perk      : `Wearer is immune to Crowd Control for first 10s [UNIQUE]`,
 		},
 		cloak_rod       : {
 			id        : 'ionicspark',
@@ -198,7 +195,6 @@ module.exports = {
 			perk_100  : `Zap enemies that cast a spell w/in 3 hexes for 225% of their Max Mana (Magic) & -50% MR (no stack)`,
 			perk      : 'Zap nearby enemies that cast spell for 225% their max mana (Magic) & -50% MR (no stack)',
 		},
-		//* NEW: Celestial Orb ********************************************************
 		cloak_spatula   : {
 			id        : `celestialorb`,
 			name      : `Celestial Orb`,
@@ -213,13 +209,12 @@ module.exports = {
 			perk_100  : `Basic Attacks heal the wearer for 40% of the damage dealt`,
 			perk      : 'Atks heal for 50% of dmg',
 		},
-		//* NEW: Chalice of Favor (replaced hush) ****************************************
 		cloak_tear      : {
 			id        : 'chaliceoffavor',
 			name      : `Chalice of Favor`,
-			perk_full : `Whenever you cast your spell, give all nearby allies 10 mana`,
-			perk_100  : `Whenever you cast your spell, give all nearby allies 10 mana`,
-			perk      : 'When you cast spell, +10 mana for all nearby allies',
+			perk_full : `Whenever you cast your spell, you and all nearby allies gain 8 mana`,
+			perk_100  : `Whenever you cast your spell, you and all nearby allies gain 8 mana`,
+			perk      : 'When you cast spell, +8 mana for yourself & all nearby allies',
 		},
 		cloak_vest      : {
 			id        : 'swordbreaker',
@@ -243,7 +238,6 @@ module.exports = {
 			perk_100  : `Wearer's spells can critically strike`,
 			perk      : 'Abilities can crit strike',
 		},
-		//* NEW: Dark Star's Heart *********************************************************************
 		glove_spatula   : {
 			id        : `darkstarsheart`,
 			name      : `Dark Star's Heart`,
@@ -266,7 +260,6 @@ module.exports = {
 			perk      : 'Start w/ +50% dmg or +50 life on hit for round',
 		},
 		
-		//* NEW: Shroud of Stillness (prev. iceborn gauntlet) ****************************
 		glove_vest      : {
 			id        : 'shroudofstillness',
 			name      : `Shroud of Stillness`,
@@ -281,7 +274,6 @@ module.exports = {
 			perk_100  : `+50% Spell Power Amplification. (All sources of Spell Power are 50% more effective)`,
 			perk      : '+50% spell power from all sources',
 		},		
-		//* NEW: Demolitionist's Charge ************************************************************
 		rod_spatula     : {
 			id        : `demolitionistscharge`,
 			name      : `Demolitionist's Charge`,
@@ -325,7 +317,6 @@ module.exports = {
 			perk_100  : `Wearer is also Blademaster`,
 			perk      : `Also Blademaster`,
 		},
-		//* NEW: Star Guardian spat *************************************************
 		spatula_tear    : {
 			id        : `starguardianscharm`,
 			name      : `Star Guardian's Charm`,
@@ -333,7 +324,6 @@ module.exports = {
 			perk_100  : `Wearer is also Star Guardian`,
 			perk      : `Also Star Guardian`,
 		},
-		//* NEW: Rebel spat ************************************************************
 		spatula_vest    : {
 			id        : `rebelmedal`,
 			name      : `Rebel Medal`,
@@ -341,15 +331,12 @@ module.exports = {
 			perk_100  : `Wearer is also Rebel`,
 			perk      : `Also Rebel`,
 		},
-
-		// TODO: figure out what this change is 
-		//? Deathblade Starting Stacks: 1 ⇒ 3
 		sword_sword     : {
 			id        : 'deathblade',
 			name      : `Deathblade`,
-			perk_full : `Whenever the wearer kills or participates in killing an enemy, gain +15 Attack Damage for the remainder of combat. This effect can stack any number of times.`,
-			perk_100  : `On Kill/Assist, +15 Attack Damage for rest of combat (infinite stack)`,
-			perk      : 'On kill/assist, +15 atk (stacks infinitely)',
+			perk_full : `Whenever the wearer kills or participates in killing an enemy, gain +30 Attack Damage for the remainder of combat. This effect can stack any number of times.`,
+			perk_100  : `On Kill/Assist, +30 Attack Damage for rest of combat (infinite stack, starts with 1)`,
+			perk      : 'On kill/assist, +30 atk (stacks infinitely, starts with 1)',
 		},
 		sword_tear      : {
 			id        : 'spearofshojin',
@@ -375,9 +362,9 @@ module.exports = {
 		tear_vest       : {
 			id        : 'frozenheart',
 			name      : `Frozen Heart`,
-			perk_full : `Nearby enemies' attack speed is slowed by 40%. (Stacking increases the radius of this effect, not the amount of the slow)`,
-			perk_100  : `Nearby enemies' Attack Speed slowed 40% (Stacking increases radius, not slowness)`,
-			perk      : `Nearby enemy atk speed slowed 40%. (Stack increases effect radius)`,
+			perk_full : `Nearby enemies' attack speed is slowed by 50%. (Stacking increases the radius of this effect, not the amount of the slow)`,
+			perk_100  : `Nearby enemies' Attack Speed slowed 50% (Stacking increases radius, not slowness)`,
+			perk      : `Nearby enemy atk speed slowed 50%. (Stack increases effect radius)`,
 		},
 		vest_vest       : {
 			id        : 'bramblevest',
