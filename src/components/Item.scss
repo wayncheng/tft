@@ -31,8 +31,14 @@ $size-2: 32px;
 	max-width: $size-0;
 	max-height: $size-0;
 	vertical-align: top;
-	// Tailwind aligns middle by default Suddenly became an issue one day.
+	// Make text visible in case image fails
+	color: $fg-light-disabled;
+	line-height: 1;
+	font-size: .75rem;
+
+
 	// TODO: highlight style not working on compact combos 
+	// Tailwind aligns middle by default Suddenly became an issue one day.
 	&.tiny {
 		width: $size-2;
 		height: $size-2;

@@ -11,7 +11,8 @@ class Image extends Component {
 		let description = item.name || item.id;
 		if (item_id.indexOf('_') !== -1){
 			const parts = item_id.split('_')
-			description = `${item.name} (${parts[0]} + ${parts[1]})`
+			// description = `${item.name} (${parts[0]} + ${parts[1]})`
+			description = `${item.name}`
 		}
 
 		return (
