@@ -248,7 +248,7 @@ module.exports = {
 		glove_sword     : {
 			id       : 'infinityedge',
 			name     : `Infinity Edge`,
-			perk_full: `The holder gains 20% bonus Critical Strike Damage and 100% Critical Strike Chance`,
+			perk_full: `The holder gains 20% bonus Critical Strike Damage and their Critical Strike Chance becomes 100%.`,
 			perk_100 : `Holder gains 20% bonus Crit Damage and 100% Crit Chance`,
 			perk     : '100% Crit Chance, +20% Crit Dmg',
 		},
