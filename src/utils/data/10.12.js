@@ -55,12 +55,16 @@ module.exports = {
 		},
 
 		// Combos -----------------------------------------
+		// TODO: figure out if 600HP or 1000HP. per tick or once? 
 		belt_belt       : {
 			id        : 'warmogsarmor',
 			name      : `Warmog's Armor`,
-			perk_full : `Wearer regenerates 5% of their missing Health per second. Max of 150HP per tick`,
+			perk_full: `Wearer regenerates 5% of their missing Health per second. Max of 150HP per tick`,
 			perk_100 : `Every second, Wearer regenerates 5% of missing HP (Max 150HP/tick)`,
-			perk : `Every second, Wearer regenerates 5% of missing HP (Max 150HP/tick)`,
+			perk     : `Every second, Wearer regenerates 5% of missing HP (Max 150HP/tick)`,
+			perk_full: `Wearer gains 600 Health (1000 Health total including belts)`,
+			perk_100 : `Gains 600 HP (1000 HP including components)`,
+			perk_100 : `+600 HP (1000 HP total)`,
 		},
 		belt_bow        : {
 			id        : 'zzrotportal',
@@ -114,9 +118,9 @@ module.exports = {
 		belt_vest       : {
 			id        : 'redbuff',
 			name      : `Red Buff`,
-			perk_full : `Wearer's Basic Attacks burn the target on-hit, dealing 25% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn. A champion can only have one burn effect at a time, preferring the strongest.`,
-			perk_100  : `Basic on-hits burn 25% of their Max HP (True) & -80% healing over 10s. 1 burn/unit (stronger burn)`,
-			perk      : 'Atks burn for 25% max HP over 10s & disable healing',
+			perk_full : `Wearer's Basic Attacks burn the target on-hit, dealing 10% of the target's Maximum Health as true damage over 4 seconds and reducing healing by 80% for the duration of the burn. A champion can only have one burn effect at a time, preferring the strongest.`,
+			perk_100  : `Basic on-hits burn 10% of their Max HP (True) & -80% healing over 4s. 1 burn/unit (stronger burn)`,
+			perk      : 'Atks burn for 10% max HP over 4s & disable healing',
 		},
 		bow_bow         : {
 			id        : 'rapidfirecannon',
@@ -156,9 +160,12 @@ module.exports = {
 		bow_sword       : {
 			id        : 'giantslayer',
 			name      : `Giant Slayer`,
-			perk_full : `The wearer's Basic Attacks deal an additional 12% of the Target's Maximum Health as Physical Damage`,
-			perk_100  : `Wearer's Basic Attacks deal +12% of the Target's Max HP as Physical Damage`,
-			perk      : "Basic Atks deal +12% of Target's Max HP as Physical Dmg",
+			// perk_full : `The wearer's Basic Attacks deal an additional 12% of the Target's Maximum Health as Physical Damage`,
+			// perk_100  : `Wearer's Basic Attacks deal +12% of the Target's Max HP as Physical Damage`,
+			// perk      : "Basic Atks deal +12% of Target's Max HP as Physical Dmg",
+			perk_full : `Deal 20% bonus true damage. If enemy max Health is over 1750, deal 80% bonus true damage instead.`,
+			perk_100  : `Deal 20% Bonus True Damage (If enemy Max HP > 1750, +80% True Damage)`,
+			perk      : `Deal +20% True Dmg (Enemy Max HP > 1750? +80% True Dmg)`,
 		},
 		bow_tear        : {
 			id        : 'statikkshiv',
@@ -207,14 +214,14 @@ module.exports = {
 			name      : `Bloodthirster`,
 			perk_full : `Basic Attacks heal the wearer for 40% of the damage dealt.`,
 			perk_100  : `Basic Attacks heal the wearer for 40% of the damage dealt`,
-			perk      : 'Atks heal for 50% of dmg',
+			perk      : 'Atks heal for 40% of dmg',
 		},
 		cloak_tear      : {
-			id        : 'chaliceoffavor',
-			name      : `Chalice of Favor`,
-			perk_full : `Whenever you cast your spell, you and all nearby allies gain 8 mana`,
-			perk_100  : `Whenever you cast your spell, you and all nearby allies gain 8 mana`,
-			perk      : 'When you cast spell, +8 mana for yourself & all nearby allies',
+			id        : 'chaliceofpower',
+			name      : `Chalice of Power`,
+			perk_full : `At start of combat, the holder and their left and right neighbors gain 30 AP for 20 seconds.`,
+			perk_100  : `At combat start, holder and neighbors L&R gain 30 AP for 20s`,
+			perk_100  : `At start, +30 AP for 20s to holder and neighbors L&R`,
 		},
 		cloak_vest      : {
 			id        : 'swordbreaker',
@@ -234,9 +241,9 @@ module.exports = {
 		glove_rod       : {
 			id        : 'jeweledgauntlet',
 			name      : `Jeweled Gauntlet`,
-			perk_full : `The wearer's spells can critically strike.`,
-			perk_100  : `Wearer's spells can critically strike`,
-			perk      : 'Abilities can crit strike',
+			perk_full : `The wearer's spells can Critically Strike. +20% Critical Strike Damage.`,
+			perk_100  : `Wearer's spells can Critically Strike. +20% Critical Strike Damage.`,
+			perk      : 'Abilities can Crit. +20% Crit Dmg',
 		},
 		glove_spatula   : {
 			id        : `darkstarsheart`,
@@ -248,9 +255,9 @@ module.exports = {
 		glove_sword     : {
 			id       : 'infinityedge',
 			name     : `Infinity Edge`,
-			perk_full: `The holder gains 20% bonus Critical Strike Damage and their Critical Strike Chance becomes 100%.`,
-			perk_100 : `Holder gains 20% bonus Crit Damage and 100% Crit Chance`,
-			perk     : '100% Crit Chance, +20% Crit Dmg',
+			perk_full: `The holder gains 20% bonus Critical Strike Damage and their Critical Strike Chance becomes 100%. [UNIQUE]`,
+			perk_100 : `Holder gains 20% bonus Crit Damage and 100% Crit Chance [UNIQUE]`,
+			perk     : '100% Crit Chance, +20% Crit Dmg [UNIQUE]',
 		},
 		glove_tear      : {
 			id        : 'handofjustice',
@@ -278,8 +285,8 @@ module.exports = {
 		//* NEW: Battlecast Armor
 		//********************************************************************************
 		rod_spatula     : {
-			id        : `battlecastarmor`,
-			name      : `Battlecast Armor`,
+			id        : `battlecastplating`,
+			name      : `Battlecast Plating`,
 			perk_full : `Wearer gains the Battlecast trait`,
 			perk_100  : `Wearer is also Battlecast`,
 			perk      : `Also Battlecast`,
@@ -287,16 +294,16 @@ module.exports = {
 		rod_sword       : {
 			id        : 'hextechgunblade',
 			name      : `Hextech Gunblade`,
-			perk_full : `Basic Attacks and spells heal the wearer for 35% of the damage dealt.`,
-			perk_100  : `Basic Attacks & Spells heal the wearer for 35% of the damage dealt`,
+			perk_full : `Spells heal the wearer for 35% of the damage dealt.`,
+			perk_100  : `Spells heal wearer for 35% of damage dealt`,
 			perk      : 'Heal for 35% of dmg dealt',
 		},
 		rod_tear        : {
 			id        : 'ludensecho',
 			name      : `Luden's Echo`,
-			perk_full : `When the wearer deals damage with their spell, the first target hit and up to 3 enemies within 2 hexes are dealt an additional 150/175/225 magic damage (scales with wearer’s Star Level).`,
-			perk_100  : `When unit deals Spell Dmg, extra 150/175/225 Magic Dmg to first target & max 3 enemies w/in 2 hexes `,
-			perk      : 'Deals 150/175/225 magic dmg',
+			perk_full : `When the wearer deals damage with their spell, the first target hit and up to 3 enemies within 2 hexes are dealt an additional 200/200/200 magic damage (scales with wearer’s Star Level).`,
+			perk_100  : `When unit deals Spell Dmg, extra 200/200/200 Magic Dmg to first target & max 3 enemies w/in 2 hexes `,
+			perk      : 'Deals 200/200/200 magic dmg',
 		},
 		rod_vest        : {
 			id        : 'locketoftheironsolari',
@@ -337,9 +344,9 @@ module.exports = {
 		sword_sword     : {
 			id        : 'deathblade',
 			name      : `Deathblade`,
-			perk_full : `Whenever the wearer kills or participates in killing an enemy, gain +30 Attack Damage for the remainder of combat. This effect can stack any number of times.`,
-			perk_100  : `On Kill/Assist, +30 Attack Damage for rest of combat (infinite stack, starts with 1)`,
-			perk      : 'On kill/assist, +30 atk (stacks infinitely, starts with 1)',
+			perk_full : `Whenever the wearer kills or participates in killing an enemy, gain +25 Attack Damage for the remainder of combat. This effect can stack any number of times.`,
+			perk_100  : `On Kill/Assist, +25 AD for rest of combat (infinite stack, starts with 1)`,
+			perk      : 'On kill/assist, +25 AD (stacks infinitely, starts with 1)',
 		},
 		sword_tear      : {
 			id        : 'spearofshojin',
@@ -361,9 +368,9 @@ module.exports = {
 		tear_tear       : {
 			id        : 'bluebuff',
 			name      : `Blue Buff`,
-			perk_full : `After each spellcast, the holder’s mana is set to 20.`,
-			perk_100  : `After each spellcast, the holder’s mana is set to 20.`,
-			perk      : 'Mana set to 20 after each spellcast',
+			perk_full : `After each spellcast, the holder’s mana is set to 20. [UNIQUE]`,
+			perk_100  : `After each spellcast, the holder’s mana is set to 20. [UNIQUE]`,
+			perk      : 'Mana set to 20 after spellcasts [UNIQUE]',
 		},
 		tear_vest       : {
 			id        : 'frozenheart',
