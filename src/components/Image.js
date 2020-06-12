@@ -10,7 +10,7 @@ class Image extends Component {
 		const item = this.props.itemData[item_id];
 		let description = item.name || item.id;
 		if (item_id.indexOf('_') !== -1){
-			const parts = item_id.split('_')
+			// const parts = item_id.split('_')
 			// description = `${item.name} (${parts[0]} + ${parts[1]})`
 			description = `${item.name}`
 		}

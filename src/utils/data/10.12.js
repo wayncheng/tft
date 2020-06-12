@@ -1,8 +1,8 @@
 module.exports = {
 	constants : {
-		item_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-item-cheat-sheet-set-3-10-11.png',
-		full_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-ultimate-cheat-sheet-set3-10-11.png',
-		wide_sheet       : 'https://progameguides.com/wp-content/uploads/2019/06/tft-desktop-cheat-sheet-set3-10-11.png',
+		item_sheet : 'https://progameguides.com/wp-content/uploads/2019/06/tft-item-cheat-sheet-set-3-10-11.png',
+		full_sheet : 'https://progameguides.com/wp-content/uploads/2019/06/tft-ultimate-cheat-sheet-set3-10-11.png',
+		wide_sheet : 'https://progameguides.com/wp-content/uploads/2019/06/tft-desktop-cheat-sheet-set3-10-11.png',
 		// item_sheet_local : require(`../../static/img/10.9/tft-sheet-item-10.9.png`),
 		// full_sheet_local : require(`../../static/img/10.9/tft-sheet-full-10.9.png`),
 		// wide_sheet_local : require(`../../static/img/10.9/tft-sheet-wide-10.9.png`),
@@ -55,16 +55,13 @@ module.exports = {
 		},
 
 		// Combos -----------------------------------------
-		// TODO: figure out if 600HP or 1000HP. per tick or once? 
+		// TODO: figure out if 600HP or 1000HP. per tick or once?
 		belt_belt       : {
 			id        : 'warmogsarmor',
 			name      : `Warmog's Armor`,
-			perk_full: `Wearer regenerates 5% of their missing Health per second. Max of 150HP per tick`,
-			perk_100 : `Every second, Wearer regenerates 5% of missing HP (Max 150HP/tick)`,
-			perk     : `Every second, Wearer regenerates 5% of missing HP (Max 150HP/tick)`,
-			perk_full: `Wearer gains 600 Health (1000 Health total including belts)`,
-			perk_100 : `Gains 600 HP (1000 HP including components)`,
-			perk_100 : `+600 HP (1000 HP total)`,
+			perk_full : `Wearer gains 600 Health (1000 Health total including belts)`,
+			perk_100  : `Gains 600 HP (1000 HP including components)`,
+			perk      : `+600 HP (1000 HP total)`,
 		},
 		belt_bow        : {
 			id        : 'zzrotportal',
@@ -221,7 +218,7 @@ module.exports = {
 			name      : `Chalice of Power`,
 			perk_full : `At start of combat, the holder and their left and right neighbors gain 30 AP for 20 seconds.`,
 			perk_100  : `At combat start, holder and neighbors L&R gain 30 AP for 20s`,
-			perk_100  : `At start, +30 AP for 20s to holder and neighbors L&R`,
+			perk      : `At start, +30 AP for 20s to holder and neighbors L&R`,
 		},
 		cloak_vest      : {
 			id        : 'swordbreaker',
@@ -253,11 +250,11 @@ module.exports = {
 			perk      : `Also Dark Star`,
 		},
 		glove_sword     : {
-			id       : 'infinityedge',
-			name     : `Infinity Edge`,
-			perk_full: `The holder gains 20% bonus Critical Strike Damage and their Critical Strike Chance becomes 100%. [UNIQUE]`,
-			perk_100 : `Holder gains 20% bonus Crit Damage and 100% Crit Chance [UNIQUE]`,
-			perk     : '100% Crit Chance, +20% Crit Dmg [UNIQUE]',
+			id        : 'infinityedge',
+			name      : `Infinity Edge`,
+			perk_full : `The holder gains 20% bonus Critical Strike Damage and their Critical Strike Chance becomes 100%. [UNIQUE]`,
+			perk_100  : `Holder gains 20% bonus Crit Damage and 100% Crit Chance [UNIQUE]`,
+			perk      : '100% Crit Chance, +20% Crit Dmg [UNIQUE]',
 		},
 		glove_tear      : {
 			id        : 'handofjustice',
@@ -266,7 +263,7 @@ module.exports = {
 			perk_100  : `At planning start, either get: +50% Dmg (Basic & Spells) or Basic On-Hits heal 50HP`,
 			perk      : 'Start w/ +50% dmg or +50 life on hit for round',
 		},
-		
+
 		glove_vest      : {
 			id        : 'shroudofstillness',
 			name      : `Shroud of Stillness`,
@@ -384,7 +381,8 @@ module.exports = {
 			name      : `Bramble Vest`,
 			perk_full : `Negates bonus damage from critical hits on the wearer. When the wearer is hit by a Basic attack, deals 100/140/200 (based on Star level) magic damage to all nearby enemies (2s second cooldown).`,
 			perk_100  : `Blocks bonus Crit Dmg. When hit by Basic Atk, 100/140/200 Magic Dmg to nearby enemies. 2s cooldown`,
-			perk      : 'Negates bonus dmg from crit. When hit by Basic atk, deal 100/140/200 magic dmg to nearby enemies (Max every 2s)',
+			perk      :
+				'Negates bonus dmg from crit. When hit by Basic atk, deal 100/140/200 magic dmg to nearby enemies (Max every 2s)',
 		},
 	},
 };
